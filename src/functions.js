@@ -2,7 +2,14 @@ const Database = require('./config/database');
 const connection = Database.connection;
 const Character = require('./models/Character');
 const Hunted = require('./models/Hunted');
+const namess = require('./updates').namess;
 
+async function logsReturn() {
+    const xd = await namess()
+    console.log(xd.length)
+    return xd;
+
+};
 
 async function checkStatus() {
 
@@ -150,4 +157,5 @@ module.exports = {
     sleep,
     getText,
     toSqlDatetime,
+    logsReturn
 };

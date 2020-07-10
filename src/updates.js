@@ -34,7 +34,7 @@ async function mostrarHuntedOn() {
 };
 
 async function namess() {
-
+    array =[];
     const onlines = await onlines_now();
     for (const online of onlines) {
         await Character.sync().then(async function() {
@@ -55,10 +55,11 @@ async function namess() {
                 if (!created) {
                     //char existe
                     if (user.level != online.level) {
-                        console.log('download_names: level de ' + user.name + ' atualizado de ' + user.level + ' para ' + online.level);
+                        array.push('O level de ' + user.name + ' atualizado de ' + user.level + ' para ' + online.level);
+                        
                     }
                     if (user.vocation != online.vocation) {
-                        console.log('download_names: vocation de ' + user.name + ' atualizado de ' + user.vocation + ' para ' + online.vocation);
+                        array.push('A Vocation: vocation de ' + user.name + ' atualizado de ' + user.vocation + ' para ' + online.vocation);
                     }
                     return user.update(options.defaults).then(function(updated) {
                         return [updated, created];
@@ -69,6 +70,7 @@ async function namess() {
             });
         })
     };
+    return array;
 }
 
 
