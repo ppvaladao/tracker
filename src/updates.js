@@ -4,10 +4,14 @@ const onlines_now = require('./puppeteer');
 const func = require('./functions');
 const fetch = require('fetch');
 
+
+//definir 'onlines' de 'namess() && huntedss()', em updates.js, pra pegar da nossa rota '/allonlines', algo como: "const onlines = await fetch("http://localhost/allonlines").then(function(response) {return response.json();})"
+
+
+
+
 //falta retornar 'updates = []' de 'huntedss()' em 'updates.js' e settar no html.
 //ajeitar botao de add/remover hunted em src/html/index.html.
-//definir 'onlines' de 'namess() && huntedss()', em updates.js, pra pegar da nossa rota '/allonlines', algo como: "const onlines = await fetch("http://localhost/allonlines").then(function(response) {return response.json();})"
-//colocar loop nos onlines da rota '/allonlines', no momento só carrega os nomes quando acessamos(5 segundos), quero deixar os dados já disponíveis a cada loop check de onlines
 
 async function mostrarHuntedOn() {
 
@@ -51,10 +55,10 @@ async function namess() {
                 if (!created) {
                     //char existe
                     if (user.level != online.level) {
-                        console.log('download_names: level de ' + online.name + ' atualizado de ' + user.level + ' para ' + online.level);
+                        console.log('download_names: level de ' + user.name + ' atualizado de ' + user.level + ' para ' + online.level);
                     }
                     if (user.vocation != online.vocation) {
-                        console.log('download_names: vocation de ' + online.name + ' atualizado de ' + user.vocation + ' para ' + online.vocation);
+                        console.log('download_names: vocation de ' + user.name + ' atualizado de ' + user.vocation + ' para ' + online.vocation);
                     }
                     return user.update(options.defaults).then(function(updated) {
                         return [updated, created];

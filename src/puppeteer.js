@@ -1,6 +1,6 @@
-//puppeteer new
 const { Cluster } = require('puppeteer-cluster');
 const url_names = 'https://www.utorion.com/index.php?subtopic=whoisonline';
+
 async function onlines_now() {
     const cluster = await Cluster.launch({
         concurrency: Cluster.CONCURRENCY_CONTEXT,

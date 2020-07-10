@@ -1,8 +1,8 @@
 const Database = require('./config/database');
 const connection = Database.connection;
-
 const Character = require('./models/Character');
 const Hunted = require('./models/Hunted');
+
 
 async function checkStatus() {
 

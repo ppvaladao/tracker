@@ -2,10 +2,10 @@ var express = require('express');
 var router = express.Router();
 const onlines_now = require('./puppeteer');
 const mostrarHuntedOn = require('./updates').mostrarHuntedOn;
-const updates = require('./updates').huntedss().updates;
 
 
 //falta importar 'updates = []' de 'huntedss()' em updates.js
+//algo tipo: const updates = require('./updates').huntedss().updates;
 
 
 

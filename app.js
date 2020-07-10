@@ -14,8 +14,11 @@ const { namess, huntedss } = require('./src/updates');
 (async function Rodar() {
     //huntedss()
     namess()
-    
+
 })();
+
+
 app.listen(80);
+
 
 
