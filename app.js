@@ -2,7 +2,7 @@ const Database = require('./src/config/database');
 const connection = Database.connection;
 app = require ('./src/express')
 
-// Models testte
+// Models testte xx
 const Character = require('./src/models/Character');
 const Death = require('./src/models/Death');
 const Killer = require('./src/models/Killer');
