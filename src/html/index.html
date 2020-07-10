@@ -1,0 +1,48 @@
+<html>
+<head>
+<script type="text/javascript">
+	function hello() {
+    $.getJSON("http://localhost/huntedson", function(json) {
+        var $table = $('#jsonTable');
+        var $tbody = $table.find('tbody').empty();
+
+        $table.css("visibility", "visible").css("border", "1px solid green");
+
+        for (var counter = 0; counter < json.length; counter++) {
+            $tbody.append("<tr><td>" + json[counter].name + "</td><td>" + json[counter].level + "</td><td>" + json[counter].vocation + "</td><td>" + json[counter].body + "</td></tr>");
+        }
+
+        $('th').css("border", "1px solid green");
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    setInterval(hello, 2000);
+});
+
+
+</script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
+</head>
+<body>
+	<input type="button" value="Atualizar" id="Render JSON" onclick="return hello();"/>
+	
+	<p><input id="search" type="text" placeholder="settar func.addHunted" /> <button id="submit" value="send">add</button></p><div class="alpha">&nbsp;</div>
+
+	<p><input id="search" type="text" placeholder="settar func.removeHunted" /> <button id="submit" value="send">add</button></p><div class="alpha">&nbsp;</div>
+
+
+	<br/>
+	<table id="jsonTable" style="visibility:hidden">
+		<thead>
+			<tr>
+				<!-- The JSON downloaded from the URL above provides four attributes.-->
+				<th>name</th>
+				<th>level</th>
+				<th>vocation</th>
+				<th>body</th>
+			</tr>
+		</thead> <tbody></tbody>
+	</table>
+</body>
+</html>
