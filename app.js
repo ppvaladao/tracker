@@ -13,7 +13,7 @@ const { namess, huntedss } = require('./src/updates');
 
 (async function Rodar() {
     //huntedss()
-    //namess()
+    namess()
     
 })();
 app.listen(80);

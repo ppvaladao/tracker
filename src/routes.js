@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+const onlines_now = require('./puppeteer');
 const mostrarHuntedOn = require('./updates').mostrarHuntedOn;
 const updates = require('./updates').huntedss().updates;
 
@@ -18,6 +19,13 @@ router.get('/huntedsOn', async function(req, res){
 
     res.json(huntedsOn);
   });
+
+  router.get('/allonlines', async function(req, res){
+    const onlines = await onlines_now()
+
+    res.json(onlines);
+  });
+
 
   router.get('/updatesPush', function (req, res) {
     res.json();

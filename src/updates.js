@@ -2,10 +2,12 @@ const Character = require('./models/Character');
 const Hunted = require('./models/Hunted');
 const onlines_now = require('./puppeteer');
 const func = require('./functions');
+const fetch = require('fetch');
 
-//fazer uma rota com onlines e colocar os updates pra pegar onlines direto da route.
 //falta retornar 'updates = []' de 'huntedss()' em 'updates.js' e settar no html.
 //ajeitar botao de add/remover hunted em src/html/index.html.
+//definir 'onlines' de 'namess() && huntedss()', em updates.js, pra pegar da nossa rota '/allonlines', algo como: "const onlines = await fetch("http://localhost/allonlines").then(function(response) {return response.json();})"
+//colocar loop nos onlines da rota '/allonlines', no momento só carrega os nomes quando acessamos(5 segundos), quero deixar os dados já disponíveis a cada loop check de onlines
 
 async function mostrarHuntedOn() {
 
@@ -28,8 +30,8 @@ async function mostrarHuntedOn() {
 };
 
 async function namess() {
-    const onlines = await onlines_now();
 
+    const onlines = await onlines_now();
     for (const online of onlines) {
         await Character.sync().then(async function() {
             let options = {
