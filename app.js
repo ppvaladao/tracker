@@ -1,11 +1,8 @@
-const puppeteer = require('puppeteer');
-const CronJob = require('cron').CronJob;
-const express = require('express');
 const Database = require('./src/config/database');
 const connection = Database.connection;
 app = require ('./src/express')
 
-// Models
+// Models testte
 const Character = require('./src/models/Character');
 const Death = require('./src/models/Death');
 const Killer = require('./src/models/Killer');
