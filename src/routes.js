@@ -3,13 +3,11 @@ var router = express.Router();
 const onlines_now = require('./puppeteer');
 const mostrarHuntedOn = require('./updates').mostrarHuntedOn;
 const huntedss = require('./updates').huntedss;
+const path = require('path');
 
 
 
-router.get('/', function (req, res) {
-    res.render(__dirname + '/html/index.html');
-});
-
+router.use('/', express.static(path.join(__dirname, './html')));
 
 router.get('/huntedsOn', async function(req, res){
     const huntedsOn = await mostrarHuntedOn()

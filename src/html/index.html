@@ -1,7 +1,1212 @@
-<html>
-<head>
-<script type="text/javascript">
-	function hello() {
+<html class style="height: 100%;">
+   <head>
+      <style type="text/css">.swal-icon--error{border-color:#f27474;-webkit-animation:animateErrorIcon .5s;animation:animateErrorIcon .5s}.swal-icon--error__x-mark{position:relative;display:block;-webkit-animation:animateXMark .5s;animation:animateXMark .5s}.swal-icon--error__line{position:absolute;height:5px;width:47px;background-color:#f27474;display:block;top:37px;border-radius:2px}.swal-icon--error__line--left{-webkit-transform:rotate(45deg);transform:rotate(45deg);left:17px}.swal-icon--error__line--right{-webkit-transform:rotate(-45deg);transform:rotate(-45deg);right:16px}@-webkit-keyframes animateErrorIcon{0%{-webkit-transform:rotateX(100deg);transform:rotateX(100deg);opacity:0}to{-webkit-transform:rotateX(0deg);transform:rotateX(0deg);opacity:1}}@keyframes animateErrorIcon{0%{-webkit-transform:rotateX(100deg);transform:rotateX(100deg);opacity:0}to{-webkit-transform:rotateX(0deg);transform:rotateX(0deg);opacity:1}}@-webkit-keyframes animateXMark{0%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}50%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}80%{-webkit-transform:scale(1.15);transform:scale(1.15);margin-top:-6px}to{-webkit-transform:scale(1);transform:scale(1);margin-top:0;opacity:1}}@keyframes animateXMark{0%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}50%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}80%{-webkit-transform:scale(1.15);transform:scale(1.15);margin-top:-6px}to{-webkit-transform:scale(1);transform:scale(1);margin-top:0;opacity:1}}.swal-icon--warning{border-color:#f8bb86;-webkit-animation:pulseWarning .75s infinite alternate;animation:pulseWarning .75s infinite alternate}.swal-icon--warning__body{width:5px;height:47px;top:10px;border-radius:2px;margin-left:-2px}.swal-icon--warning__body,.swal-icon--warning__dot{position:absolute;left:50%;background-color:#f8bb86}.swal-icon--warning__dot{width:7px;height:7px;border-radius:50%;margin-left:-4px;bottom:-11px}@-webkit-keyframes pulseWarning{0%{border-color:#f8d486}to{border-color:#f8bb86}}@keyframes pulseWarning{0%{border-color:#f8d486}to{border-color:#f8bb86}}.swal-icon--success{border-color:#a5dc86}.swal-icon--success:after,.swal-icon--success:before{content:"";border-radius:50%;position:absolute;width:60px;height:120px;background:#fff;-webkit-transform:rotate(45deg);transform:rotate(45deg)}.swal-icon--success:before{border-radius:120px 0 0 120px;top:-7px;left:-33px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-transform-origin:60px 60px;transform-origin:60px 60px}.swal-icon--success:after{border-radius:0 120px 120px 0;top:-11px;left:30px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-transform-origin:0 60px;transform-origin:0 60px;-webkit-animation:rotatePlaceholder 4.25s ease-in;animation:rotatePlaceholder 4.25s ease-in}.swal-icon--success__ring{width:80px;height:80px;border:4px solid hsla(98,55%,69%,.2);border-radius:50%;box-sizing:content-box;position:absolute;left:-4px;top:-4px;z-index:2}.swal-icon--success__hide-corners{width:5px;height:90px;background-color:#fff;padding:1px;position:absolute;left:28px;top:8px;z-index:1;-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}.swal-icon--success__line{height:5px;background-color:#a5dc86;display:block;border-radius:2px;position:absolute;z-index:2}.swal-icon--success__line--tip{width:25px;left:14px;top:46px;-webkit-transform:rotate(45deg);transform:rotate(45deg);-webkit-animation:animateSuccessTip .75s;animation:animateSuccessTip .75s}.swal-icon--success__line--long{width:47px;right:8px;top:38px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-animation:animateSuccessLong .75s;animation:animateSuccessLong .75s}@-webkit-keyframes rotatePlaceholder{0%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}5%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}12%{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}to{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}}@keyframes rotatePlaceholder{0%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}5%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}12%{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}to{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}}@-webkit-keyframes animateSuccessTip{0%{width:0;left:1px;top:19px}54%{width:0;left:1px;top:19px}70%{width:50px;left:-8px;top:37px}84%{width:17px;left:21px;top:48px}to{width:25px;left:14px;top:45px}}@keyframes animateSuccessTip{0%{width:0;left:1px;top:19px}54%{width:0;left:1px;top:19px}70%{width:50px;left:-8px;top:37px}84%{width:17px;left:21px;top:48px}to{width:25px;left:14px;top:45px}}@-webkit-keyframes animateSuccessLong{0%{width:0;right:46px;top:54px}65%{width:0;right:46px;top:54px}84%{width:55px;right:0;top:35px}to{width:47px;right:8px;top:38px}}@keyframes animateSuccessLong{0%{width:0;right:46px;top:54px}65%{width:0;right:46px;top:54px}84%{width:55px;right:0;top:35px}to{width:47px;right:8px;top:38px}}.swal-icon--info{border-color:#c9dae1}.swal-icon--info:before{width:5px;height:29px;bottom:17px;border-radius:2px;margin-left:-2px}.swal-icon--info:after,.swal-icon--info:before{content:"";position:absolute;left:50%;background-color:#c9dae1}.swal-icon--info:after{width:7px;height:7px;border-radius:50%;margin-left:-3px;top:19px}.swal-icon{width:80px;height:80px;border-width:4px;border-style:solid;border-radius:50%;padding:0;position:relative;box-sizing:content-box;margin:20px auto}.swal-icon:first-child{margin-top:32px}.swal-icon--custom{width:auto;height:auto;max-width:100%;border:none;border-radius:0}.swal-icon img{max-width:100%;max-height:100%}.swal-title{color:rgba(0,0,0,.65);font-weight:600;text-transform:none;position:relative;display:block;padding:13px 16px;font-size:27px;line-height:normal;text-align:center;margin-bottom:0}.swal-title:first-child{margin-top:26px}.swal-title:not(:first-child){padding-bottom:0}.swal-title:not(:last-child){margin-bottom:13px}.swal-text{font-size:16px;position:relative;float:none;line-height:normal;vertical-align:top;text-align:left;display:inline-block;margin:0;padding:0 10px;font-weight:400;color:rgba(0,0,0,.64);max-width:calc(100% - 20px);overflow-wrap:break-word;box-sizing:border-box}.swal-text:first-child{margin-top:45px}.swal-text:last-child{margin-bottom:45px}.swal-footer{text-align:right;padding-top:13px;margin-top:13px;padding:13px 16px;border-radius:inherit;border-top-left-radius:0;border-top-right-radius:0}.swal-button-container{margin:5px;display:inline-block;position:relative}.swal-button{background-color:#7cd1f9;color:#fff;border:none;box-shadow:none;border-radius:5px;font-weight:600;font-size:14px;padding:10px 24px;margin:0;cursor:pointer}.swal-button[not:disabled]:hover{background-color:#78cbf2}.swal-button:active{background-color:#70bce0}.swal-button:focus{outline:none;box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(43,114,165,.29)}.swal-button[disabled]{opacity:.5;cursor:default}.swal-button::-moz-focus-inner{border:0}.swal-button--cancel{color:#555;background-color:#efefef}.swal-button--cancel[not:disabled]:hover{background-color:#e8e8e8}.swal-button--cancel:active{background-color:#d7d7d7}.swal-button--cancel:focus{box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(116,136,150,.29)}.swal-button--danger{background-color:#e64942}.swal-button--danger[not:disabled]:hover{background-color:#df4740}.swal-button--danger:active{background-color:#cf423b}.swal-button--danger:focus{box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(165,43,43,.29)}.swal-content{padding:0 20px;margin-top:20px;font-size:medium}.swal-content:last-child{margin-bottom:20px}.swal-content__input,.swal-content__textarea{-webkit-appearance:none;background-color:#fff;border:none;font-size:14px;display:block;box-sizing:border-box;width:100%;border:1px solid rgba(0,0,0,.14);padding:10px 13px;border-radius:2px;transition:border-color .2s}.swal-content__input:focus,.swal-content__textarea:focus{outline:none;border-color:#6db8ff}.swal-content__textarea{resize:vertical}.swal-button--loading{color:transparent}.swal-button--loading~.swal-button__loader{opacity:1}.swal-button__loader{position:absolute;height:auto;width:43px;z-index:2;left:50%;top:50%;-webkit-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%);text-align:center;pointer-events:none;opacity:0}.swal-button__loader div{display:inline-block;float:none;vertical-align:baseline;width:9px;height:9px;padding:0;border:none;margin:2px;opacity:.4;border-radius:7px;background-color:hsla(0,0%,100%,.9);transition:background .2s;-webkit-animation:swal-loading-anim 1s infinite;animation:swal-loading-anim 1s infinite}.swal-button__loader div:nth-child(3n+2){-webkit-animation-delay:.15s;animation-delay:.15s}.swal-button__loader div:nth-child(3n+3){-webkit-animation-delay:.3s;animation-delay:.3s}@-webkit-keyframes swal-loading-anim{0%{opacity:.4}20%{opacity:.4}50%{opacity:1}to{opacity:.4}}@keyframes swal-loading-anim{0%{opacity:.4}20%{opacity:.4}50%{opacity:1}to{opacity:.4}}.swal-overlay{position:fixed;top:0;bottom:0;left:0;right:0;text-align:center;font-size:0;overflow-y:auto;background-color:rgba(0,0,0,.4);z-index:10000;pointer-events:none;opacity:0;transition:opacity .3s}.swal-overlay:before{content:" ";display:inline-block;vertical-align:middle;height:100%}.swal-overlay--show-modal{opacity:1;pointer-events:auto}.swal-overlay--show-modal .swal-modal{opacity:1;pointer-events:auto;box-sizing:border-box;-webkit-animation:showSweetAlert .3s;animation:showSweetAlert .3s;will-change:transform}.swal-modal{width:478px;opacity:0;pointer-events:none;background-color:#fff;text-align:center;border-radius:5px;position:static;margin:20px auto;display:inline-block;vertical-align:middle;-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;z-index:10001;transition:opacity .2s,-webkit-transform .3s;transition:transform .3s,opacity .2s;transition:transform .3s,opacity .2s,-webkit-transform .3s}@media (max-width:500px){.swal-modal{width:calc(100% - 20px)}}@-webkit-keyframes showSweetAlert{0%{-webkit-transform:scale(1);transform:scale(1)}1%{-webkit-transform:scale(.5);transform:scale(.5)}45%{-webkit-transform:scale(1.05);transform:scale(1.05)}80%{-webkit-transform:scale(.95);transform:scale(.95)}to{-webkit-transform:scale(1);transform:scale(1)}}@keyframes showSweetAlert{0%{-webkit-transform:scale(1);transform:scale(1)}1%{-webkit-transform:scale(.5);transform:scale(.5)}45%{-webkit-transform:scale(1.05);transform:scale(1.05)}80%{-webkit-transform:scale(.95);transform:scale(.95)}to{-webkit-transform:scale(1);transform:scale(1)}}</style>
+      <meta charset="utf-8">
+      <title>Utorion - Accountmanagement</title>
+      <meta name="description" content="Have fun and be happy!">
+      <meta name="author" content="ADM - Utorion">
+      <meta http-equiv="content-language" content="en">
+      <meta name="keywords" content="otserver, otserv, online role playing game, online multiplayer game, internet game, online rpg, rpg">
+      <!--ICON-->
+      <link rel="shortcut icon" href="UtorionS.ico" type="image/x-icon">
+      <link rel="icon" href="UtorionS.ico" type="image/x-icon">
+      <!--CSS'S-->
+      <link href="css/basic_d.css" rel="stylesheet" type="text/css">
+      <link href="css/news.css" rel="stylesheet" type="text/css">
+      <link href="css/all.css" rel="stylesheet">
+      <!--JS-->
+      <script src="js/osd.js"></script><script src="js/show_ads_impl.js" id="google_shimpl"></script><script type="text/javascript" src="js/newalert.js"></script>
+      <script type="text/javascript" src="js/livesearch.js"></script>
+      <script id="twitter-wjs" src="js/widgets.js"></script>
+      <script type="text/javascript" src="js/jquery.js"></script>
+      <script type="text/javascript" src="js/ajaxcip.js"></script>
+      <script src="js/ajaxmonteiro.js"></script>
+      <script type="text/javascript" src="js/generic.js"></script>
+      <script type="text/javascript" src="js/create_character.js"></script>
+      <link rel="stylesheet" type="text/css" href="css/style_1.css">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <script type="text/javascript" src="js/jquery.markitup.js"></script>
+      <script type="text/javascript" src="js/set.js"></script>
+      <script type="text/javascript" src="js/ajax_checks.js"></script>
+      <!-- <script type="text/javascript" src="./layouts/tibiarl/js/snowstorm0.js"></script> -->
+      <script src="js/security.js" view="accountmanagement"></script>
+      <script type="text/javascript">
+         function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:"pt",includedLanguages:"en,es,pl",layout:google.translate.TranslateElement.InlineLayout.SIMPLE,autoDisplay:!1},"google_translate_element")}
+      </script>
+      <script src="js/element.js" type="text/javascript"></script>
+      <link type="text/css" rel="stylesheet" charset="UTF-8" href="css/translateelement.css">
+      <script type="text/javascript" charset="UTF-8" src="js/main_pt-BR.js"></script>
+      <script id="facebook-jssdk" async src="js/all.js"></script>
+      <script language="javascript" type="text/javascript">
+         $(document).ready(function()	{
+         	$('#bbcode').markItUp(myBbcodeSettings);
+         
+         	$('#emoticons a').click(function() {
+         		emoticon = $(this).attr("title");
+         		$.markItUp( { replaceWith:emoticon } );
+         	});
+         });
+      </script>
+      <script async src="js/adsbygoogle.js"></script>
+      <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+           google_ad_client: "ca-pub-5378331841052803",
+           enable_page_level_ads: true
+         });
+      </script>
+      <script type="text/javascript">  
+         var loginStatus=0;
+         loginStatus='false';  
+         var activeSubmenuItem='accountmanagement';  
+         var JS_DIR_IMAGES=0;
+         JS_DIR_IMAGES='./layouts/tibiarl/images/';  
+         var JS_DIR_ACCOUNT=0;
+         JS_DIR_ACCOUNT='';  
+         var g_FormName='';  
+         var g_FormField='';  
+         var g_Deactivated=false;
+         var FB_TryLogin = 0;
+         var FB_ForceReload = 0;
+      </script>
+      <script type="text/javascript">
+         if(top.location != window.location) {
+           top.location = self.location;
+         }
+      </script>
+      <script type="text/javascript" src="js/initialize.js"></script>
+      <link href="css/facebook.css" rel="stylesheet" type="text/css">
+      <link rel="preload" href="https://adservice.google.com.br/adsid/integrator.js?domain=www.utorion.com" as="script">
+      <script type="text/javascript" src="js/integrator.js"></script>
+      <link rel="preload" href="https://adservice.google.com/adsid/integrator.js?domain=www.utorion.com" as="script">
+      <script type="text/javascript" src="js/integrator_1.js"></script>
+      <style type="text/css">.fancybox-margin{margin-right:0px;}</style>
+      <style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}
+         .fb_invisible{display:none}
+         .fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}
+         .fb_reset > div{overflow:hidden}
+         .fb_link img{border:none}
+         .fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}
+         .fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}
+         .fb_dialog_content{background:#fff;color:#333}
+         .fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px;top:8px\9;right:7px\9}
+         .fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}
+         .fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}
+         .fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+         .fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+         .fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}
+         .fb_dialog_top_left,
+         .fb_dialog_top_right,
+         .fb_dialog_bottom_left,
+         .fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}
+         .fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}
+         .fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}
+         .fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}
+         .fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}
+         .fb_dialog_vert_left,
+         .fb_dialog_vert_right,
+         .fb_dialog_horiz_top,
+         .fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}
+         .fb_dialog_vert_left,
+         .fb_dialog_vert_right{width:10px;height:100%}
+         .fb_dialog_vert_left{margin-left:-10px}
+         .fb_dialog_vert_right{right:0;margin-right:-10px}
+         .fb_dialog_horiz_top,
+         .fb_dialog_horiz_bottom{width:100%;height:10px}
+         .fb_dialog_horiz_top{margin-top:-10px}
+         .fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}
+         .fb_dialog_iframe{line-height:0}
+         .fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}
+         .fb_dialog_content .dialog_title > span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif)
+         no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}
+         body.fb_hidden{-webkit-transform:none;height:100%;margin:0;left:-10000px;overflow:visible;position:absolute;top:-10000px;width:100%
+         }
+         .fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif)
+         white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}
+         .fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}
+         #fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}
+         #fb-root #fb_dialog_ipad_overlay.hidden{display:none}
+         .fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}
+         .fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0 0, 0 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}
+         .fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%
+         }
+         .fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px
+         }
+         .fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px
+         }
+         .fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0 0, 0 100%, from(#4966A6),
+         color-stop(0.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset,
+         rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}
+         .fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+         .fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}
+         .fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}
+         .fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}
+         #fb_dialog_loader_close{float:left}
+         .fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+         .fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+         .fb_iframe_widget{display:inline-block;position:relative}
+         .fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}
+         .fb_iframe_widget iframe{position:absolute}
+         .fb_iframe_widget_lift{z-index:1}
+         .fb_hide_iframes iframe{position:relative;left:-10000px}
+         .fb_iframe_widget_loader{position:relative;display:inline-block}
+         .fb_iframe_widget_fluid{display:inline}
+         .fb_iframe_widget_fluid span{width:100%}
+         .fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}
+         .fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+         .fb_connect_bar_container div,
+         .fb_connect_bar_container span,
+         .fb_connect_bar_container a,
+         .fb_connect_bar_container img,
+         .fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}
+         .fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}
+         .fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}
+         .fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size:13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}
+         .fb_connect_bar a:hover{color:#fff}
+         .fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}
+         .fb_connect_bar div a,
+         .fb_connect_bar span,
+         .fb_connect_bar span a{color:#bac6da;font-size:11px;text-decoration:none}
+         .fb_connect_bar .fb_buttons{float:right;margin-top:7px}
+         .fb_edge_widget_with_comment{position:relative;*z-index:1000}
+         .fb_edge_widget_with_comment span.fb_edge_comment_widget{position:absolute}
+         .fb_edge_widget_with_comment span.fb_send_button_form_widget{z-index:1}
+         .fb_edge_widget_with_comment span.fb_send_button_form_widget .FB_Loader{left:0;top:1px;margin-top:6px;margin-left:0;background-position:50% 50%;background-color:#fff;height:150px;width:394px;border:1px #666 solid;border-bottom:2px solid #283e6c;z-index:1}
+         .fb_edge_widget_with_comment span.fb_send_button_form_widget.dark .FB_Loader{background-color:#000;border-bottom:2px solid #ccc}
+         .fb_edge_widget_with_comment span.fb_send_button_form_widget.siderender
+         .FB_Loader{margin-top:0}
+         .fbpluginrecommendationsbarleft,
+         .fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}
+         .fbpluginrecommendationsbarleft{left:10px}
+         .fbpluginrecommendationsbarright{right:10px}
+      </style>
+      <script type="text/javascript" charset="UTF-8" src="js/element_main.js"></script><script>
+         function isPrivateMode(){return new Promise(function(d){function f(){var a="MozAppearance"in document.documentElement.style;if(a)if(null==indexedDB)b();else{var e=indexedDB.open("inPrivate");e.onsuccess=c;e.onerror=b}return a}function g(){var a=navigator.userAgent.match(/Version\/([0-9\._]+).*Safari/);if(a){if(11>parseInt(a[1],10)){try{localStorage.length||(localStorage.setItem("inPrivate","0"),localStorage.removeItem("inPrivate")),c()}catch(e){navigator.cookieEnabled?b():c()}return!0}try{window.openDatabase(null,
+         null,null,null),c()}catch(e){b()}}return!!a}function h(){var a=!window.indexedDB&&(window.PointerEvent||window.MSPointerEvent);a&&b();return!!a}var b=function(){d(!0)},c=function(){d(!1)};if(!(function(){var a=/(?=.*(opera|chrome)).*/i.test(navigator.userAgent)&&navigator.storage&&navigator.storage.estimate;a&&navigator.storage.estimate().then(function(a){return 12E7>a.quota?b():c()});return!!a}()||f()||g()||h()))return c()})}
+         "undefined"!==typeof Promise&&isPrivateMode().then(function(d){window.mlbp_incognito=d});window.JSON||(window.JSON={});
+         (function(){function a(a){return 10>a?"0"+a:a}function c(a){d.lastIndex=0;return d.test(a)?'"'+a.replace(d,function(a){var b=h[a];return"string"===typeof b?b:"\\u"+("0000"+a.charCodeAt(0).toString(16)).slice(-4)})+'"':'"'+a+'"'}function b(a,d){var e,h,p,u,v=g,r,m=d[a];m&&"object"===typeof m&&"function"===typeof m.toJSON&&(m=m.toJSON(a));"function"===typeof n&&(m=n.call(d,a,m));switch(typeof m){case "string":return c(m);case "number":return isFinite(m)?String(m):"null";case "boolean":case "null":return String(m);
+         case "object":if(!m)return"null";g+=f;r=[];if("[object Array]"===Object.prototype.toString.apply(m)){u=m.length;for(e=0;e<u;e+=1)r[e]=b(e,m)||"null";p=0===r.length?"[]":g?"[\n"+g+r.join(",\n"+g)+"\n"+v+"]":"["+r.join(",")+"]";g=v;return p}if(n&&"object"===typeof n)for(u=n.length,e=0;e<u;e+=1)"string"===typeof n[e]&&(h=n[e],(p=b(h,m))&&r.push(c(h)+(g?": ":":")+p));else for(h in m)Object.prototype.hasOwnProperty.call(m,h)&&(p=b(h,m))&&r.push(c(h)+(g?": ":":")+p);p=0===r.length?"{}":g?"{\n"+g+r.join(",\n"+
+         g)+"\n"+v+"}":"{"+r.join(",")+"}";g=v;return p}}"function"!==typeof Date.prototype.toJSON&&(Date.prototype.toJSON=function(){return isFinite(this.valueOf())?this.getUTCFullYear()+"-"+a(this.getUTCMonth()+1)+"-"+a(this.getUTCDate())+"T"+a(this.getUTCHours())+":"+a(this.getUTCMinutes())+":"+a(this.getUTCSeconds())+"Z":null},String.prototype.toJSON=Number.prototype.toJSON=Boolean.prototype.toJSON=function(){return this.valueOf()});var e=/[\u0000\u00ad\u0600-\u0604\u070f\u17b4\u17b5\u200c-\u200f\u2028-\u202f\u2060-\u206f\ufeff\ufff0-\uffff]/g,
+         d=/[\\\"\x00-\x1f\x7f-\x9f\u00ad\u0600-\u0604\u070f\u17b4\u17b5\u200c-\u200f\u2028-\u202f\u2060-\u206f\ufeff\ufff0-\uffff]/g,g,f,h={"\b":"\\b","\t":"\\t","\n":"\\n","\f":"\\f","\r":"\\r",'"':'\\"',"\\":"\\\\"},n;"function"!==typeof window.JSON.stringify&&(window.JSON.stringify=function(a,c,d){var e;f=g="";if("number"===typeof d)for(e=0;e<d;e+=1)f+=" ";else"string"===typeof d&&(f=d);if((n=c)&&"function"!==typeof c&&("object"!==typeof c||"number"!==typeof c.length))throw Error("JSON.stringify");return b("",
+         {"":a})});"function"!==typeof window.JSON.parse&&(window.JSON.parse=function(a,b){function c(a,d){var e,g,f=a[d];if(f&&"object"===typeof f)for(e in f)Object.prototype.hasOwnProperty.call(f,e)&&(g=c(f,e),void 0!==g?f[e]=g:delete f[e]);return b.call(a,d,f)}var d;a=String(a);e.lastIndex=0;e.test(a)&&(a=a.replace(e,function(a){return"\\u"+("0000"+a.charCodeAt(0).toString(16)).slice(-4)}));if(/^[\],:{}\s]*$/.test(a.replace(/\\(?:["\\\/bfnrt]|u[0-9a-fA-F]{4})/g,"@").replace(/"[^"\\\n\r]*"|true|false|null|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?/g,
+         "]").replace(/(?:^|:|,)(?:\s*\[)+/g,"")))return d=eval("("+a+")"),"function"===typeof b?c({"":d},""):d;throw new SyntaxError("JSON.parse");})})();function w(a){if(Array.prototype.reduce&&/\{\s*\[native code\]\s*\}/.test(""+Array.prototype.reduce))return a.split("").reduce(function(a,b){a=(a<<5)-a+b.charCodeAt(0);return a&a},0);var c=0;if(0===a.length)return c;for(var b=0;b<a.length;b++)c=(c<<5)-c+a.charCodeAt(b),c&=c;return c}
+         window.x64h={f:function(a,c){a=[a[0]>>>16,a[0]&65535,a[1]>>>16,a[1]&65535];c=[c[0]>>>16,c[0]&65535,c[1]>>>16,c[1]&65535];var b=[0,0,0,0];b[3]+=a[3]+c[3];b[2]+=b[3]>>>16;b[3]&=65535;b[2]+=a[2]+c[2];b[1]+=b[2]>>>16;b[2]&=65535;b[1]+=a[1]+c[1];b[0]+=b[1]>>>16;b[1]&=65535;b[0]+=a[0]+c[0];b[0]&=65535;return[b[0]<<16|b[1],b[2]<<16|b[3]]},c:function(a,c){a=[a[0]>>>16,a[0]&65535,a[1]>>>16,a[1]&65535];c=[c[0]>>>16,c[0]&65535,c[1]>>>16,c[1]&65535];var b=[0,0,0,0];b[3]+=a[3]*c[3];b[2]+=b[3]>>>16;b[3]&=65535;
+         b[2]+=a[2]*c[3];b[1]+=b[2]>>>16;b[2]&=65535;b[2]+=a[3]*c[2];b[1]+=b[2]>>>16;b[2]&=65535;b[1]+=a[1]*c[3];b[0]+=b[1]>>>16;b[1]&=65535;b[1]+=a[2]*c[2];b[0]+=b[1]>>>16;b[1]&=65535;b[1]+=a[3]*c[1];b[0]+=b[1]>>>16;b[1]&=65535;b[0]+=a[0]*c[3]+a[1]*c[2]+a[2]*c[1]+a[3]*c[0];b[0]&=65535;return[b[0]<<16|b[1],b[2]<<16|b[3]]},h:function(a,c){c%=64;if(32===c)return[a[1],a[0]];if(32>c)return[a[0]<<c|a[1]>>>32-c,a[1]<<c|a[0]>>>32-c];c-=32;return[a[1]<<c|a[0]>>>32-c,a[0]<<c|a[1]>>>32-c]},b:function(a,c){c%=64;return 0===
+         c?a:32>c?[a[0]<<c|a[1]>>>32-c,a[1]<<c]:[a[1]<<c-32,0]},a:function(a,c){return[a[0]^c[0],a[1]^c[1]]},F:function(a){a=this.a(a,[0,a[0]>>>1]);a=this.c(a,[4283543511,3981806797]);a=this.a(a,[0,a[0]>>>1]);a=this.c(a,[3301882366,444984403]);return a=this.a(a,[0,a[0]>>>1])},va:function(a,c){a=a||"";c=c||0;for(var b=a.length%16,e=a.length-b,d=[0,c],g=[0,c],f=[0,0],h=[0,0],n=[2277735313,289559509],q=[1291169091,658871167],k=0;k<e;k+=16)f=[a.charCodeAt(k+4)&255|(a.charCodeAt(k+5)&255)<<8|(a.charCodeAt(k+6)&
+         255)<<16|(a.charCodeAt(k+7)&255)<<24,a.charCodeAt(k)&255|(a.charCodeAt(k+1)&255)<<8|(a.charCodeAt(k+2)&255)<<16|(a.charCodeAt(k+3)&255)<<24],h=[a.charCodeAt(k+12)&255|(a.charCodeAt(k+13)&255)<<8|(a.charCodeAt(k+14)&255)<<16|(a.charCodeAt(k+15)&255)<<24,a.charCodeAt(k+8)&255|(a.charCodeAt(k+9)&255)<<8|(a.charCodeAt(k+10)&255)<<16|(a.charCodeAt(k+11)&255)<<24],f=this.c(f,n),f=this.h(f,31),f=this.c(f,q),d=this.a(d,f),d=this.h(d,27),d=this.f(d,g),d=this.f(this.c(d,[0,5]),[0,1390208809]),h=this.c(h,q),
+         h=this.h(h,33),h=this.c(h,n),g=this.a(g,h),g=this.h(g,31),g=this.f(g,d),g=this.f(this.c(g,[0,5]),[0,944331445]);f=[0,0];h=[0,0];switch(b){case 15:h=this.a(h,this.b([0,a.charCodeAt(k+14)],48));case 14:h=this.a(h,this.b([0,a.charCodeAt(k+13)],40));case 13:h=this.a(h,this.b([0,a.charCodeAt(k+12)],32));case 12:h=this.a(h,this.b([0,a.charCodeAt(k+11)],24));case 11:h=this.a(h,this.b([0,a.charCodeAt(k+10)],16));case 10:h=this.a(h,this.b([0,a.charCodeAt(k+9)],8));case 9:h=this.a(h,[0,a.charCodeAt(k+8)]),
+         h=this.c(h,q),h=this.h(h,33),h=this.c(h,n),g=this.a(g,h);case 8:f=this.a(f,this.b([0,a.charCodeAt(k+7)],56));case 7:f=this.a(f,this.b([0,a.charCodeAt(k+6)],48));case 6:f=this.a(f,this.b([0,a.charCodeAt(k+5)],40));case 5:f=this.a(f,this.b([0,a.charCodeAt(k+4)],32));case 4:f=this.a(f,this.b([0,a.charCodeAt(k+3)],24));case 3:f=this.a(f,this.b([0,a.charCodeAt(k+2)],16));case 2:f=this.a(f,this.b([0,a.charCodeAt(k+1)],8));case 1:f=this.a(f,[0,a.charCodeAt(k)]),f=this.c(f,n),f=this.h(f,31),f=this.c(f,q),
+         d=this.a(d,f)}d=this.a(d,[0,a.length]);g=this.a(g,[0,a.length]);d=this.f(d,g);g=this.f(g,d);d=this.F(d);g=this.F(g);d=this.f(d,g);g=this.f(g,d);return("00000000"+(d[0]>>>0).toString(16)).slice(-8)+("00000000"+(d[1]>>>0).toString(16)).slice(-8)+("00000000"+(g[0]>>>0).toString(16)).slice(-8)+("00000000"+(g[1]>>>0).toString(16)).slice(-8)}};
+         window.mlbp={options:{D:[/palemoon/i]},O:function(){var a={},c=Date.now(),b=window.mlbp.R();a.canvas=Date.now()-c;var c=Date.now(),e=window.mlbp.ca();a.webgl=Date.now()-c;var c=Date.now(),d=window.mlbp.ba();a.userfonts=Date.now()-c;var c=Date.now(),g=window.mlbp.M();a.browserplugins=Date.now()-c;return{ad_block:window.mlbp.K(),canvas:b,connection:window.mlbp.T(),cookie_enabled:navigator.cookieEnabled,device_memory:navigator.deviceMemory||0,do_not_track:navigator.doNotTrack,fonts:d,hardware_concurrency:navigator.hardwareConcurrency||
+         0,history:window.history?window.history.length:"unknown",incognito:window.mlbp_incognito,indexed_db:!!window.indexedDB,js_type:"js_hash",lang:navigator.language||navigator.userLanguage,languages:navigator.languages,local_storage:!!window.localStorage,open_database:!!window.openDatabase,pixel_ratio:window.devicePixelRatio,platform:window.mlbp.Z(),webgl:e,plugins:g,resolution:[screen.height,screen.width,screen.colorDepth].join("x"),screen:window.mlbp.$(),session_storage:!!window.sessionStorage,time:a,
+         time_zone_name:window.Intl&&window.Intl.DateTimeFormat?(new window.Intl.DateTimeFormat).resolvedOptions().timeZone:"",time_zone_offset:(new Date).getTimezoneOffset(),touch_points:navigator.maxTouchPoints,user_agent:navigator.userAgent,vendor:navigator.vendor,window_size:window.mlbp.ha()}},ha:function(){return{inner:[window.innerHeight,window.innerWidth].join("x"),outer:[window.outerHeight,window.outerWidth].join("x")}},$:function(){return window.screen?{orientation:window.screen.orientation?window.screen.orientation.angle:
+         "not_available",type:window.screen.orientation?window.screen.orientation.type:"not_available",avail_height:window.screen.availHeight,avail_left:window.screen.availLeft,avail_top:window.screen.availTop,avail_width:window.screen.availWidth}:"not_available"},T:function(){return navigator.connection?{downlink:navigator.connection.downlink?navigator.connection.downlink:"unknown",rtt:navigator.connection.rtt?navigator.connection.rtt:"unknown",type:navigator.connection.effectiveType?navigator.connection.effectiveType:
+         "unknown"}:"not_available"},K:function(){var a=document.createElement("div");a.innerHTML="\x26nbsp;";a.className="adsbox";var c=!1;try{document.body.appendChild(a),c=0===document.getElementsByClassName("adsbox")[0].offsetHeight,document.body.removeChild(a)}catch(b){c=!1}return c},ya:function(){return{js_type:"js_cookie",value:"x"}},N:function(){return{js_type:"js_fonts",installed_fonts:window.mlbp.W()}},P:function(){return{js_type:"js_plugins",installed_plugins:window.mlbp.X()}},W:function(){try{var a=
+         window.mlbp.ra,a=a.concat(window.mlbp.H);return(new window.mlbp.o(a)).U()}catch(c){return["not available"]}},Ca:function(a){var c=[],b;for(b in a)c.push(b);return c},o:function(a){function c(){var a=document.createElement("span");a.style.position="absolute";a.style.left="-9999px";a.style.fontSize="72px";a.innerHTML="mmmmmmmmmmlli";return a}function b(a){for(var b=!1,c=0;c<d.length&&!(b=a[c].offsetWidth!==n[d[c]]||a[c].offsetHeight!==q[d[c]]);c++);return b}for(var e=[],d=["monospace","sans-serif",
+         "serif"],g=document.getElementsByTagName("body")[0],f=document.createElement("div"),h=document.createElement("div"),n={},q={},k=[],l=0,t=d.length;l<t;l++){var p=c();p.style.fontFamily=d[l];f.appendChild(p);k.push(p)}g.appendChild(f);l=0;for(t=d.length;l<t;l++)n[d[l]]=k[l].offsetWidth,q[d[l]]=k[l].offsetHeight;k=function(a){for(var b={},e=0,g=a.length;e<g;e++){for(var f=[],k=0,n=d.length;k<n;k++){var l;l=a[e];var p=d[k],q=c();q.style.fontFamily="'"+l+"',"+p;l=q;h.appendChild(l);f.push(l)}b[a[e]]=f}return b}(a);
+         g.appendChild(h);l=0;for(t=a.length;l<t;l++)b(k[a[l]])&&e.push(a[l]);e.sort(function(a,b){var c=a.toLowerCase(),d=b.toLowerCase();return c<d?-1:c>d?1:0});g.removeChild(h);g.removeChild(f);this.U=function(){return e};this.ia=function(a){for(var b=e.length,b=0,c=e.length;b<c;b++)if(e[b]===a)return!0;return!1}},X:function(){try{var a={};return a=window.ActiveXObject?window.mlbp.V():window.mlbp.w()}catch(c){return["not available"]}},w:function(){for(var a=[],c=0,b=navigator.plugins.length;c<b;c++)a.push(navigator.plugins[c]);
+         return 0<a.length?(this.sa()&&(a=a.sort(function(a,b){return a.name>b.name?1:a.name<b.name?-1:0})),this.map(a,function(a){var b=this.map(a,function(a){return[a.type,a.suffixes].join("~")}).join(",");return[a.name,a.description,b].join("::")},this)):[]},V:function(){var a=[];if(Object.getOwnPropertyDescriptor&&Object.getOwnPropertyDescriptor(window,"ActiveXObject")||"ActiveXObject"in window)a=this.map("AcroPDF.PDF;Adodb.Stream;AgControl.AgControl;DevalVRXCtrl.DevalVRXCtrl.1;MacromediaFlashPaper.MacromediaFlashPaper;Msxml2.DOMDocument;Msxml2.XMLHTTP;PDF.PdfCtrl;QuickTime.QuickTime;QuickTimeCheckObject.QuickTimeCheck.1;RealPlayer;RealPlayer.RealPlayer(tm) ActiveX Control (32-bit);RealVideo.RealVideo(tm) ActiveX Control (32-bit);Scripting.Dictionary;SWCtl.SWCtl;Shell.UIHelper;ShockwaveFlash.ShockwaveFlash;Skype.Detection;TDCCtl.TDCCtl;WMPlayer.OCX;rmocx.RealPlayer G2 Control;rmocx.RealPlayer G2 Control.1".split(";"),
+         function(a){try{return new ActiveXObject(a),a}catch(b){return null}});navigator.plugins&&(a=a.concat(this.w()));for(var c=[],b=0,e=a.length;b<e;b++)a[b]&&c.push(a[b]);return c},M:function(){var a={};return a=window.ActiveXObject?window.mlbp.I():window.mlbp.J()},I:function(){var a=/[0-9]+/,c={flash:"ShockwaveFlash.ShockwaveFlash.1",wmplayer:"wmplayer.ocx",pdf:"AcroPDF.PDF.1",silverlight:"AgControl.AgControl",quicktime:"QuickTime.QuickTime"},b={},e;for(e in c){var d=window.mlbp.ma(c[e]);d&&(d=a.exec(d),
+         b[e]=d&&d[0]||"")}navigator.javaEnabled()&&(b.java="");return b},J:function(){for(var a={},c=/\d+(.\d+)*/,b=navigator.plugins,e=/Flash|PDF|Java|Silverlight|QuickTime/i,d=0;d<b.length;d++){var g=e.exec(b[d].description);if(g){var g=g[0].toLowerCase(),f=c.exec(b[d].version||b[d].name+" "+b[d].description);a[g]||(a[g]=f&&f[0]||"")}}return a},ba:function(){var a=[],c=[],b=[],e=window.mlbp.Y(),d=new window.mlbp.o(window.mlbp.fonts),g={Linux:"0346",Mac:"1356",Windows:"2456"},f;for(f in window.mlbp.g)d.ia(f)?
+         -1!=(new String(g[e])).indexOf(window.mlbp.g[f])?a.push('{"'+f+'" :'+window.mlbp.g[f]+"}"):c.push('{"'+f+'" :'+window.mlbp.g[f]+"}"):-1!=(new String(g[e])).indexOf(window.mlbp.g[f])&&b.push('{"'+f+'" :'+window.mlbp.g[f]+"}");return{os:w(new String(JSON.stringify(a))),other_os:JSON.stringify(c),not_os:w(new String(JSON.stringify(b)))}},Y:function(){var a="Unknown OS";-1!=navigator.appVersion.indexOf("Win")&&(a="Windows");-1!=navigator.appVersion.indexOf("Mac")&&(a="Mac");-1!=navigator.appVersion.indexOf("Linux")&&
+         (a="Linux");return a},map:function(a,c,b){var e=[];if(null==a)return e;if(this.oa&&a.map===this.oa)return a.map(c,b);this.G(a,function(a,g,f){e[e.length]=c.call(b,a,g,f)});return e},G:function(a,c,b){if(null!==a)if(this.na&&a.forEach===this.na)a.forEach(c,b);else if(a.length===+a.length)for(var e=0,d=a.length;e<d&&c.call(b,a[e],e,a)!=={};e++);else for(e in a)if(a.hasOwnProperty(e)&&c.call(b,a[e],e,a)==={})break},sa:function(){for(var a=!1,c=0,b=this.options.D.length;c<b;c++)if(navigator.userAgent.match(this.options.D[c])){a=
+         !0;break}return a},fonts:"Palatino Linotype;Franklin Gothic Medium;Lucida Grande;URW Gothic L;Sylfaen;URW Bookman L;Helvetica Neue;URW Palladio L;Gill Sans;Nimbus Sans L;Lucida Console;Lucida Sans Unicode;Tahoma;Arial Black;Verdana;Arial;Courier New;Comic Sans MS;Impact;Trebuchet MS;Georgia;Times New Roman;Arial Narrow;Century Gothic;Bookman Oldstyle;Book Antigua;Calibri;Cambria;Consolas;Candara;Corbel;Constantia;Geneva;Monaco;Skia;Helvetica;Courier;Bitstream Vera Sans;Bitstream Vera Sans Mono;Bitstream Vera Serif;Utopia;New Century Schoolbook;Fixed;Nimbus Mono;Century Schoolbook L;URW Chancery L;Bitstream Charter;DejaVu Sans Mono;DejaVu Sans Condensed;DejaVu Serif Condensed;DejaVu Sans;DejaVu Serif;Free Mono;Free Sans;Free Serif;Liberation Mono;Liberation Sans;Liberation Serif".split(";"),
+         g:{"Palatino Linotype":2,"Franklin Gothic Medium":2,"Lucida Grande":1,"URW Gothic L":0,Sylfaen:2,"URW Bookman L":0,"Helvetica Neue":1,"URW Palladio L":0,"Gill Sans":1,"Nimbus Sans L":0,"Lucida Console":2,"Lucida Sans Unicode":2,Tahoma:5,"Arial Black":6,Verdana:6,Arial:6,"Courier New":6,"Comic Sans MS":6,Impact:6,"Trebuchet MS":6,Georgia:6,"Times New Roman":6,"Arial Narrow":5,"Century Gothic":5,"Bookman Oldstyle":5,"Book Antigua":5,Calibri:5,Cambria:5,Consolas:3,Candara:5,Corbel:5,Constantia:5,Geneva:1,
+         Monaco:1,Skia:1,Helvetica:3,Courier:3,"Bitstream Vera Sans":3,"Bitstream Vera Sans Mono":3,"Bitstream Vera Serif":3,Utopia:3,"New Century Schoolbook":3,Fixed:0,"Nimbus Mono":0,"Century Schoolbook L":0,"URW Chancery L":0,"Bitstream Charter":0,"DejaVu Sans Mono":0,"DejaVu Sans Condensed":0,"DejaVu Serif Condensed":0,"DejaVu Sans":0,"DejaVu Serif":0,"Free Mono":0,"Free Sans":0,"Free Serif":0,"Liberation Mono":0,"Liberation Sans":0,"Liberation Serif":0},ra:"Andale Mono;Arial Hebrew;Arial MT;Arial Rounded MT Bold;Arial Unicode MS;Cambria Math;Century;Comic Sans;Garamond;Lucida Bright;Lucida Calligraphy;Lucida Fax;Lucida Handwriting;Lucida Sans;Lucida Sans Typewriter;Microsoft Sans Serif;Monotype Corsiva;MS Gothic;MS Outlook;MS PGothic;MS Reference Sans Serif;MS Sans Serif;MS Serif;MYRIAD;MYRIAD PRO;Palatino;Segoe Print;Segoe Script;Segoe UI;Segoe UI Light;Segoe UI Semibold;Segoe UI Symbol;Times;Times New Roman PS;Wingdings;Wingdings 2;Wingdings 3".split(";"),
+         H:"AvantGarde Md BT;AVENIR;Baskerville;Big Caslon;Bodoni 72;Brush Script MT;Calisto MT;Copperplate;Didot;Futura;Goudy Stout;Hoefler Text;Old Century;Papyrus;Perpetua;Rockwell".split(";"),wa:function(){var a=["monospace","sans-serif","serif"],c=document.getElementsByTagName("body")[0],b=document.createElement("span");b.style.fontSize="72px";b.innerHTML="mmmmmmmmmmlli";for(var e in a)b.style.fontFamily=a[e],c.appendChild(b),c.removeChild(b)},ma:function(a){var c=!1,b=null;try{b=new ActiveXObject(a);
+         try{c=b.GetVariable("$version")}catch(d){try{c=b.xa()}catch(g){try{var e;for(a=1;9>a;a++)b.Ba(a+".0")&&(e=a);c=e||!0}catch(f){c=!0}}}}catch(d){c=!1}null!=b&&delete b;return c},base64_encode:function(a){var c,b,e,d,g=0,f=0,h="",h=[];if(!a)return a;do c=a.charCodeAt(g++),b=a.charCodeAt(g++),e=a.charCodeAt(g++),d=c<<16|b<<8|e,c=d>>18&63,b=d>>12&63,e=d>>6&63,d&=63,h[f++]="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/\x3d".charAt(c)+"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/\x3d".charAt(b)+
+         "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/\x3d".charAt(e)+"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/\x3d".charAt(d);while(g<a.length);h=h.join("");a=a.length%3;return(a?h.slice(0,a-3):h)+"\x3d\x3d\x3d".slice(a||3)},JSONP:{ta:null,options:{},call:function(a,c){c||(this.options={});this.options.s=c.s||function(){};this.options.u=c.u||"callback";this.options.m=c.m||[];var b=-1<a.indexOf("?")?"\x26":"?",e=[],d;for(d in this.options.m)e.push(d+"\x3d"+encodeURIComponent(c.m[d]));
+         e=e.join("\x26");d=document.getElementsByTagName("head")[0];this.ta&&d.removeChild(script);script=document.createElement("script");script.type="text/javascript";script.src=a+b+e+(e?"\x26":"")+this.options.u+"\x3dmlbp.JSONP.process";d.appendChild(script)},process:function(a){this.options.s(a)}},Aa:function(){return window},ka:function(){return void 0!==navigator.platform&&null!==navigator.platform?!0:!1},Z:function(){return this.ka()?navigator.platform:"not available"},R:function(){try{return this.ja()?
+         this.l(this.S()):"not supported"}catch(a){return"not available"}},ja:function(){var a=document.createElement("canvas");return!(!a.getContext||!a.getContext("2d"))},l:function(a){return window.x64h.va(a,31)},S:function(){var a=[],c=document.createElement("canvas");c.width=2E3;c.height=200;c.style.display="inline";var b=c.getContext("2d");b.rect(0,0,10,10);b.rect(2,2,6,6);b.textBaseline="alphabetic";b.fillStyle="#f60";b.fillRect(125,1,62,20);b.fillStyle="#069";b.font="11pt Arial";b.fillText("Cwm fjordbank glyphs vext quiz, \ud83d\ude03",
+         2,15);b.fillStyle="rgba(102, 204, 0, 0.2)";b.font="18pt Arial";b.fillText("Cwm fjordbank glyphs vext quiz, \ud83d\ude03",4,45);b.globalCompositeOperation="multiply";b.fillStyle="rgb(255,0,255)";b.beginPath();b.arc(50,50,50,0,2*Math.PI,!0);b.closePath();b.fill();b.fillStyle="rgb(0,255,255)";b.beginPath();b.arc(100,50,50,0,2*Math.PI,!0);b.closePath();b.fill();b.fillStyle="rgb(255,255,0)";b.beginPath();b.arc(75,100,50,0,2*Math.PI,!0);b.closePath();b.fill();b.fillStyle="rgb(255,0,255)";b.arc(75,75,75,
+         0,2*Math.PI,!0);b.arc(75,75,25,0,2*Math.PI,!0);b.fill("evenodd");c.toDataURL&&a.push("canvas fp:"+c.toDataURL());return a.join("~")},ca:function(){var a=window.mlbp.da();if(!window.WebGLRenderingContext||!a)return window.mlbp.A(a),"not_supported";var c=null;try{c=window.mlbp.ea(a),c=window.mlbp.l(c)}catch(d){c="not_available"}var b=null;try{b=window.mlbp.fa(a),b=window.mlbp.l(b)}catch(d){b="not_available"}var e=window.mlbp.ga(a);window.mlbp.A(a);return{image:c,report:b,vendor:e.vendor,renderer:e.B}},
+         da:function(){var a=document.createElement("canvas"),c=null;try{c=a.getContext("webgl")||a.getContext("experimental-webgl")}catch(b){}c||(c=null);return c},A:function(a){try{var c=a.getExtension("WEBGL_lose_context");null!=c&&c.loseContext()}catch(b){}},i:function(a,c){if(Array.prototype.forEach&&a.forEach===Array.prototype.forEach)a.forEach(c);else if(a.length===+a.length)for(var b=0,e=a.length;b<e;b++)c(a[b],b,a);else for(b in a)a.hasOwnProperty(b)&&c(a[b],b,a)},fa:function(a){function c(b){a.clearColor(0,
+         0,0,1);a.enable(a.DEPTH_TEST);a.depthFunc(a.LEQUAL);a.clear(a.COLOR_BUFFER_BIT|a.DEPTH_BUFFER_BIT);return"["+b[0]+", "+b[1]+"]"}var b=[];b.push("extensions:"+(a.getSupportedExtensions()||[]).join(";"));b.push("webgl aliased line width range:"+c(a.getParameter(a.ALIASED_LINE_WIDTH_RANGE)));b.push("webgl aliased point size range:"+c(a.getParameter(a.ALIASED_POINT_SIZE_RANGE)));b.push("webgl alpha bits:"+a.getParameter(a.ALPHA_BITS));b.push("webgl antialiasing:"+(a.getContextAttributes().antialias?"yes":
+         "no"));b.push("webgl blue bits:"+a.getParameter(a.BLUE_BITS));b.push("webgl depth bits:"+a.getParameter(a.DEPTH_BITS));b.push("webgl green bits:"+a.getParameter(a.GREEN_BITS));b.push("webgl max anisotropy:"+function(a){var b=a.getExtension("EXT_texture_filter_anisotropic")||a.getExtension("WEBKIT_EXT_texture_filter_anisotropic")||a.getExtension("MOZ_EXT_texture_filter_anisotropic");return b?(a=a.getParameter(b.MAX_TEXTURE_MAX_ANISOTROPY_EXT),0===a&&(a=2),a):null}(a));b.push("webgl max combined texture image units:"+
+         a.getParameter(a.MAX_COMBINED_TEXTURE_IMAGE_UNITS));b.push("webgl max cube map texture size:"+a.getParameter(a.MAX_CUBE_MAP_TEXTURE_SIZE));b.push("webgl max fragment uniform vectors:"+a.getParameter(a.MAX_FRAGMENT_UNIFORM_VECTORS));b.push("webgl max render buffer size:"+a.getParameter(a.MAX_RENDERBUFFER_SIZE));b.push("webgl max texture image units:"+a.getParameter(a.MAX_TEXTURE_IMAGE_UNITS));b.push("webgl max texture size:"+a.getParameter(a.MAX_TEXTURE_SIZE));b.push("webgl max varying vectors:"+a.getParameter(a.MAX_VARYING_VECTORS));
+         b.push("webgl max vertex attribs:"+a.getParameter(a.MAX_VERTEX_ATTRIBS));b.push("webgl max vertex texture image units:"+a.getParameter(a.MAX_VERTEX_TEXTURE_IMAGE_UNITS));b.push("webgl max vertex uniform vectors:"+a.getParameter(a.MAX_VERTEX_UNIFORM_VECTORS));b.push("webgl max viewport dims:"+c(a.getParameter(a.MAX_VIEWPORT_DIMS)));b.push("webgl red bits:"+a.getParameter(a.RED_BITS));b.push("webgl renderer:"+a.getParameter(a.RENDERER));b.push("webgl shading language version:"+a.getParameter(a.SHADING_LANGUAGE_VERSION));
+         b.push("webgl stencil bits:"+a.getParameter(a.STENCIL_BITS));b.push("webgl vendor:"+a.getParameter(a.VENDOR));b.push("webgl version:"+a.getParameter(a.VERSION));try{var e=a.getExtension("WEBGL_debug_renderer_info");e&&(b.push("webgl unmasked vendor:"+a.getParameter(e.UNMASKED_VENDOR_WEBGL)),b.push("webgl unmasked renderer:"+a.getParameter(e.UNMASKED_RENDERER_WEBGL)))}catch(d){}if(!a.getShaderPrecisionFormat)return b.join("~");window.mlbp.i(["FLOAT","INT"],function(c){window.mlbp.i(["VERTEX","FRAGMENT"],
+         function(e){window.mlbp.i(["HIGH","MEDIUM","LOW"],function(f){window.mlbp.i(["precision","rangeMin","rangeMax"],function(h){var n=a.getShaderPrecisionFormat(a[e+"_SHADER"],a[f+"_"+c])[h];"precision"!==h&&(h="precision "+h);b.push(["webgl ",e.toLowerCase()," shader ",f.toLowerCase()," ",c.toLowerCase()," ",h,":",n].join(""))})})})});return b.join("~")},ea:function(a){var c=a.createBuffer();a.bindBuffer(a.ARRAY_BUFFER,c);var b=new Float32Array([-.2,-.9,0,.4,-.26,0,0,.732134444,0]);a.bufferData(a.ARRAY_BUFFER,
+         b,a.STATIC_DRAW);c.la=3;c.pa=3;var b=a.createProgram(),e=a.createShader(a.VERTEX_SHADER);a.shaderSource(e,"attribute vec2 attrVertex;varying vec2 varyinTexCoordinate;uniform vec2 uniformOffset;void main(){varyinTexCoordinate\x3dattrVertex+uniformOffset;gl_Position\x3dvec4(attrVertex,0,1);}");a.compileShader(e);var d=a.createShader(a.FRAGMENT_SHADER);a.shaderSource(d,"precision mediump float;varying vec2 varyinTexCoordinate;void main() {gl_FragColor\x3dvec4(varyinTexCoordinate,0,1);}");a.compileShader(d);
+         a.attachShader(b,e);a.attachShader(b,d);a.linkProgram(b);a.useProgram(b);b.ua=a.getAttribLocation(b,"attrVertex");b.qa=a.getUniformLocation(b,"uniformOffset");a.enableVertexAttribArray(b.Ha);a.vertexAttribPointer(b.ua,c.la,a.FLOAT,!1,0,0);a.uniform2f(b.qa,1,1);a.drawArrays(a.TRIANGLE_STRIP,0,c.pa);return a.canvas.toDataURL()},ga:function(a){try{var c=a.getExtension("WEBGL_debug_renderer_info");return{vendor:a.getParameter(c.UNMASKED_VENDOR_WEBGL),B:a.getParameter(c.UNMASKED_RENDERER_WEBGL)}}catch(b){return{vendor:"not_available",
+         B:"not_available"}}},L:function(){return new Promise(function(a){if(navigator.userAgent.match(/OS 11.+Version\/11.+Safari/))a("not_supported");else{var c=window.OfflineAudioContext||window.webkitOfflineAudioContext;if(null==c)a("not_supported");else try{var b=new c(1,44100,44100),e=b.createOscillator();e.type="triangle";e.frequency.setValueAtTime(1E4,b.currentTime);var d=b.createDynamicsCompressor();window.mlbp.i([["threshold",-50],["knee",40],["ratio",12],["reduction",-20],["attack",0],["release",
+         .25]],function(a){void 0!==d[a[0]]&&"function"===typeof d[a[0]].setValueAtTime&&d[a[0]].setValueAtTime(a[1],b.currentTime)});e.connect(d);d.connect(b.destination);e.start(0);b.startRendering().then(function(b){b=b.getChannelData(0).slice(4500,5E3).reduce(function(a,b){return a+Math.abs(b)},0).toString();e.disconnect();d.disconnect();a(b)})["catch"](function(){a("not_available")})}catch(g){a("not_available")}}})},v:function(){if(!window.dp){var a=Date.now(),c={},b=Date.now();c.hash=window.mlbp.O();
+         c.hash.time.hash=Date.now()-b;b=Date.now();c.fonts=window.mlbp.N();c.hash.time.installedfonts=Date.now()-b;b=Date.now();c.plugins=window.mlbp.P();c.hash.time.plugins=Date.now()-b;c.cookie={js_type:"js_cookie",value:"x"};c.hash.time.total=Date.now()-a;window.dp=c}}};
+         window["armor.ee76e2077e0fdd2eab5b7341654f56f6e0b33348a16b82ff5c915c8614da95da1f018a8aad04e2b0a1d49439c383301640310af1111024ae6ddd3d5803d6e84cfa137f2b4102642e1cfc6666efa68b48.171a5af3d7dc068ec5956b43911b21b7"]={C:function(){a=JSON.stringify(window.dp.cookie);window["armor.ee76e2077e0fdd2eab5b7341654f56f6e0b33348a16b82ff5c915c8614da95da1f018a8aad04e2b0a1d49439c383301640310af1111024ae6ddd3d5803d6e84cfa137f2b4102642e1cfc6666efa68b48.171a5af3d7dc068ec5956b43911b21b7"].j(a,null);if("undefined"!==typeof window.dp.hash.incognito){var a=JSON.stringify(window.dp.hash);window["armor.ee76e2077e0fdd2eab5b7341654f56f6e0b33348a16b82ff5c915c8614da95da1f018a8aad04e2b0a1d49439c383301640310af1111024ae6ddd3d5803d6e84cfa137f2b4102642e1cfc6666efa68b48.171a5af3d7dc068ec5956b43911b21b7"].j(a,"mlb")}else setTimeout(function(){window.dp.hash.incognito=window.mlbp_incognito;var a=JSON.stringify(window.dp.hash);window["armor.ee76e2077e0fdd2eab5b7341654f56f6e0b33348a16b82ff5c915c8614da95da1f018a8aad04e2b0a1d49439c383301640310af1111024ae6ddd3d5803d6e84cfa137f2b4102642e1cfc6666efa68b48.171a5af3d7dc068ec5956b43911b21b7"].j(a,"mlb")},50);a=JSON.stringify(window.dp.fonts);window["armor.ee76e2077e0fdd2eab5b7341654f56f6e0b33348a16b82ff5c915c8614da95da1f018a8aad04e2b0a1d49439c383301640310af1111024ae6ddd3d5803d6e84cfa137f2b4102642e1cfc6666efa68b48.171a5af3d7dc068ec5956b43911b21b7"].j(a,"mlm");a=JSON.stringify(window.dp.plugins);
+         window["armor.ee76e2077e0fdd2eab5b7341654f56f6e0b33348a16b82ff5c915c8614da95da1f018a8aad04e2b0a1d49439c383301640310af1111024ae6ddd3d5803d6e84cfa137f2b4102642e1cfc6666efa68b48.171a5af3d7dc068ec5956b43911b21b7"].j(a,"mla")},j:function(a,c){(new Image(1,1)).src=window["armor.ee76e2077e0fdd2eab5b7341654f56f6e0b33348a16b82ff5c915c8614da95da1f018a8aad04e2b0a1d49439c383301640310af1111024ae6ddd3d5803d6e84cfa137f2b4102642e1cfc6666efa68b48.171a5af3d7dc068ec5956b43911b21b7"].aa(a,c)},aa:function(a,c){var b="https://www.mercadolibre.com/jms/lgz/background/session/armor.ee76e2077e0fdd2eab5b7341654f56f6e0b33348a16b82ff5c915c8614da95da1f018a8aad04e2b0a1d49439c383301640310af1111024ae6ddd3d5803d6e84cfa137f2b4102642e1cfc6666efa68b48.171a5af3d7dc068ec5956b43911b21b7";"mlb"===c&&(b="https://www.mercadolivre.com.br/jms/mlb/lgz/background/session/armor.ee76e2077e0fdd2eab5b7341654f56f6e0b33348a16b82ff5c915c8614da95da1f018a8aad04e2b0a1d49439c383301640310af1111024ae6ddd3d5803d6e84cfa137f2b4102642e1cfc6666efa68b48.171a5af3d7dc068ec5956b43911b21b7");"mla"===c&&(b="https://www.mercadolibre.com.ar/jms/mla/lgz/background/session/armor.ee76e2077e0fdd2eab5b7341654f56f6e0b33348a16b82ff5c915c8614da95da1f018a8aad04e2b0a1d49439c383301640310af1111024ae6ddd3d5803d6e84cfa137f2b4102642e1cfc6666efa68b48.171a5af3d7dc068ec5956b43911b21b7");"mlm"===c&&(b="https://www.mercadolibre.com.mx/jms/mlm/lgz/background/session/armor.ee76e2077e0fdd2eab5b7341654f56f6e0b33348a16b82ff5c915c8614da95da1f018a8aad04e2b0a1d49439c383301640310af1111024ae6ddd3d5803d6e84cfa137f2b4102642e1cfc6666efa68b48.171a5af3d7dc068ec5956b43911b21b7");b+="?background\x3darmor.ee76e2077e0fdd2eab5b7341654f56f6e0b33348a16b82ff5c915c8614da95da1f018a8aad04e2b0a1d49439c383301640310af1111024ae6ddd3d5803d6e84cfa137f2b4102642e1cfc6666efa68b48.171a5af3d7dc068ec5956b43911b21b7";
+         a=window.mlbp.base64_encode(a);return b+="\x26message\x3d"+encodeURIComponent(a)},za:function(){return{Ea:"https://www.mercadolivre.com.br/jms/mlb/lgz/background/session/armor.ee76e2077e0fdd2eab5b7341654f56f6e0b33348a16b82ff5c915c8614da95da1f018a8aad04e2b0a1d49439c383301640310af1111024ae6ddd3d5803d6e84cfa137f2b4102642e1cfc6666efa68b48.171a5af3d7dc068ec5956b43911b21b7",Fa:"https://www.mercadolibre.com.mx/jms/mlm/lgz/background/session/armor.ee76e2077e0fdd2eab5b7341654f56f6e0b33348a16b82ff5c915c8614da95da1f018a8aad04e2b0a1d49439c383301640310af1111024ae6ddd3d5803d6e84cfa137f2b4102642e1cfc6666efa68b48.171a5af3d7dc068ec5956b43911b21b7",Da:"https://www.mercadolibre.com.ar/jms/mla/lgz/background/session/armor.ee76e2077e0fdd2eab5b7341654f56f6e0b33348a16b82ff5c915c8614da95da1f018a8aad04e2b0a1d49439c383301640310af1111024ae6ddd3d5803d6e84cfa137f2b4102642e1cfc6666efa68b48.171a5af3d7dc068ec5956b43911b21b7",url:"https://www.mercadolibre.com/jms/lgz/background/session/armor.ee76e2077e0fdd2eab5b7341654f56f6e0b33348a16b82ff5c915c8614da95da1f018a8aad04e2b0a1d49439c383301640310af1111024ae6ddd3d5803d6e84cfa137f2b4102642e1cfc6666efa68b48.171a5af3d7dc068ec5956b43911b21b7",Ga:"armor.ee76e2077e0fdd2eab5b7341654f56f6e0b33348a16b82ff5c915c8614da95da1f018a8aad04e2b0a1d49439c383301640310af1111024ae6ddd3d5803d6e84cfa137f2b4102642e1cfc6666efa68b48.171a5af3d7dc068ec5956b43911b21b7"}}};
+         function x(){if("undefined"!==typeof Promise){window.mlbp.v();var a,c=new Promise(function(b){a=setTimeout(function(){b("timeout")},100)}),b=Date.now();Promise.race([c,window.mlbp.L()]).then(function(c){clearTimeout(a);window.dp.hash.audio=c;window.dp.hash.time.audio=Date.now()-b;window["armor.ee76e2077e0fdd2eab5b7341654f56f6e0b33348a16b82ff5c915c8614da95da1f018a8aad04e2b0a1d49439c383301640310af1111024ae6ddd3d5803d6e84cfa137f2b4102642e1cfc6666efa68b48.171a5af3d7dc068ec5956b43911b21b7"].C()})}else window.mlbp.v(),window["armor.ee76e2077e0fdd2eab5b7341654f56f6e0b33348a16b82ff5c915c8614da95da1f018a8aad04e2b0a1d49439c383301640310af1111024ae6ddd3d5803d6e84cfa137f2b4102642e1cfc6666efa68b48.171a5af3d7dc068ec5956b43911b21b7"].C()}
+         "complete"===document.readyState?x():window.addEventListener?window.addEventListener("load",x,!1):window.attachEvent&&window.attachEvent("onload",x);function a(){var b=document.createElement("iframe");b.src="https://www.mercadolibre.com/jms/lgz/background?dps=armor.ee76e2077e0fdd2eab5b7341654f56f6e0b33348a16b82ff5c915c8614da95da1f018a8aad04e2b0a1d49439c383301640310af1111024ae6ddd3d5803d6e84cfa137f2b4102642e1cfc6666efa68b48.171a5af3d7dc068ec5956b43911b21b7";b.setAttribute("style","display: none; width: 0; height: 0; border: none; margin: 0;");document.body.appendChild(b)}"complete"===document.readyState?a():window.addEventListener?window.addEventListener("load",a,!1):window.attachEvent&&window.attachEvent("onload",a);
+      </script>
+   </head>
+   <body onbeforeunload="SaveMenu();" onunload="SaveMenu();" onload="relogio()" data-twttr-rendered="true" style="background-color: rgb(9, 11, 10); position: relative; min-height: 100%; top: 0px;">
+      <a name="top"></a>
+      <div id="MainHelper1">
+         <div id="DeactivationContainer" onclick="DisableDeactivationContainer();"></div>
+         <div id="MainHelper2">
+            <div id="ArtworkHelper1">
+               <div id="ArtworkHelper2">
+                  <div id="HeaderArtworkDiv" style="background-image:url(images/BackGroundUT.jpg);background-size: 100%;height: 100%;"></div>
+               </div>
+            </div>
+            <div id="DeactivationContainer" onclick="DisableDeactivationContainer();"></div>
+            <div id="Bodycontainer">
+               <div id="ContentRow">
+                  <div id="MenuColumn">
+                     <script type="text/javascript">
+                        window.fbAsyncInit = function() {
+                        FB.init({
+                         appId      : 497232093667125, // App ID
+                         status     : true,              // check login status
+                         cookie     : true,              // enable cookies to allow the server to access the session
+                         xfbml      : true               // parse XFBML
+                        });
+                        FB.Event.subscribe('auth.login', function() {
+                         var URLHelper = "?";
+                         if (window.location.search.replace("?", "").length > 0) {
+                        URLHelper = "&";
+                         }
+                         if (FB_TryLogin == 1) {
+                        window.location = window.location + URLHelper + "step=facebooktrylogin&wasreloaded=1";
+                         } else if (FB_TryLogin == 2) {
+                        window.location = window.location + URLHelper + "page=facebooktrylogin&wasreloaded=1";
+                         } else {
+                        window.location = window.location + URLHelper + "wasreloaded=1";
+                         }
+                        });
+                        FB.Event.subscribe('auth.logout', function(a_Response) {
+                         if (a_Response.status !== 'connected') {
+                        window.location.href=window.location.href;
+                         } else {
+                        /* nothing to do here*/
+                         }
+                        });
+                        FB.Event.subscribe('auth.statusChange', function(response) {
+                         if (FB_ForceReload == 1 && response.status == "connected") {
+                        var URLHelper = "?";
+                        if (window.location.search.replace("?", "").length > 0) {
+                          URLHelper = "&";
+                        }
+                        window.location = window.location + URLHelper + "step=facebooktrylogin&wasreloaded=1";
+                         }
+                        });
+                        };
+                        (function(d){
+                        var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+                        if (d.getElementById(id)) {return;}
+                        js = d.createElement('script'); js.id = id; js.async = true;
+                        js.src = "//connect.facebook.net/en_US/all.js";
+                        ref.parentNode.insertBefore(js, ref);
+                        }(document));
+                     </script>
+                     <div id="LeftArtwork">
+                        <a href="/?subtopic=latestnews">
+                        <img id="LogoArtworkTop" src="images/UtorionTopo.png" alt="logoartwork">
+                        </a>
+                     </div>
+                     <div id="Loginbox">
+                        <div id="LoginTop" style="background-image:url(images/box-top.gif)"></div>
+                        <div id="BorderLeft" class="LoginBorder" style="background-image:url(images/chain.gif)"></div>
+                        <div id="LoginButtonContainer" style="background-image:url(images/loginbox-textfield-background.gif)">
+                           <div id="PlayNowContainer">
+                              <form class="MediumButtonForm" action="?subtopic=accountmanagement" method="post">
+                                 <input type="hidden" name="page" value="overview">
+                                 <div class="MediumButtonBackground" style="background-image:url(images/mediumbutton.gif)" onmouseover="MouseOverMediumButton(this);" onmouseout="MouseOutMediumButton(this);">
+                                    <div class="MediumButtonOver" style="background-image: url(images/mediumbutton-over.gif); visibility: hidden;" onmouseover="MouseOverMediumButton(this);" onmouseout="MouseOutMediumButton(this);"></div>
+                                    <input class="MediumButtonText" type="image" name="Play Now" alt="Play Now" src="images/mediumbutton_playnow.png">
+                                 </div>
+                              </form>
+                           </div>
+                        </div>
+                        <div class="Loginstatus" style="background-image:url(images/loginbox-textfield-background.gif)">
+                           <div id="LoginstatusText" onclick="LoginstatusTextAction(this);" onmouseover="MouseOverLoginBoxText(this);" onmouseout="MouseOutLoginBoxText(this);">
+                              <div id="LoginstatusText_1" class="LoginstatusText" style="background-image: url(images/loginbox-font-create-account.gif); visibility: visible;"></div>
+                              <div id="LoginstatusText_2" class="LoginstatusText" style="background-image: url(images/loginbox-font-create-account-over.gif); visibility: hidden;"></div>
+                           </div>
+                        </div>
+                        <div id="BorderRight" class="LoginBorder" style="background-image:url(images/chain.gif)"></div>
+                        <div id="LoginBottom" class="Loginstatus" style="background-image:url(images/box-bottom.gif)"></div>
+                     </div>
+                     <div id="Menu">
+                        <div id="MenuTop" style="background-image:url(images/box-top.gif);"></div>
+                        <div id="news" class="menuitem">
+                           <span onclick="MenuItemAction('news')">
+                              <div class="MenuButton" style="background-image:url(images/button-background.png);">
+                                 <div onmouseover="MouseOverMenuItem(this);" onmouseout="MouseOutMenuItem(this);">
+                                    <div class="Button" style="background-image:url(images/button-background-over.png);"></div>
+                                    <span id="news_Lights" class="Lights" style="visibility: hidden;">
+                                       <div class="light_lu" style="background-image:url(images/green-light.gif);"></div>
+                                       <div class="light_ld" style="background-image:url(images/green-light.gif);"></div>
+                                       <div class="light_ru" style="background-image:url(images/green-light.gif);"></div>
+                                    </span>
+                                    <div id="news_Icon" class="Icon" style="background-image:url(images/icon-news.gif);"></div>
+                                    <div id="news_Label" class="Label" style="background-image:url(images/label-news.gif);"></div>
+                                    <div id="news_Extend" class="Extend" style="background-image: url(images/minus.gif);"></div>
+                                 </div>
+                              </div>
+                           </span>
+                           <div id="news_Submenu" class="Submenu" style="visibility: visible; display: block;">
+                              <a href="?subtopic=latestnews">
+                                 <div id="submenu_latestnews" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_latestnews" class="ActiveSubmenuItemIcon" style="background-image: url(images/icon-activesubmenu.gif);"></div>
+                                    <div id="ActiveSubmenuItemLabel_latestnews" class="SubmenuitemLabel">Latest News</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="?subtopic=archive">
+                                 <div id="submenu_archive" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_archive" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div id="ActiveSubmenuItemLabel_archive" class="SubmenuitemLabel">News Archive</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+                        <div id="videos" class="menuitem">
+                           <span onclick="MenuItemAction('videos')">
+                              <div class="MenuButton" style="background-image:url(images/button-background.png);">
+                                 <div onmouseover="MouseOverMenuItem(this);" onmouseout="MouseOutMenuItem(this);">
+                                    <div class="Button" style="background-image:url(images/button-background-over.png);"></div>
+                                    <span id="videos_Lights" class="Lights" style="visibility: visible;">
+                                       <div class="light_lu" style="background-image:url(images/green-light.gif);"></div>
+                                       <div class="light_ld" style="background-image:url(images/green-light.gif);"></div>
+                                       <div class="light_ru" style="background-image:url(images/green-light.gif);"></div>
+                                    </span>
+                                    <div id="videos_Icon" class="Icon" style="background-image:url(images/icon-videos.gif);"></div>
+                                    <div id="videos_Label" class="Label" style="background-image:url(images/label-videos.gif);"></div>
+                                    <div id="videos_Extend" class="Extend" style="background-image: url(images/plus.gif);"></div>
+                                 </div>
+                              </div>
+                           </span>
+                           <div id="videos_Submenu" class="Submenu" style="visibility: hidden; display: none;">
+                              <a href="?subtopic=videos">
+                                 <div id="submenu_videos" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_videos" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div id="ActiveSubmenuItemLabel_videos" class="SubmenuitemLabel">Videos</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="?subtopic=castsystem">
+                                 <div id="submenu_castsystem" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_castsystem" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div id="ActiveSubmenuItemLabel_castsystem" class="SubmenuitemLabel">Cast System</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+                        <div id="community" class="menuitem">
+                           <span onclick="MenuItemAction('community')">
+                              <div class="MenuButton" style="background-image:url(images/button-background.png);">
+                                 <div onmouseover="MouseOverMenuItem(this);" onmouseout="MouseOutMenuItem(this);">
+                                    <div class="Button" style="background-image:url(images/button-background-over.png);"></div>
+                                    <span id="community_Lights" class="Lights" style="visibility: visible;">
+                                       <div class="light_lu" style="background-image:url(images/green-light.gif);"></div>
+                                       <div class="light_ld" style="background-image:url(images/green-light.gif);"></div>
+                                       <div class="light_ru" style="background-image:url(images/green-light.gif);"></div>
+                                    </span>
+                                    <div id="community_Icon" class="Icon" style="background-image:url(images/icon-community.gif);"></div>
+                                    <div id="community_Label" class="Label" style="background-image:url(images/label-community.gif);"></div>
+                                    <div id="community_Extend" class="Extend" style="background-image: url(images/plus.gif);"></div>
+                                 </div>
+                              </div>
+                           </span>
+                           <div id="community_Submenu" class="Submenu" style="visibility: hidden; display: none;">
+                              <a href="?subtopic=characters">
+                                 <div id="submenu_characters" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_characters" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div id="ActiveSubmenuItemLabel_characters" class="SubmenuitemLabel">Characters</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="?subtopic=buycharacters">
+                                 <div id="submenu_buycharacters" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_buycharacters" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div id="ActiveSubmenuItemLabel_buycharacters" class="SubmenuitemLabel">Buy Characters</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="?subtopic=whoisonline">
+                                 <div id="submenu_whoisonline" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_whoisonline" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div id="ActiveSubmenuItemLabel_whoisonline" class="SubmenuitemLabel">Who is online</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="?subtopic=killstatistics">
+                                 <div id="submenu_killstatistics" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_killstatistics" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div id="ActiveSubmenuItemLabel_killstatistics" class="SubmenuitemLabel">Kill Statistics</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="?subtopic=highscores">
+                                 <div id="submenu_highscores" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_highscores" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div id="ActiveSubmenuItemLabel_highscores" class="SubmenuitemLabel">Highscores</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="?subtopic=bans">
+                                 <div id="submenu_bans" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_bans" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div class="SubmenuitemLabel">Banishments</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="?subtopic=houses">
+                                 <div id="submenu_houses" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_houses" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div id="ActiveSubmenuItemLabel_houses" class="SubmenuitemLabel">Houses</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="?subtopic=guilds">
+                                 <div id="submenu_guilds" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_guilds" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div id="ActiveSubmenuItemLabel_guilds" class="SubmenuitemLabel">Guilds</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="index.php?subtopic=exphist">
+                                 <div id="submenu_exphist" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_exphist" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div class="SubmenuitemLabel">Powergamers</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="?subtopic=tradeoff">
+                                 <div id="submenu_tradeoff" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_tradeoff" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div id="ActiveSubmenuItemLabel_tradeoff" class="SubmenuitemLabel"><font color="#F9A602">Trade</font> <font color="#FFDF00">O</font><font color="#CC7722">F</font><font color="#BC9B1B">F</font></div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="?subtopic=polls">
+                                 <div id="submenu_polls" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_polls" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div id="ActiveSubmenuItemLabel_polls" class="SubmenuitemLabel">Polls</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="?subtopic=respawns">
+                                 <div id="submenu_respawns" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_respawns" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div class="SubmenuitemLabel">Respawns <img src="images/hot.gif"></div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="?subtopic=raids#RaidDays">
+                                 <div id="submenu_raids" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_raids" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div class="SubmenuitemLabel">Raids</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="?subtopic=security">
+                                 <div id="submenu_security" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_security" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div class="SubmenuitemLabel">Security</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="index.php?subtopic=huntedsystem">
+                                 <div id="submenu_huntedsystem" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_huntedsystem" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div class="SubmenuitemLabel">Hunted System <img src="images/hot.gif"></div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="https://goo.gl/2e5X6o" target="_blanck">
+                                 <div id="submenu_guidoscripts" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_guidoscripts" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div id="ActiveSubmenuItemLabel_guidoscripts" class="SubmenuitemLabel">Cave BOT</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+                        <div id="wars" class="menuitem">
+                           <span onclick="MenuItemAction('wars')">
+                              <div class="MenuButton" style="background-image:url(images/button-background.png);">
+                                 <div onmouseover="MouseOverMenuItem(this);" onmouseout="MouseOutMenuItem(this);">
+                                    <div class="Button" style="background-image:url(images/button-background-over.png);"></div>
+                                    <span id="wars_Lights" class="Lights" style="visibility: visible;">
+                                       <div class="light_lu" style="background-image:url(images/green-light.gif);"></div>
+                                       <div class="light_ld" style="background-image:url(images/green-light.gif);"></div>
+                                       <div class="light_ru" style="background-image:url(images/green-light.gif);"></div>
+                                    </span>
+                                    <div id="wars_Icon" class="Icon" style="background-image:url(images/icon-wars.gif);"></div>
+                                    <div id="wars_Label" class="Label" style="background-image:url(images/label-wars.gif);"></div>
+                                    <div id="wars_Extend" class="Extend" style="background-image: url(images/plus.gif);"></div>
+                                 </div>
+                              </div>
+                           </span>
+                           <div id="wars_Submenu" class="Submenu" style="visibility: hidden; display: none;">
+                              <a href="?subtopic=warsystem">
+                                 <div id="submenu_warsystem" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_warsystem" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div id="ActiveSubmenuItemLabel_warsystem" class="SubmenuitemLabel">War System <img src="images/green.gif"></div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="?subtopic=topguilds">
+                                 <div id="submenu_topguilds" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_topguilds" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div id="ActiveSubmenuItemLabel_topguilds" class="SubmenuitemLabel">Top Guilds</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="?subtopic=fragers">
+                                 <div id="submenu_fragers" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_fragers" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div id="ActiveSubmenuItemLabel_fragers" class="SubmenuitemLabel">Top Fragers</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="?subtopic=warantientrosa">
+                                 <div id="submenu_warantientrosa" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_warantientrosa" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div id="ActiveSubmenuItemLabel_warantientrosa" class="SubmenuitemLabel">War Anti-Entrosa <img src="images/red.gif"></div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="index.php?subtopic=openbattle">
+                                 <div id="submenu_openbattle" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_openbattle" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div class="SubmenuitemLabel">Open Battle</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="?subtopic=pvpcity">
+                                 <div id="submenu_pvpcity" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_pvpcity" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div id="ActiveSubmenuItemLabel_pvpcity" class="SubmenuitemLabel">PVP City</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+                        <div id="events" class="menuitem">
+                           <span onclick="MenuItemAction('events')">
+                              <div class="MenuButton" style="background-image:url(images/button-background.png);">
+                                 <div onmouseover="MouseOverMenuItem(this);" onmouseout="MouseOutMenuItem(this);">
+                                    <div class="Button" style="background-image:url(images/button-background-over.png);"></div>
+                                    <span id="events_Lights" class="Lights" style="visibility: visible;">
+                                       <div class="light_lu" style="background-image:url(images/green-light.gif);"></div>
+                                       <div class="light_ld" style="background-image:url(images/green-light.gif);"></div>
+                                       <div class="light_ru" style="background-image:url(images/green-light.gif);"></div>
+                                    </span>
+                                    <div id="events_Icon" class="Icon" style="background-image:url(images/icon-events.gif);"></div>
+                                    <div id="events_Label" class="Label" style="background-image:url(images/label-events.gif);"></div>
+                                    <div id="events_Extend" class="Extend" style="background-image: url(images/plus.gif);"></div>
+                                 </div>
+                              </div>
+                           </span>
+                           <div id="events_Submenu" class="Submenu" style="visibility: hidden; display: none;">
+                              <a href="index.php?subtopic=NPC_UtorionEvents">
+                                 <div id="submenu_NPC_UtorionEvents" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_NPC_UtorionEvents" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div class="SubmenuitemLabel"><font color="#00FFFF">NPC Utorion Events</font></div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="index.php?subtopic=Hunt_Creature">
+                                 <div id="submenu_Hunt_Creature" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_Hunt_Creature" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div class="SubmenuitemLabel">Hunt Creature <img src="images/hot.gif"></div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="index.php?subtopic=SafeZone">
+                                 <div id="submenu_SafeZone" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_SafeZone" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div class="SubmenuitemLabel">SafeZone</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="index.php?subtopic=Defend_The_Towers">
+                                 <div id="submenu_Defend_The_Towers" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_Defend_The_Towers" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div class="SubmenuitemLabel">DTT</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="index.php?subtopic=Duel_Push">
+                                 <div id="submenu_Duel_Push" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_Duel_Push" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div class="SubmenuitemLabel">Duel Push</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="index.php?subtopic=BomberMan">
+                                 <div id="submenu_BomberMan" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_BomberMan" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div class="SubmenuitemLabel">BomberMan</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="index.php?subtopic=castlewar">
+                                 <div id="submenu_castlewar" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_castlewar" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div class="SubmenuitemLabel">CastleWar 24hr</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="index.php?subtopic=battlefield">
+                                 <div id="submenu_battlefield" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_battlefield" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div class="SubmenuitemLabel">BattleField</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="index.php?subtopic=zombieattack">
+                                 <div id="submenu_zombieattack" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_zombieattack" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div class="SubmenuitemLabel">Zombie Attack</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="index.php?subtopic=bloodcastle">
+                                 <div id="submenu_bloodcastle" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_bloodcastle" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div class="SubmenuitemLabel">Blood Castle</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="index.php?subtopic=rushwar">
+                                 <div id="submenu_rushwar" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_rushwar" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div class="SubmenuitemLabel">Rush War</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="index.php?subtopic=snowballwar">
+                                 <div id="submenu_snowballwar" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_snowballwar" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div class="SubmenuitemLabel">SnowBall War</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="index.php?subtopic=desertbattlewar">
+                                 <div id="submenu_desertbattlewar" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_desertbattlewar" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div class="SubmenuitemLabel">Desert Battle WAR</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="?subtopic=lottery">
+                                 <div id="submenu_lottery" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_lottery" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div id="ActiveSubmenuItemLabel_lottery" class="SubmenuitemLabel">Lottery</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+                        <div id="forum" class="menuitem">
+                           <span onclick="MenuItemAction('forum')">
+                              <div class="MenuButton" style="background-image:url(images/button-background.png);">
+                                 <div onmouseover="MouseOverMenuItem(this);" onmouseout="MouseOutMenuItem(this);">
+                                    <div class="Button" style="background-image:url(images/button-background-over.png);"></div>
+                                    <span id="forum_Lights" class="Lights" style="visibility: visible;">
+                                       <div class="light_lu" style="background-image:url(images/green-light.gif);"></div>
+                                       <div class="light_ld" style="background-image:url(images/green-light.gif);"></div>
+                                       <div class="light_ru" style="background-image:url(images/green-light.gif);"></div>
+                                    </span>
+                                    <div id="forum_Icon" class="Icon" style="background-image:url(images/icon-forum.gif);"></div>
+                                    <div id="forum_Label" class="Label" style="background-image:url(images/label-forum.gif);"></div>
+                                    <div id="forum_Extend" class="Extend" style="background-image: url(images/plus.gif);"></div>
+                                 </div>
+                              </div>
+                           </span>
+                           <div id="forum_Submenu" class="Submenu" style="visibility: hidden; display: none;">
+                              <a href="?subtopic=accountmanagement&amp;action=ticket&amp;do=newticket">
+                                 <div id="submenu_forum" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_forum" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div id="ActiveSubmenuItemLabel_forum" class="SubmenuitemLabel">Server Forum</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+                        <div id="library" class="menuitem">
+                           <span onclick="MenuItemAction('library')">
+                              <div class="MenuButton" style="background-image:url(images/button-background.png);">
+                                 <div onmouseover="MouseOverMenuItem(this);" onmouseout="MouseOutMenuItem(this);">
+                                    <div class="Button" style="background-image:url(images/button-background-over.png);"></div>
+                                    <span id="library_Lights" class="Lights" style="visibility: visible;">
+                                       <div class="light_lu" style="background-image:url(images/green-light.gif);"></div>
+                                       <div class="light_ld" style="background-image:url(images/green-light.gif);"></div>
+                                       <div class="light_ru" style="background-image:url(images/green-light.gif);"></div>
+                                    </span>
+                                    <div id="library_Icon" class="Icon" style="background-image:url(images/icon-library.gif);"></div>
+                                    <div id="library_Label" class="Label" style="background-image:url(images/label-library.gif);"></div>
+                                    <div id="library_Extend" class="Extend" style="background-image: url(images/plus.gif);"></div>
+                                 </div>
+                              </div>
+                           </span>
+                           <div id="library_Submenu" class="Submenu" style="visibility: hidden; display: none;">
+                              <a href="?subtopic=serverinfo">
+                                 <div id="submenu_serverinfo" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_serverinfo" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div id="ActiveSubmenuItemLabel_serverinfo" class="SubmenuitemLabel">Server Info</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="?subtopic=Stamina">
+                                 <div id="submenu_Stamina" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_Stamina" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div id="ActiveSubmenuItemLabel_Stamina" class="SubmenuitemLabel">Ticket Stamina</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="?subtopic=Quests">
+                                 <div id="submenu_Quests" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_Quests" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div id="ActiveSubmenuItemLabel_Quests" class="SubmenuitemLabel">Quests Custom</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="?subtopic=Items_Custom">
+                                 <div id="submenu_Items_Custom" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_Items_Custom" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div id="ActiveSubmenuItemLabel_Items_Custom" class="SubmenuitemLabel">Items Custom</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="?subtopic=monsters">
+                                 <div id="submenu_monsters" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_monsters" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div id="ActiveSubmenuItemLabel_monsters" class="SubmenuitemLabel">Monsters</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="?subtopic=addons">
+                                 <div id="submenu_addons" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_addons" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div id="ActiveSubmenuItemLabel_addons" class="SubmenuitemLabel">Addons</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="?subtopic=tasksystem">
+                                 <div id="submenu_tasksystem" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_tasksystem" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div id="ActiveSubmenuItemLabel_tasksystem" class="SubmenuitemLabel">Task System</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="/images/mapfull1.png" target="_blanck">
+                                 <div id="submenu_tasksystem" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_minimap" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div id="ActiveSubmenuItemLabel_minimap" class="SubmenuitemLabel"><font color="#00FFFF">Map Full</font></div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="?subtopic=elfbot_itemid">
+                                 <div id="submenu_elfbot_itemid" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_elfbot_itemid" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div id="ActiveSubmenuItemLabel_elfbot_itemid" class="SubmenuitemLabel">ElfBot ItemID</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="?subtopic=experiencetable">
+                                 <div id="submenu_experiencetable" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_experiencetable" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div id="ActiveSubmenuItemLabel_experiencetable" class="SubmenuitemLabel">Experience Table</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+                        <div id="account" class="menuitem">
+                           <span onclick="MenuItemAction('account')">
+                              <div class="MenuButton" style="background-image:url(images/button-background.png);">
+                                 <div onmouseover="MouseOverMenuItem(this);" onmouseout="MouseOutMenuItem(this);">
+                                    <div class="Button" style="background-image:url(images/button-background-over.png);"></div>
+                                    <span id="account_Lights" class="Lights" style="visibility: visible;">
+                                       <div class="light_lu" style="background-image:url(images/green-light.gif);"></div>
+                                       <div class="light_ld" style="background-image:url(images/green-light.gif);"></div>
+                                       <div class="light_ru" style="background-image:url(images/green-light.gif);"></div>
+                                    </span>
+                                    <div id="account_Icon" class="Icon" style="background-image:url(images/icon-account.gif);"></div>
+                                    <div id="account_Label" class="Label" style="background-image:url(images/label-account.gif);"></div>
+                                    <div id="account_Extend" class="Extend" style="background-image: url(images/plus.gif);"></div>
+                                 </div>
+                              </div>
+                           </span>
+                           <div id="account_Submenu" class="Submenu" style="visibility: hidden; display: none;">
+                              <a href="?subtopic=accountmanagement">
+                                 <div id="submenu_accountmanagement" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)" style="color: white;">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_accountmanagement" class="ActiveSubmenuItemIcon" style="background-image: url(&quot;images/icon-activesubmenu.gif&quot;); visibility: visible;"></div>
+                                    <div id="ActiveSubmenuItemLabel_accountmanagement" class="SubmenuitemLabel">Account Management</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="?subtopic=createaccount">
+                                 <div id="submenu_createaccount" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_createaccount" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div id="ActiveSubmenuItemLabel_createaccount" class="SubmenuitemLabel">Create Account</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="?subtopic=lostaccount">
+                                 <div id="submenu_lostaccount" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_lostaccount" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div id="ActiveSubmenuItemLabel_lostaccount" class="SubmenuitemLabel">Lost Account?</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+                        <div id="team" class="menuitem">
+                           <span onclick="MenuItemAction('team')">
+                              <div class="MenuButton" style="background-image:url(images/button-background.png);">
+                                 <div onmouseover="MouseOverMenuItem(this);" onmouseout="MouseOutMenuItem(this);">
+                                    <div class="Button" style="background-image: url(images/button-background-over.png);"></div>
+                                    <span id="team_Lights" class="Lights" style="visibility: visible;">
+                                       <div class="light_lu" style="background-image:url(images/green-light.gif);"></div>
+                                       <div class="light_ld" style="background-image:url(images/green-light.gif);"></div>
+                                       <div class="light_ru" style="background-image:url(images/green-light.gif);"></div>
+                                    </span>
+                                    <div id="team_Icon" class="Icon" style="background-image:url(images/icon-support.gif);"></div>
+                                    <div id="team_Label" class="Label" style="background-image:url(images/label-support.gif);"></div>
+                                    <div id="team_Extend" class="Extend" style="background-image: url(images/plus.gif);"></div>
+                                 </div>
+                              </div>
+                           </span>
+                           <div id="team_Submenu" class="Submenu" style="visibility: hidden; display: none;">
+                              <a href="?subtopic=team">
+                                 <div id="submenu_team" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_team" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div id="ActiveSubmenuItemLabel_team" class="SubmenuitemLabel">Support List</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="?subtopic=servrules">
+                                 <div id="submenu_servrules" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_servrules" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div id="ActiveSubmenuItemLabel_servrules" class="SubmenuitemLabel">Server Rules</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+                        <div id="shops" class="menuitem">
+                           <span onclick="MenuItemAction('shops')">
+                              <div class="MenuButton" style="background-image:url(images/button-background.png);">
+                                 <div onmouseover="MouseOverMenuItem(this);" onmouseout="MouseOutMenuItem(this);">
+                                    <div class="Button" style="background-image: url(images/button-background-over.png);"></div>
+                                    <span id="shops_Lights" class="Lights" style="visibility: visible;">
+                                       <div class="light_lu" style="background-image:url(images/green-light.gif);"></div>
+                                       <div class="light_ld" style="background-image:url(images/green-light.gif);"></div>
+                                       <div class="light_ru" style="background-image:url(images/green-light.gif);"></div>
+                                    </span>
+                                    <div id="shops_Icon" class="Icon" style="background-image:url(images/icon-shops.gif);"></div>
+                                    <div id="shops_Label" class="Label" style="background-image:url(images/label-shops.gif);"></div>
+                                    <div id="shops_Extend" class="Extend" style="background-image: url(images/plus.gif);"></div>
+                                 </div>
+                              </div>
+                           </span>
+                           <div id="shops_Submenu" class="Submenu" style="visibility: hidden; display: none;">
+                              <a href="?subtopic=accountmanagement&amp;action=donate">
+                                 <div id="submenu_doacao" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_doacao" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div class="SubmenuitemLabel">Doação</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="?subtopic=shopguild">
+                                 <div id="submenu_shopguild" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_shopguild" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div class="SubmenuitemLabel">Shop Guild</div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                              <a href="?subtopic=accountmanagement&amp;action=services&amp;ServiceCategoryID=5&amp;step=1">
+                                 <div id="submenu_shopsystem" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
+                                    <div class="LeftChain" style="background-image:url(images/chain.gif);"></div>
+                                    <div id="ActiveSubmenuItemIcon_shopsystem" class="ActiveSubmenuItemIcon" style="background-image:url(images/icon-activesubmenu.gif);"></div>
+                                    <div class="SubmenuitemLabel"><font color="#00FFFF">Shopping Online</font></div>
+                                    <div class="RightChain" style="background-image:url(images/chain.gif);"></div>
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+                        <div id="MenuBottom" style="background-image:url(images/box-bottom.gif);"></div>
+                     </div>
+                     <script type="text/javascript">InitializePage();</script>
+                  </div>
+                  <div id="ContentColumn">
+                     <div id="Content" class="Content">
+                        <div id="ContentHelper">
+                           <script type="text/javascript" src="js/newsticker.js"></script>
+                           <div id="news" class="Box">
+                              <div class="Corner-tl" style="background-image:url(images/corner-tl.gif);"></div>
+                              <div class="Corner-tr" style="background-image:url(images/corner-tr.gif);"></div>
+                              <div class="Border_1" style="background-image:url(images/border-1.gif);"></div>
+                              <div class="BorderTitleText" style="background-image:url(images/title-background-green.gif);"></div>
+                              <img id="ContentBoxHeadline" class="Title" src="headline.php" alt="Contentbox headline">
+                              <div class="Border_2">
+                                 <div class="Border_3">
+                                    <div class="BoxContent" style="background-image:url(images/scroll.gif);">
+                                       <form action method="post" style="margin: 0px; padding: 0px;">
+                                          <div class="TableContainer">
+                                             <div class="CaptionContainer">
+                                                <div class="CaptionInnerContainer">
+                                                   <span class="CaptionEdgeLeftTop" style="background-image:url(images/box-frame-edge.gif);"></span> 
+                                                   <span class="CaptionEdgeRightTop" style="background-image:url(images/box-frame-edge.gif);"></span> 
+                                                   <span class="CaptionBorderTop" style="background-image:url(images/table-headline-border.gif);"></span> 
+                                                   <span class="CaptionVerticalLeft" style="background-image:url(images/box-frame-vertical.gif);"></span>
+                                                   <div class="Text">ADD/REMOVER HUNTED</div>
+                                                   <span class="CaptionVerticalRight" style="background-image:url(images/box-frame-vertical.gif);"></span> 
+                                                   <span class="CaptionBorderBottom" style="background-image:url(images/table-headline-border.gif);"></span> 
+                                                   <span class="CaptionEdgeLeftBottom" style="background-image:url(images/box-frame-edge.gif);"></span> 
+                                                   <span class="CaptionEdgeRightBottom" style="background-image:url(images/box-frame-edge.gif);"></span> 
+                                                </div>
+                                             </div>
+                                             
+                                             <table class="Table4" cellpadding="0" cellspacing="0">
+                                                
+                                                <tbody>
+                                                   <tr>
+                                                      <td>
+                                                         <div class="InnerTableContainer">
+                                                            <table style="width:100%;">
+                                                               <tbody>
+                                                                  <tr>
+                                                                     <td>
+                                                                        <div class="TableShadowContainerRightTop">
+                                                                           <div class="TableShadowRightTop" style="background-image:url(images/table-shadow-rt.gif);"></div>
+                                                                        </div>
+                                                                        <div class="TableContentAndRightShadow" style="background-image:url(images/table-shadow-rm.gif);">
+                                                                           <div class="TableContentContainer">
+                                                                              <table class="TableContent" width="100%" style="border:1px solid #faf0d7;">
+                                                                                 <tbody>
+                                                                                    <tr>
+                                                                                       <td>
+                                                                                          <table style="float: left; width: 370px;" cellpadding="0" cellspacing="0">
+                                                                                             <tbody>
+                                                                                                <tr>
+                                                                                                   <td class="LabelV120"><span><span>Name:</span></span></td>
+                                                                                                   <td><input type="password" name="account_login" size="35" maxlength="30"></td>
+                                                                                                </tr>
+                                                                                                <!-- <tr>
+                                                                                                   <td class="LabelV120"><span><span>Password:</span></span></td>
+                                                                                                   <td><input type="password" name="password_login" size="35" maxlength="29"></td>
+                                                                                                </tr>
+                                                                                                <tr> -->
+                                                                                                   <td></td>
+                                                                                                   <td>
+                                                                                                      <div id="html_element"></div>
+                                                                                                   </td>
+                                                                                                </tr>
+                                                                                             </tbody>
+                                                                                          </table>
+                                                                                          <div style="float: right; font-size: 1px;">
+                                                                                             <input type="hidden" name="page" value="overview">
+                                                                                             <div class="BigButton" style="background-image:url(images/sbutton_green.gif)">
+                                                                                                <div onmouseover="MouseOverBigButton(this);" onmouseout="MouseOutBigButton(this);">
+                                                                                                   <div class="BigButtonOver" style="background-image:url(images/sbutton_green_over.gif);"></div>
+                                                                                                   <input class="ButtonText" type="image" name="Login" alt="Login" src="images/_sbutton_login.gif">
+                                                                                                </div>
+                                                                                             </div>
+                                                                                             <div style="float: left; font-size: 1px;">
+                                                                                                <input type="hidden" name="page" value="overview">
+                                                                                                <div class="BigButton" style="background-image:url(images/sbutton_green.gif)">
+                                                                                                   <div onmouseover="MouseOverBigButton(this);" onmouseout="MouseOutBigButton(this);">
+                                                                                                      <div class="BigButton" style="background-image:url(images/sbutton_red.gif)"><div onmouseover="MouseOverBigButton(this);" onmouseout="MouseOutBigButton(this);"><div class="BigButtonOver" style="background-image:url(images/sbutton_red_over.gif);"></div>
+                                                                                                      <input class="ButtonText" type="image" name="Remover" alt="Account lost?" src="images/_sbutton_accountlost.gif">
+                                                                                                   </div>
+                                                                                                </div>
+                                                                                             <div style="width: 2px; height: 2px;"></div>
+            
+                                       </div>
+                                       </div>
+                                       </form>
+                                       </div>
+                                       </td>
+                                       </tr>
+                                       </tbody></table>
+                                       </div>
+                                       </div>
+                                       <div class="TableShadowContainer">
+                                       <div class="TableBottomShadow" style="background-image:url(images/table-shadow-bm.gif);">
+                                       <div class="TableBottomLeftShadow" style="background-image:url(images/table-shadow-bl.gif);"></div>
+                                       <div class="TableBottomRightShadow" style="background-image:url(images/table-shadow-br.gif);"></div>
+                                       </div>
+                                       </div>
+                                       </td>
+                                       </tr>
+                                       </tbody></table>
+                                       </div>
+                                       </td></tr></tbody></table>
+                                       </div>
+                                       <br>
+                                       <center>
+                                          <h1></h1>
+                                       </center>
+                                       <div class="TableContainer">
+                                          <div class="CaptionContainer">
+                                             <div class="CaptionInnerContainer">
+                                                <span class="CaptionEdgeLeftTop" style="background-image:url(images/box-frame-edge.gif);"></span>
+                                                <span class="CaptionEdgeRightTop" style="background-image:url(images/box-frame-edge.gif);"></span>
+                                                <span class="CaptionBorderTop" style="background-image:url(images/table-headline-border.gif);"></span> 
+                                                <span class="CaptionVerticalLeft" style="background-image:url(images/box-frame-vertical.gif);"></span>							
+                                                <div class="Text">Hunteds Online</div>
+                                                <span class="CaptionVerticalRight" style="background-image:url(images/box-frame-vertical.gif);"></span>
+                                                <span class="CaptionBorderBottom" style="background-image:url(images/table-headline-border.gif);"></span> 
+                                                <span class="CaptionEdgeLeftBottom" style="background-image:url(images/box-frame-edge.gif);"></span>
+                                                <span class="CaptionEdgeRightBottom" style="background-image:url(images/box-frame-edge.gif);"></span>
+                                             </div>
+                                          </div>
+                                          <table class="Table4" cellpadding="0" cellspacing="0">
+                                             <tbody>
+                                                <tr>
+                                                   <td>
+                                                      <div class="InnerTableContainer">
+                                                         <table style="width:100%;">
+                                                            <tbody>
+                                                               <tr>
+                                                                  <td>
+                                                                     <div class="TableShadowContainerRightTop">
+                                                                        <div class="TableShadowRightTop" style="background-image:url(images/table-shadow-rt.gif);"></div>
+                                                                     </div>
+                                                                     <div class="TableContentAndRightShadow" style="background-image:url(images/table-shadow-rm.gif);">
+                                                                        <div class="TableContentContainer">
+                                                                           <table class="TableContent" width="100%" style="border:1px solid #faf0d7;">
+                                                                              <tbody>
+                                                                                 <tr>
+                                                                                    <td>
+                                                                                       <div style="float: right; margin-top: 20px;">
+                                                                                          <form class="MediumButtonForm" action="?subtopic=createaccount" method="post">
+                                                                                             <div class="MediumButtonBackground" style="background-image:url(images/mediumbutton-green.png)" onmouseover="MouseOverMediumButton(this);" onmouseout="MouseOutMediumButton(this);">
+                                                                                                <div class="MediumButtonOver" style="background-image:url(images/mediumbutton-green-over.png)" onmouseover="MouseOverMediumButton(this);" onmouseout="MouseOutMediumButton(this);"></div>
+                                                                                                <input class="MediumButtonText" type="image" name="Create Account" alt="Create Account" src="images/mediumbutton_createaccount.png">
+                                                                                             </div>
+                                                                                          </form>
+                                                                                       </div>
+                                                                                       <div id="LoginCreateAccountBox">
+                                                                                          <div style="margin-left: 10px;">
+                                                                                             <!-- <p><input id="search" onclick="return addHunted(name);" type="text" placeholder="addHunted" /> <button id="submit" value="send">add</button></p><div class="alpha"></div>
+                                                                                             <p><input id="search" onclick="return removeHunted(name);"  type="text" placeholder="removeHunted" /> <button id="submit" value="send">add</button></p><div class="alpha"></div> -->
+                                                                                             <table id="jsonTable" style="visibility:hidden">
+                                                                                                <thead>
+                                                                                                   <tr>
+                                                                                                      <!-- The JSON downloaded from the URL above provides four attributes.-->
+                                                                                                      <th>Nme</th>
+                                                                                                      <th>Level</th>
+                                                                                                      <th>Vocation</th>
+                                                                                                      <th>Experiência</th>
+                                                                                                   </tr>
+                                                                                                </thead> <tbody></tbody>
+                                                                                             </table>
+                                                                                             <br>
+                                                                                          </div>
+                                                                                       </div>
+                                                                                    </td>
+                                                                                 </tr>
+                                                                              </tbody>
+                                                                           </table>
+                                                                        </div>
+                                                                     </div>
+                                                                     
+                                                                     <div class="TableShadowContainer">
+                                                                        <div class="TableBottomShadow" style="background-image:url(images/table-shadow-bm.gif);">
+                                                                           <div class="TableBottomLeftShadow" style="background-image:url(images/table-shadow-bl.gif);"></div>
+                                                                           <div class="TableBottomRightShadow" style="background-image:url(images/table-shadow-br.gif);"></div>
+                                                                        </div>
+                                                                     </div>
+                                                                  </td>
+                                                                  
+                                                               </tr>
+                                                            </tbody>
+                                                         </table>
+                                                         
+                                                      </div>
+                                                   </td>
+                                                </tr>
+                                             </tbody>
+                                         
+                                             </div>
+                                          </table>
+                                       </div>
+                                       <center>
+                                          <pre id="logsreturn" cols="50" rows="5"></pre>
+                                       </center>
+                                       <script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
+                                       <script type="text/javascript" src="js/jquery.mousewheel-3.0.6.pack.js"></script>
+                                       <link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css" media="screen">
+                                       <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+                                       <script type="text/javascript">
+                                          $(document).ready(function() {
+                                          	$(".fancybox").fancybox();
+                                          });
+
+
+
+
+
+
+
+                                          function hello() {
     $.getJSON("http://localhost/huntedson", function(json) {
         var $table = $('#jsonTable');
         var $tbody = $table.find('tbody').empty();
@@ -25,36 +1230,415 @@ document.addEventListener("DOMContentLoaded", function() {
 	setInterval(hello, 2000);
 	setInterval(logsreturn, 2000);
 });
-
-
-
-
-
-
-</script>
-<script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
-</head>
-<body>
-	<input type="button" value="Atualizar" id="Render JSON" onclick="return hello();"/>
-
-	<p><input id="search" onclick="return addHunted(name);" type="text" placeholder="addHunted" /> <button id="submit" value="send">add</button></p><div class="alpha"></div>
-	<p><input id="search" onclick="return removeHunted(name);"  type="text" placeholder="removeHunted" /> <button id="submit" value="send">add</button></p><div class="alpha"></div>
-	<table id="jsonTable" style="visibility:hidden">
-		<thead>
-			<tr>
-				<!-- The JSON downloaded from the URL above provides four attributes.-->
-				<th>name</th>
-				<th>level</th>
-				<th>vocation</th>
-				<th>body</th>
-			</tr>
-		</thead> <tbody></tbody>
-	</table>
-	<br>
-	
-
-		<pre id="logsreturn" cols="50" rows="5"></pre>
-	
-		
-</body>
+                                       </script>
+                                       <style> 
+                                          .progress { position:relative; width:100%; border: 1px solid #ddd; padding: 1px; border-radius: 3px; }
+                                          .bar { background-color: #B4F5B4; width:0%; height:20px; border-radius: 3px; }
+                                          .percent { position:absolute; display:inline-block; top:3px; left:48%; }
+                                          .swal-modal {
+                                          background-color: rgba(212,192,161,1.0);
+                                          border: 3px solid white;
+                                          }
+                                          .swal-button {
+                                          padding: 7px 19px;
+                                          background-image:url(images/mediumbutton-green.png);"
+                                          font-size: 8px;
+                                          color: white;
+                                          text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+                                          width: 150px;
+                                          height: 38px;
+                                          }
+                                          .swal-button--cancel {
+                                          background-image:url(images/mediumbutton-red.gif);"
+                                          font-size: 8px;
+                                          color: white;
+                                          text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+                                          width: 150px;
+                                          height: 38px;
+                                          }
+                                          .swal-button-container {
+                                          padding-right: 40px;
+                                          }
+                                          .swal-text {
+                                          background-color: #FEFAE3;
+                                          padding: 17px;
+                                          border: 2px solid #a48a18;
+                                          border-style: dashed;
+                                          display: block;
+                                          margin: 22px;
+                                          text-align: center;
+                                          color: #61534e;
+                                          }
+                                          a:link.keepcolor
+                                          {
+                                          color:#5a2800;
+                                          }
+                                          a:visited.keepcolor
+                                          {
+                                          color:#5a2800;
+                                          }
+                                          a:hover.keepcolor
+                                          {
+                                          color:#5a2800;
+                                          }
+                                          .ticketAlert {
+                                          position: absolute;
+                                          padding-top: 0px;
+                                          top: 20px;
+                                          left: 53px;
+                                          padding-left: 0px;
+                                          z-index: 100;
+                                          pointer-events: none;
+                                          }
+                                       </style>
+                                       </form>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="Border_1" style="background-image:url(images/border-1.gif);"></div>
+                              <div class="CornerWrapper-b">
+                                 <div class="Corner-bl" style="background-image:url(images/corner-bl.gif);"></div>
+                              </div>
+                              <div class="CornerWrapper-b">
+                                 <div class="Corner-br" style="background-image:url(images/corner-br.gif);"></div>
+                              </div>
+                           </div>
+                           <div id="ThemeboxesColumn">
+                              <div id="DeactivationContainerThemebox" onclick="DisableDeactivationContainer();"></div>
+                              <div id="RightArtwork">
+                                 <img id="Monster" src="images/marid.gif" onclick="window.location = #" alt="Monster of the Week">
+                                 <img id="PedestalAndOnline" src="images/pedestal-and-online.gif" alt="Monster Pedestal and Players Online Box">
+                                 <div id="PlayersOnline" onclick="window.location='?subtopic=whoisonline'">
+                                    3002<br>Players Online																
+                                 </div>
+                              </div>
+                              <div id="Themeboxes">
+                                 <div id="Topbar" class="Toplevelbox" style="background-image:url(images/top_level_top.gif);margin-top: 78%;">
+                                    <div style="background:url(images/shield.gif);width: 32px;height: 32px;position: relative;margin-left: 5px;margin-top: 1px;"></div>
+                                    <span class="topleveltext">Top Experience</span>
+                                    <div id="RankingBox" class="Themebox" style="height: auto; display: table;margin-top: 20px;">
+                                       <div id="menusrank"></div>
+                                       <style>
+                                          .Themebox
+                                          {
+                                          position:relative;
+                                          margin-bottom:10px;
+                                          top:-4px;
+                                          width:180px;
+                                          height:192px
+                                          }
+                                          .semtoplevel {
+                                          margin-bottom: 2px;
+                                          color: darkred;
+                                          font-style: italic;
+                                          line-height: 3;
+                                          }
+                                          .topleveltext {
+                                          z-index: 99;
+                                          padding: 3px;
+                                          position: absolute;
+                                          height: 24px;
+                                          width: 100%;
+                                          top: 2px;
+                                          left: 36px;
+                                          color: #ffd698;
+                                          text-shadow: -1px -1px 0 #000, 1px -1px 0 #2c2c2c, -1px 1px 0 #000, 1px 1px 0 #000;
+                                          font: 100 14pt Fondamento,Arial,Times New Roman,sans-serif;
+                                          -ms-user-select: none;
+                                          user-select: none;
+                                          cursor: default;
+                                          }
+                                          .ButtonTextInputs {
+                                          text-align: center;
+                                          color: #ffd698;
+                                          overflow: hidden;
+                                          font: 400 9pt Verdana,Arial,Times New Roman,sans-serif;
+                                          text-shadow: -1px -1px 0 #000, 1px -1px 0 #2c2c2c, -1px 1px 0 #000, 1px 1px 0 #000;
+                                          height: 22px;
+                                          top: 5px;
+                                          }
+                                          .Toplevelbox
+                                          {
+                                          position:relative
+                                          }
+                                          .top_level
+                                          {
+                                          top:35px;
+                                          left:6px;
+                                          z-index:20;
+                                          display:block;
+                                          padding-top:6px;
+                                          font-family:Tahoma,Geneva,sans-serif;
+                                          font-size:8pt;
+                                          color:#5f4d41!important;
+                                          font-weight:700;
+                                          text-align:left;
+                                          text-decoration:inherit
+                                          }
+                                          a.topfont,a:hover.topfont
+                                          {
+                                          font-weight:700;
+                                          font-size:12px
+                                          }
+                                          #Topbar a,a.topfont,a:hover.top_level,a:hover.topfont
+                                          {
+                                          text-decoration:none
+                                          }
+                                          a:hover.top_level
+                                          {
+                                          font-weight:700;
+                                          color:#4e3131!important
+                                          }
+                                          a.topfont
+                                          {
+                                          color:#004294
+                                          }
+                                          a:hover.topfont
+                                          {
+                                          color:#06c
+                                          }
+                                          #Themeboxes .Bottom2
+                                          {
+                                          bottom:0;
+                                          left:0;
+                                          margin-top:-38px;
+                                          height:32px;
+                                          width:180px;
+                                          z-index:-1
+                                          }
+                                          .levelvoctoplevel
+                                          {
+                                          color:#5a2800;
+                                          font:100 7pt Verdana,Arial,Times New Roman,sans-serif
+                                          }
+                                          .positiotoplvel
+                                          {
+                                          left:52px;
+                                          top:82px;
+                                          color:#fdeed7;
+                                          text-shadow:1px 1px 1px #000
+                                          }
+                                          .positiotoplvel img
+                                          {
+                                          margin-left:-5px;
+                                          margin-top:-5px
+                                          }
+                                          .outfitImgtoplevel,.positiotoplvel
+                                          {
+                                          background-position:right bottom;
+                                          position:relative;
+                                          margin-left:-64px;
+                                          margin-top:-64px;
+                                          height:64px;
+                                          width:64px
+                                          }
+                                          .outfitImgtoplevel
+                                          {
+                                          left:26px;
+                                          top:13px
+                                          }
+                                       </style>
+                                       <link href="css/css.css" rel="stylesheet">
+                                       <table style="font-family: sans-serif; font-size: 12px; padding: 0px 12px; height: auto; display: block; background-image:url(images/box-bg.gif); margin-bottom: 5px; margin-top: -6px">
+                                          <tbody>
+                                             <tr style="background-color:rgba(241, 224, 198, 0.6)">
+                                                <td width="34px;" style="padding:0px; padding-left: 2px;">
+                                                   <div class="outfitImgtoplevel" style="background-image:url(&#x27;outfit.php&#x27;);"></div>
+                                                </td>
+                                                <td width="130px;" style="padding:1px; padding-left: 3px;">
+                                                   <strong style="float: right;font-size: 10px;color:green;"><i class="fa fa-user" aria-hidden="true"></i></strong> <a class="top_level" href="?subtopic=characters&amp;name=Shael Nifok"><small style="margin-left: -2px;">1- </small>Shael Nifok</a>
+                                                   <div class="levelvoctoplevel"><small style="font-size: 10px;"><img alt="1" src="images/top1.gif" style="float: left;margin-top: -26px;margin-left: -4px;"><b>491</b>, Royal Paladin</small></div>
+                                                </td>
+                                             </tr>
+                                          </tbody>
+                                       </table>
+                                       <table style="font-family: sans-serif; font-size: 12px; padding: 0px 12px; height: auto; display: block; background-image:url(images/box-bg.gif); margin-bottom: 5px; margin-top: -6px">
+                                          <tbody>
+                                             <tr style="background-color:rgba(212, 192, 161, 0.6)">
+                                                <td width="34px;" style="padding:0px; padding-left: 2px;">
+                                                   <div class="outfitImgtoplevel" style="background-image:url(&#x27;outfit_1.php&#x27;);"></div>
+                                                </td>
+                                                <td width="130px;" style="padding:1px; padding-left: 3px;">
+                                                   <strong style="float: right;font-size: 10px;color:green;"><i class="fa fa-user" aria-hidden="true"></i></strong> <a class="top_level" href="?subtopic=characters&amp;name=Universo Paralello"><small style="margin-left: -2px;">2- </small>Universo Paralello</a>
+                                                   <div class="levelvoctoplevel"><small style="font-size: 10px;"><b>487</b>, Elite Knight</small></div>
+                                                </td>
+                                             </tr>
+                                          </tbody>
+                                       </table>
+                                       <table style="font-family: sans-serif; font-size: 12px; padding: 0px 12px; height: auto; display: block; background-image:url(images/box-bg.gif); margin-bottom: 5px; margin-top: -6px">
+                                          <tbody>
+                                             <tr style="background-color:rgba(241, 224, 198, 0.6)">
+                                                <td width="34px;" style="padding:0px; padding-left: 2px;">
+                                                   <div class="outfitImgtoplevel" style="background-image:url(&#x27;outfit_3.php&#x27;);"></div>
+                                                </td>
+                                                <td width="130px;" style="padding:1px; padding-left: 3px;">
+                                                   <strong style="float: right;font-size: 10px;color:#bf2015;"><i class="fa fa-user" aria-hidden="true"></i></strong> <a class="top_level" href="?subtopic=characters&amp;name=Lous Bland"><small style="margin-left: -2px;">3- </small>Lous Bland</a>
+                                                   <div class="levelvoctoplevel"><small style="font-size: 10px;"><b>485</b>, Royal Paladin</small></div>
+                                                </td>
+                                             </tr>
+                                          </tbody>
+                                       </table>
+                                       <table style="font-family: sans-serif; font-size: 12px; padding: 0px 12px; height: auto; display: block; background-image:url(images/box-bg.gif); margin-bottom: 5px; margin-top: -6px">
+                                          <tbody>
+                                             <tr style="background-color:rgba(212, 192, 161, 0.6)">
+                                                <td width="34px;" style="padding:0px; padding-left: 2px;">
+                                                   <div class="outfitImgtoplevel" style="background-image:url(&#x27;outfit_2.php&#x27;);"></div>
+                                                </td>
+                                                <td width="130px;" style="padding:1px; padding-left: 3px;">
+                                                   <strong style="float: right;font-size: 10px;color:green;"><i class="fa fa-user" aria-hidden="true"></i></strong> <a class="top_level" href="?subtopic=characters&amp;name=Nikitow Calmera"><small style="margin-left: -2px;">4- </small>Nikitow Calmera</a>
+                                                   <div class="levelvoctoplevel"><small style="font-size: 10px;"><b>485</b>, Elite Knight</small></div>
+                                                </td>
+                                             </tr>
+                                          </tbody>
+                                       </table>
+                                       <table style="font-family: sans-serif; font-size: 12px; padding: 0px 12px; height: auto; display: block; background-image:url(images/box-bg.gif); margin-bottom: 5px; margin-top: -6px">
+                                          <tbody>
+                                             <tr style="background-color:rgba(241, 224, 198, 0.6)">
+                                                <td width="34px;" style="padding:0px; padding-left: 2px;">
+                                                   <div class="outfitImgtoplevel" style="background-image:url(&#x27;outfit_4.php&#x27;);"></div>
+                                                </td>
+                                                <td width="130px;" style="padding:1px; padding-left: 3px;">
+                                                   <strong style="float: right;font-size: 10px;color:green;"><i class="fa fa-user" aria-hidden="true"></i></strong> <a class="top_level" href="?subtopic=characters&amp;name=Polvilho"><small style="margin-left: -2px;">5- </small>Polvilho</a>
+                                                   <div class="levelvoctoplevel"><small style="font-size: 10px;"><b>482</b>, Elite Knight</small></div>
+                                                </td>
+                                             </tr>
+                                          </tbody>
+                                       </table>
+                                       <br>
+                                       <div class="Bottom2" style="background-image:url(images/box-bottom_1.gif);"></div>
+                                    </div>
+                                 </div>
+                                 <!--Quests by leandro -->
+                                 <div id="Topbar" class="Toplevelbox" style="background-image:url(images/top_level_top.gif);">
+                                    <div style="background: url(images/tesource-chest.gif);width: 30px;height: 30px;position: relative;margin-left: 13px;margin-top: 1px;"></div>
+                                    <div style="background: url(images/tesource-chest.gif);width: 30px;height: 30px;position: absolute;margin-left: 77%;margin-top: -30px;float:  right;"></div>
+                                    <span class="topleveltext" style="margin-left: 14px;"><i class="fab fa-youtube"></i> Quests</span>
+                                    <div id="RankingBox" class="Themebox" style="height: auto;display: table;margin-top: 27px;">
+                                       <div id="menusrank"></div>
+                                       <table style="font-family: sans-serif; font-size: 12px; padding: 0px 12px; height: auto; display: block; background-image:url(images/box-bg.gif); margin-bottom: 5px; margin-top: -6px">
+                                          <tbody>
+                                             <tr>
+                                                <td colspan="5" style="padding:5px; padding-left: 9px;">
+                                                   <style>
+                                                      .questfont {
+                                                      padding: 6px;
+                                                      margin: 0 auto;
+                                                      color: darkred;
+                                                      font: 600 8pt Verdana,Arial,Times New Roman,sans-serif;
+                                                      border-radius: 10px;
+                                                      text-align: center;
+                                                      padding-bottom: 44px;
+                                                      margin-top: -17px;
+                                                      }
+                                                   </style>
+                                                   <div class="questfont">Conheça todos os videos das nossas Quest Custom! </div>
+                                                   <div class="ThemeboxButton">
+                                                      <form action="?subtopic=Quests" method="post" style="padding:0px;margin:0px;margin-top: -12px;">
+                                                         <div class="BigButton" style="background-image:url(images/sbutton.gif)">
+                                                            <div onmouseover="MouseOverBigButton(this);" onmouseout="MouseOutBigButton(this);">
+                                                               <div class="BigButtonOver" style="background-image: url(&quot;images/sbutton_over.gif&quot;); visibility: hidden;"></div>
+                                                               <input class="ButtonText" type="image" name="Get questbox" alt="Get questbox" src="images/_subutton_quests.png">
+                                                            </div>
+                                                         </div>
+                                                      </form>
+                                                   </div>
+                                                </td>
+                                             </tr>
+                                          </tbody>
+                                       </table>
+                                       <br>
+                                       <div class="Bottom2" style="background-image:url(images/box-bottom_1.gif);"></div>
+                                    </div>
+                                 </div>
+                                 <!-- <div id="FansiteBox" class="Themebox" style="background-image:url(images/fansites_themebox.gif);">
+                                    <div id="FansiteLogoFrame" style="background-image:url(images/border_promoted.gif);">
+                                       <a href="https://www.ciroscript.com/forum/battlefull" target="_blank"><img id="FansiteLogo" src="images/CiroScript.gif"></a>
+                                    </div> -->
+                                    <div class="ThemeboxButton">
+                                       <div class="BigButton" style="background-image:url(images/sbutton.gif)">
+                                          <div onmouseover="MouseOverBigButton(this);" onmouseout="MouseOutBigButton(this);">
+                                             <div class="BigButtonOver" style="background-image:url(images/sbutton_over_1.gif);"></div>
+                                             <a class="ButtonText" href="https://www.ciroscript.com/forum/battlefull" target="_blank"><img border="0" src="images/_view.gif" alt="View"></a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <!-- <div class="Bottom" style="background-image:url(images/box-bottom.gif);"></div> -->
+                                 </div>
+                                 <!-- networks theme box -->
+                                 <!-- current poll theme box -->
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><ins id="aswift_0_anchor" style="display:block;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><iframe id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" src="ads.html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!0" data-load-complete="true"></iframe></ins></ins></ins>
+      <div id="fb-root" class=" fb_reset">
+         <div style="position: absolute; top: -10000px; height: 0px; width: 0px;">
+            <div><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tab-index="-1" src="https://s-static.ak.facebook.com/connect/xd_arbiter.php?version=25#channel=f1f8bdf8e3c9164&amp;origin=https%3A%2F%2Fwww.utorion.com&amp;channel_path=%2F%3Fsubtopic%3Daccountmanagement%26fb_xd_fragment%23xd_sig%3Df20fa096831f27%26" style="border: none;"></iframe></div>
+         </div>
+         <div style="position: absolute; top: -10000px; height: 0px; width: 0px;">
+            <div></div>
+         </div>
+      </div>
+      <script>
+         // disable all control elements which are not part of the content container element
+         if (g_Deactivated == true) {
+           document.getElementById('LoginButtonContainer').style.zIndex = "1";
+           document.getElementById('DeactivationContainer').style.display = "block";
+           document.getElementById('DeactivationContainer').style.zIndex = "50";
+           document.getElementById('DeactivationContainerThemebox').style.display = "block";
+           document.getElementById('Monster').style.cursor = "auto";
+           document.getElementById('PlayersOnline').style.cursor = "auto";
+           document.getElementById('ThemeboxesColumn').style.opacity = "0.30";
+           document.getElementById('ThemeboxesColumn').style.MozOpacity = "0.30";
+           document.getElementById('ThemeboxesColumn').filters.alpha.opacity = "0.75";
+           document.getElementById('ThemeboxesColumn').style.filter = "alpha(opacity=50); opacity: 0.30";
+           document.getElementById('Monster').setAttribute("onclick", "");
+           document.getElementById('PlayersOnline').setAttribute("onclick", "");
+         }
+      </script>
+      <div id="HelperDivContainer" style="background-image: url(images/scroll.gif);">
+         <div class="HelperDivArrow" style="background-image: url(images/helper-div-arrow.png);"></div>
+         <div id="HelperDivHeadline"></div>
+         <div id="HelperDivText"></div>
+         <center>
+            <img class="Ornament" src="images/ornament.gif">
+         </center>
+         <br>
+      </div>
+      <div id="goog-gt-tt" class="skiptranslate" dir="ltr">
+         <div style="padding: 8px;">
+            <div>
+               <div class="logo"><img src="images/translate_24dp.png" width="20" height="20" alt="Google Tradutor"></div>
+            </div>
+         </div>
+         <div class="top" style="padding: 8px; float: left; width: 100%;">
+            <h1 class="title gray">Texto original</h1>
+         </div>
+         <div class="middle" style="padding: 8px;">
+            <div class="original-text"></div>
+         </div>
+         <div class="bottom" style="padding: 8px;">
+            <div class="activity-links"><span class="activity-link">Sugerir uma tradução melhor</span><span class="activity-link"></span></div>
+            <div class="started-activity-container">
+               <hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;">
+               <div class="activity-root"></div>
+            </div>
+         </div>
+         <div class="status-message" style="display: none;"></div>
+      </div>
+      <div class="goog-te-spinner-pos">
+         <div class="goog-te-spinner-animation">
+            <svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66">
+               <circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"/>
+            </svg>
+         </div>
+      </div>
+      <iframe id="google_osd_static_frame_5822057424479" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;"></iframe><iframe src="background.html" style="display: none; width: 0; height: 0; border: none; margin: 0;"></iframe>
+   </body>
+   <iframe id="google_esf" name="google_esf" src="zrt_lookup.html#" data-ad-client="ca-pub-5378331841052803" style="display: none;"></iframe>
 </html>
