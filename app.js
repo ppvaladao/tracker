@@ -12,7 +12,7 @@ const { namess, huntedss } = require('./src/updates');
 
 
 (async function Rodar() {
-    //huntedss()
+    huntedss()
     namess()
 
 })();

@@ -3,14 +3,10 @@ const Hunted = require('./models/Hunted');
 const onlines_now = require('./puppeteer');
 const func = require('./functions');
 const fetch = require('fetch');
+const { logsReturn } = require('./functions');
 
-
+//fazer tabela html com a rota de logs, hunted only. (preciso de um box)
 //definir 'onlines' de 'namess() && huntedss()', em updates.js, pra pegar da nossa rota '/allonlines', algo como: "const onlines = await fetch("http://localhost/allonlines").then(function(response) {return response.json();})"
-
-
-
-
-//falta retornar 'updates = []' de 'huntedss()' em 'updates.js' e settar no html.
 //ajeitar botao de add/remover hunted em src/html/index.html.
 
 async function mostrarHuntedOn() {
@@ -34,7 +30,7 @@ async function mostrarHuntedOn() {
 };
 
 async function namess() {
-    array =[];
+    var Logs = new Array();
     const onlines = await onlines_now();
     for (const online of onlines) {
         await Character.sync().then(async function() {
@@ -49,17 +45,16 @@ async function namess() {
                 },
             };
             Character.findOrCreate(options).then((result) => {
-                //entender melhor essas respostas (user, created)
                 let user = result[0];
                 let created = result[1];
                 if (!created) {
                     //char existe
                     if (user.level != online.level) {
-                        array.push('O level de ' + user.name + ' atualizado de ' + user.level + ' para ' + online.level);
+                        Logs.push('O level de ' + user.name + ' atualizado de ' + user.level + ' para ' + online.level);
                         
                     }
                     if (user.vocation != online.vocation) {
-                        array.push('A Vocation: vocation de ' + user.name + ' atualizado de ' + user.vocation + ' para ' + online.vocation);
+                        Logs.push('A Vocation: vocation de ' + user.name + ' atualizado de ' + user.vocation + ' para ' + online.vocation);
                     }
                     return user.update(options.defaults).then(function(updated) {
                         return [updated, created];
@@ -70,14 +65,13 @@ async function namess() {
             });
         })
     };
-    return array;
+    return Logs;
 }
 
 
 async function huntedss() {
     const onlines = await onlines_now();
-    const updates = [];
-    
+    var Logs = new Array();
     await Hunted.findAll({
         attributes: ['id', 'characterId', 'online'],
         raw: true
@@ -96,7 +90,7 @@ async function huntedss() {
                     if (character.level != online.level || character.vocation != online.vocation) {
                         if (character.level != online.level) {
                             console.log('hunted: level de ' + online.name + ' atualizado de ' + character.level + ' para ' + online.level);
-                            updates.push({
+                            Logs.push({
 
                                 update: `${online.name} foi atualizado do level ${character.level} para o level ${online.level} `,
         
@@ -104,7 +98,7 @@ async function huntedss() {
                         }
                         else {
                             console.log('hunted: vocation de ' + online.name + ' atualizado de ' + character.vocation + ' para ' + online.vocation);
-                            updates.push({
+                            Logs.push({
 
                                 updateVoc: `${online.name} foi atualizado do level ${character.level} para o level ${online.level} `,
         
@@ -137,7 +131,7 @@ async function huntedss() {
                 };
                 await Hunted.update(values, selector).then(function (update) {
                     if (online)
-                    updates.push({
+                    Logs.push({
 
                         update: `${character.name} ficou online `,
 
@@ -145,7 +139,7 @@ async function huntedss() {
                         
                     else
                       
-                        updates.push({
+                    Logs.push({
 
                             update: `${character.name} nao estava online e foi settado off`,
     
@@ -153,8 +147,8 @@ async function huntedss() {
                 });
             }
         }
-    })
-
+    }) 
+    return Logs;
   };
 
 

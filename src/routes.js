@@ -2,11 +2,7 @@ var express = require('express');
 var router = express.Router();
 const onlines_now = require('./puppeteer');
 const mostrarHuntedOn = require('./updates').mostrarHuntedOn;
-const logsReturnx = require('./functions').logsReturn;
-const namess = require('./updates').namess;
-//falta importar 'updates = []' de 'huntedss()' em updates.js
-//algo tipo: const updates = require('./updates').huntedss().updates;
-
+const huntedss = require('./updates').huntedss;
 
 
 router.get('/', function (req, res) {
@@ -21,7 +17,7 @@ router.get('/huntedsOn', async function(req, res){
   });
 
   router.get('/logsreturn', async function(req, res){
-    const xd = await namess()
+    const xd = await huntedss()
     res.json(xd);
   });
 
