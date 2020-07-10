@@ -3,18 +3,13 @@ const Hunted = require('./models/Hunted');
 const onlines_now = require('./puppeteer');
 const func = require('./functions');
 const fetch = require('fetch');
-const { logsReturn } = require('./functions');
-
-//fazer tabela html com a rota de logs, hunted only. (preciso de um box)
-//definir 'onlines' de 'namess() && huntedss()', em updates.js, pra pegar da nossa rota '/allonlines', algo como: "const onlines = await fetch("http://localhost/allonlines").then(function(response) {return response.json();})"
-//ajeitar botao de add/remover hunted em src/html/index.html.
 
 async function mostrarHuntedOn() {
 
     return await Hunted.findAll({
         attributes: ['id', 'characterId', 'online'],
         where: {
-            online: false
+            online: false,
         },
         raw: true,
     }).then(async function (hunteds) {

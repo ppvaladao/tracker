@@ -5,6 +5,7 @@ const mostrarHuntedOn = require('./updates').mostrarHuntedOn;
 const huntedss = require('./updates').huntedss;
 
 
+
 router.get('/', function (req, res) {
     res.render(__dirname + '/html/index.html');
 });
@@ -17,8 +18,8 @@ router.get('/huntedsOn', async function(req, res){
   });
 
   router.get('/logsreturn', async function(req, res){
-    const xd = await huntedss()
-    res.json(xd);
+    
+    res.json(await huntedss());
   });
 
   router.get('/allonlines', async function(req, res){
