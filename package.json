@@ -21,11 +21,13 @@
     "livereload": "^0.9.1",
     "md5": "^2.2.1",
     "mysql2": "^2.1.0",
+    "node-fetch": "^2.6.0",
     "path": "^0.12.7",
     "puppeteer": "^4.0.1",
     "puppeteer-cluster": "^0.21.0",
     "sequelize": "^5.22.1",
-    "util": "^0.12.3"
+    "util": "^0.12.3",
+    "whatwg-fetch": "^3.2.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"

@@ -11,13 +11,10 @@ const Frag = require('./src/models/Frag');
 const { namess, huntedss } = require('./src/updates');
 
 
-//ajeitar botao de add/remover hunted em src/html/index.html.
+//ajeitar botao de add/remover hunted em src/html/index.html. (urgente) // depois (colocar remover hunted pra realmente remover (não urgente))
 
 //conferir rota de logs que vem da function 'huntedss()' em 'updates.js'.
 
-//conferir instrução em teste.js
-
-//colocar remover hunted pra realmente remover (não urgente)
 
 //colocar as funções abaixo em loop independente. 
 (async function download_all() {

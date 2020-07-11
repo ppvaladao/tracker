@@ -2,8 +2,12 @@ const Character = require('./models/Character');
 const Hunted = require('./models/Hunted');
 const onlines_now = require('./puppeteer');
 const func = require('./functions');
-const fetch = require('fetch');
+const fetch = require('node-fetch');
 
+async function onlinesReturn() {
+    const onlines = await fetch("http://localhost/allonlines").then(response => response.json())
+    return onlines
+  };
 
 async function mostrarHuntedOn() {
 
@@ -27,7 +31,7 @@ async function mostrarHuntedOn() {
 
 async function namess() {
     var Logs = new Array();
-    const onlines = await onlines_now();
+    const onlines = await onlinesReturn();
     for (const online of onlines) {
         await Character.sync().then(async function() {
             let options = {
@@ -66,7 +70,7 @@ async function namess() {
 
 
 async function huntedss() {
-    const onlines = await onlines_now();
+    const onlines = await onlinesReturn();
     var Logs = new Array();
     await Hunted.findAll({
         attributes: ['id', 'characterId', 'online'],
