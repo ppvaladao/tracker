@@ -16,9 +16,19 @@
     });
 }
 
+async function logsreturn() {
+  var x = await fetch('http://localhost/logsreturn').then(response => response.json())
+  document.getElementById("logsreturn").innerHTML = x;
+}
+
 document.addEventListener("DOMContentLoaded", function() {
-    setInterval(hello, 2000);
+	setInterval(hello, 2000);
+	setInterval(logsreturn, 2000);
 });
+
+
+
+
 
 
 </script>
@@ -26,13 +36,9 @@ document.addEventListener("DOMContentLoaded", function() {
 </head>
 <body>
 	<input type="button" value="Atualizar" id="Render JSON" onclick="return hello();"/>
-	
-	<!-- <p><input id="search" onclick="return addHunted(name);" type="text" placeholder="addHunted" /> <button id="submit" value="send">add</button></p><div class="alpha">&nbsp;</div>
-	
-	<p><input id="search" onclick="return removeHunted(name);"  type="text" placeholder="removeHunted" /> <button id="submit" value="send">add</button></p><div class="alpha">&nbsp;</div> -->
 
-
-	<br/>
+	<p><input id="search" onclick="return addHunted(name);" type="text" placeholder="addHunted" /> <button id="submit" value="send">add</button></p><div class="alpha"></div>
+	<p><input id="search" onclick="return removeHunted(name);"  type="text" placeholder="removeHunted" /> <button id="submit" value="send">add</button></p><div class="alpha"></div>
 	<table id="jsonTable" style="visibility:hidden">
 		<thead>
 			<tr>
@@ -44,5 +50,11 @@ document.addEventListener("DOMContentLoaded", function() {
 			</tr>
 		</thead> <tbody></tbody>
 	</table>
+	<br>
+	
+
+		<pre id="logsreturn" cols="50" rows="5"></pre>
+	
+		
 </body>
 </html>

@@ -18,8 +18,8 @@ router.get('/huntedsOn', async function(req, res){
   });
 
   router.get('/logsreturn', async function(req, res){
-    
-    res.json(await huntedss());
+    //await huntedss()
+    res.json({name: 'o level de fulano é tal'});
   });
 
   router.get('/allonlines', async function(req, res){

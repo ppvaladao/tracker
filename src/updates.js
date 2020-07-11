@@ -4,6 +4,7 @@ const onlines_now = require('./puppeteer');
 const func = require('./functions');
 const fetch = require('fetch');
 
+
 async function mostrarHuntedOn() {
 
     return await Hunted.findAll({

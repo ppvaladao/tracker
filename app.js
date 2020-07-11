@@ -12,13 +12,12 @@ const { namess, huntedss } = require('./src/updates');
 
 
 //ajeitar botao de add/remover hunted em src/html/index.html.
-//conferir rota de logs e settar em box no html
-//definir 'onlines' de 'namess() && huntedss()', em updates.js, pra pegar da nossa rota '/allonlines', algo como: "const onlines = await fetch("http://localhost/allonlines").then(function(response) {return response.json();})"
 
+//conferir rota de logs que vem da function 'huntedss()' em 'updates.js'.
 
+//conferir instrução em teste.js
 
-
-
+//colocar remover hunted pra realmente remover (não urgente)
 
 //colocar as funções abaixo em loop independente. 
 (async function download_all() {
