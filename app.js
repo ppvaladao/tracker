@@ -15,6 +15,7 @@ const { namess, huntedss } = require('./src/updates');
 
 //conferir rota de logs que vem da function 'huntedss()' em 'updates.js'.
 
+//mudar tracker pra deixar mais rapido e atualizando xp //usar fetch no for de hunteds, atualiza só se data.response vir numero e fica em loop full, if char not exist, iniciar o tracker que busca num for de frags o nome do novo char baseado em lvl.
 
 //colocar as funções abaixo em loop independente. 
 (async function download_all() {
