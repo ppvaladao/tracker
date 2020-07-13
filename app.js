@@ -12,7 +12,7 @@ const { namess, huntedss } = require('./src/updates');
 
 //colocar essas funções em loop independente. (async () { huntedss(), namess() })();
 
-//criar tabela de exp em hunteds.
+//criar tabela de exp em hunteds e terminar o tracker.js.
 
 //ajeitar botão add/remover hunted(colocar pra remover msm), {src/html/index.html}.
 
