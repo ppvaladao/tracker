@@ -10,23 +10,18 @@ const Hunted = require('./src/models/Hunted');
 const Frag = require('./src/models/Frag');
 const { namess, huntedss } = require('./src/updates');
 
-
-//colocar esquema de login para usar botões.
+//colocar essas funções em loop independente. (async () { huntedss(), namess() })();
 
 //criar tabela de exp em hunteds.
 
-//ajeitar botão add/remover hunted(colocar pra remover msm), {src/html/index.html}.      //AJUDA
+//ajeitar botão add/remover hunted(colocar pra remover msm), {src/html/index.html}.
 
-//conferir no routes.js a rota de logs que vem da function 'huntedss()' em 'updates.js'. //AJUDA
+//conferir no routes.js a rota de logs que vem da function 'huntedss()' em 'updates.js'.
+
+//colocar esquema de login para usar botões.
 
 
-//colocar as funções abaixo em loop independente. //AJUDA
-(async function download_all() {
-    huntedss(),
-        namess()
-})();
 
 app.listen(80);
-
 
 
