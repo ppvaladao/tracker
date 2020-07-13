@@ -21,7 +21,7 @@ async function mostrarHuntedOn() {
         const response = [];
         for (hunted of hunteds) {
         const character = await Character.findByPk(hunted.characterId, {raw: true})
-            response.push({name: character.name, level: character.level, vocation:character.vocation})
+            response.push({name: character.name, level: character.level, vocation:character.vocation, id:hunted.characterId})
             
     };
     return response
