@@ -1,20 +1,6 @@
 const {Sequelize, connection} = require('../config/database');
-
+const Character = require('./Character');
 const Hunted = connection.define('hunted', {
-    id: {
-        primaryKey: true,
-        autoIncrement: true,
-        type: Sequelize.INTEGER,
-        allowNull: false,
-    },
-    characterId: {
-        type: Sequelize.INTEGER,
-        references: {
-            model: 'character',
-            key: 'id',
-        },
-        allowNull: false,
-    },
     accountStatus: {
         type: Sequelize.STRING,
         defaultValue: null,
@@ -30,8 +16,15 @@ const Hunted = connection.define('hunted', {
         defaultValue: false,
         allowNull: true,
     },
+    exp: {
+        type: Sequelize.INTEGER,
+        defaultValue: false,
+        allowNull: true,
+    },
 }, {
     timestamps: true,
 });
+Hunted.belongsTo(Character)
+ //Hunted.sync({force: true, cascade: true })
 
 module.exports = Hunted;

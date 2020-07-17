@@ -1,12 +1,6 @@
 const {Sequelize, connection} = require('../config/database');
 
 const Character = connection.define('character', {
-    id: {
-        primaryKey: true,
-        autoIncrement: true,
-        type: Sequelize.INTEGER,
-        allowNull: false,
-    },
     name: {
         type: Sequelize.STRING,
         allowNull: false,
@@ -29,5 +23,7 @@ const Character = connection.define('character', {
 }, {
     timestamps: true,
 });
+
+
 
 module.exports = Character;
