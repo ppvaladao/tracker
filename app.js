@@ -10,7 +10,6 @@ const Hunted = require('./src/models/Hunted');
 const Frag = require('./src/models/Frag');
 const { namess, huntedss } = require('./src/updates');
 
-//colocar essas funções em loop independente. (async () { huntedss(), namess() })();
 
 //criar tabela de exp em hunteds e terminar o tracker.js.
 
@@ -21,6 +20,8 @@ const { namess, huntedss } = require('./src/updates');
 //colocar esquema de login para usar botões.
 
 
+//colocar essa função em loop
+(async function() { huntedss() })();
 
 app.listen(80);
 

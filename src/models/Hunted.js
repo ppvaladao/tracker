@@ -24,7 +24,7 @@ const Hunted = connection.define('hunted', {
 }, {
     timestamps: true,
 });
-Hunted.belongsTo(Character)
+//Hunted.belongsTo(Character)
  //Hunted.sync({force: true, cascade: true })
 
 module.exports = Hunted;
