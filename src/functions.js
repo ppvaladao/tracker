@@ -149,6 +149,41 @@ const toSqlDatetime = (inputDate) => {
         .replace('T', ' ');
 };
 
+
+
+
+const puppeteer = require('puppeteer');
+
+
+
+
+
+
+async function pegar_exp(name) {
+    const browser = await puppeteer.launch({waitUntil: 'networkidle0'});
+    const page = await browser.newPage();
+    await page.goto(`https://www.utorion.com/index.php?subtopic=characters&name=${name.replace(' ', '+')}`);
+       if (await page.$('div.TableContentAndRightShadow > div > table > tbody > tr:nth-child(1) > td:nth-child(2)') !== null) console.log('exp encontrado');
+       else {console.log('nome nao existe'); return;}
+    function extractItems() {
+      const extractedElements = document.querySelectorAll('div.TableContentAndRightShadow > div > table > tbody > tr:nth-child(1) > td:nth-child(2)');
+      
+      const items = [];
+      for (let element of extractedElements) {
+        items.push(element.innerText);
+      }
+      return items;
+    }
+    
+    let items = await page.evaluate(extractItems);
+    let exp = items[4].split(' (experience total)').join('');
+    
+  
+  
+    browser.close();
+    return exp;
+  };
+
 module.exports = {
     checkStatus,
     addHunted,
@@ -157,5 +192,6 @@ module.exports = {
     sleep,
     getText,
     toSqlDatetime,
-    logsReturn
+    logsReturn,
+    pegar_exp
 };

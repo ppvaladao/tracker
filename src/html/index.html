@@ -5,69 +5,76 @@
 	<title>Hunteds</title>
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script>
-		$(document).ready(function () {
-			function hello() {
-				$.getJSON("http://localhost/listOnline", function (json) {
-					var $table = $('#jsonTable');
-					var $tbody = $table.find('tbody').empty();
+		function hello() {
+			$.getJSON("http://localhost/hunted", function (json) {
+				var $table = $('#jsonTable');
+				var $tbody = $table.find('tbody').empty();
 
-					$table.css("visibility", "visible").css("border", "1px solid green");
+				$table.css("visibility", "visible").css("border", "1px solid green");
 
-					for (var counter = 0; counter < json.length; counter++) {
-						$tbody.append("<tr><td>" + json[counter].name + "</td><td>" + json[counter].level + "</td><td>" + json[counter].vocation + "</td><td>" + json[counter].exp + "</td></tr>");
+				for (var counter = 0; counter < json.length; counter++) {
+					$tbody.append("<tr><td>" + json[counter].name + "</td><td>" + json[counter].level + "</td><td>" + json[counter].vocation + "</td><td>" + json[counter].exp + "</td></tr>");
+				}
+
+				$('th').css("border", "1px solid green");
+			});
+		}
+
+		async function logsreturn() {
+			var x = await fetch('http://localhost/logsreturn').then(response => response.json());
+			document.getElementById("logsreturn").innerHTML = x;
+		}
+
+		function actionHunted(action, name) {
+			var msg = {
+				name: name
+			};
+			$.ajax({
+				type: action,
+				url: 'http://localhost/hunted',
+				//baseUrl + ':3003/api/sendmail',
+				data: JSON.stringify(msg),
+				dataType: 'json',
+				contentType: 'application/json; charset=utf-8',
+				timeout: 5000,
+				error: function (jqXHR, textStatus, errorThrown) {
+					if (textStatus === 'timeout') {
+						alert('Erro, timeout');
 					}
-
-					$('th').css("border", "1px solid green");
-				});
-			}
-
+					alert('Error: ' + textStatus + '...' + errorThrown);
+				},
+				success: function (data) {
+					alert("trouxe o dado: " + JSON.stringify(data));
+				},
+			});
+		}
+		
+		// $(function() {
+		$(document).ready(function () {
 			$("#btn-add").click(function () {
-				var msg = {
-					name: $('#txt-add').val()
-				};
-				$.ajax({
-					type: 'POST',
-					url: 'http://localhost/addhunted',
-					//baseUrl + ':3003/api/sendmail',
-					data: JSON.stringify(msg),
-					dataType: 'json',
-					contentType: 'application/json; charset=utf-8',
-					timeout: 5000,
-					error: function (jqXHR, textStatus, errorThrown) {
-						if (textStatus === 'timeout') {
-							alert('Erro, timeout');
-						}
-						alert('Error: ' + textStatus + '...' + errorThrown);
-					},
-					success: function (data) {
-						alert("trouxe o dado: " + JSON.stringify(data));
-					},
-				});
+				actionHunted('POST', $('#txt-name').val());
 			});
 
-			async function logsreturn() {
-				var x = await fetch('http://localhost/logsreturn').then(response => response.json())
-				document.getElementById("logsreturn").innerHTML = x;
-			}
-
-			document.addEventListener("DOMContentLoaded", function () {
-				setInterval(hello, 2000);
-				setInterval(logsreturn, 2000);
+			$("#btn-remove").click(function () {
+				actionHunted('DELETE', $('#txt-name').val());
 			});
+
+			hello();
+			setInterval(hello, 2000);
+			//setInterval(logsreturn, 2000);
 		});
 	</script>
 </head>
 
 <body>
-	<input type="button" value="Atualizar" id="btn-atualizar" onclick="return hello();" />
+	<input type="button" value="Atualizar" id="btn-atualizar" onclick="hello()" />
 
 	<p>
-		<input id="txt-add" type="text" placeholder="addHunted" />
+		<input id="txt-name" type="text" placeholder="name" />
 		<button id="btn-add" value="send">add</button></p>
+		<button id="btn-remove" value="send">remove</button></p>
 		<div class="alpha"></div>
-		<p>
-			<input id="txt-remove" onclick="return removeHunted(name);" type="text" placeholder="removeHunted" />
-			<button id="btn-remove" value="send">add</button></p>
+	<p>
 	<div class="alpha"></div>
 	<table id="jsonTable" style="visibility:hidden">
 		<thead>

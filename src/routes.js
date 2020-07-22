@@ -1,9 +1,7 @@
 var express = require('express');
 var router = express.Router();
-const onlines_now = require('./puppeteer').onlines_now;
 const huntedss = require('./updates').huntedss;
 const path = require('path');
-const Hunted = require('./models/Hunted');
 const characterControllers = require('./controllers/characterController');
 
 
@@ -20,17 +18,16 @@ router.get('/huntedsOn', async function(req, res){
 
 //todos onlines com lvl atualizado
 router.get('/allonlines', async function(req, res){
-  const onlines = await onlines_now()
+    res.header("Content-Type",'application/json');
+    res.sendFile(path.join(__dirname, './utorionData/lastOnlines.json'));
 
-  res.json(onlines);
 });
 
 
 
-router.post('/create', characterControllers.create); //cria
-router.delete('/delete', characterControllers.delete); //deleta
-router.get('/listOnline', characterControllers.listOnline); //lista hunteds online
-
+router.post('/hunted', characterControllers.create); //cria
+router.delete('/hunted', characterControllers.delete); //deleta
+router.get('/hunted', characterControllers.listOnline); //lista hunteds online
 
 
 

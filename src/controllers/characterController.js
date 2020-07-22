@@ -11,6 +11,7 @@ module.exports = {
                 },
                 defaults: {
                     name: name,
+                    hunted: true
                 },
             };
             Character.findOrCreate(options).then((result) => {
@@ -26,6 +27,8 @@ module.exports = {
             return console.err('Erro na criação', err);
         }
     },
+
+    // e se eu tentar remover um cara que não existe? a mensagem será a mesma?
     async delete(req, res){
         try {
             const {name} = req.body;
@@ -43,7 +46,7 @@ module.exports = {
             const huntedsOnlines = await Character.findAll({
                 attributes: ['name', 'level', 'vocation', 'exp', 'online'],
                 where: {
-                    online: false,
+                    online: true,
                 },
                 raw: true,
             }).then(async function (hunteds) {
