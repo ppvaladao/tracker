@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon server.js"
+    "dev": "nodemon app.js",
+    "start": "node app.js"
   },
   "nodemonConfig": {
       "ignore": ["src/utorionData/*"]
