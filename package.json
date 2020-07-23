@@ -4,8 +4,10 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon server.js"
+  },
+  "nodemonConfig": {
+      "ignore": ["src/utorionData/*"]
   },
   "author": "",
   "license": "ISC",
