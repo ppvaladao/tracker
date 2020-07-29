@@ -11,6 +11,7 @@ async function onlinesReturn() {
 
 
 async function huntedss() {
+    console.log('huntedss started')
     // Unexpected token < in JSON at position 0
     const onlines = await onlinesReturn();
     await Character.findAll({
