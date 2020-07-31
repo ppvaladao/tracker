@@ -71,6 +71,7 @@ async function huntedss() {
   };
 
   async function tracker_exp() {
+    console.log('tracker started')
     const hunteds = await Character.findAll({
         attributes: ['name', 'level', 'vocation', 'exp', 'online'],
         where: {
