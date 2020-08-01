@@ -1,26 +1,27 @@
 const Character = require('../models/Character');
 
+
 module.exports = {
     async create(req, res){
         const {name} = req.body;
-        console.log(req.body)
+        const namex = name.toLowerCase().replace(/(?:^|\s|["'([{])+\S/g, match => match.toUpperCase());
         try {
             let options = {
                 where: {
-                    name: name,
+                    name: namex,
                 },
                 defaults: {
-                    name: name,
+                    name: namex,
                     hunted: true
                 },
             };
             Character.findOrCreate(options).then((result) => {
                 let user = result[0], created = result[1];
-                if (created) {console.log(name + ' foi criado')};
+                if (created) {console.log(namex + ' foi criado')};
                 if (!created) {
                     console.log('char ja existe')
                 } else {
-                    return res.json({msg: `${name} foi adicionado a database!`});
+                    return res.json({msg: `${namex} foi adicionado a database!`});
                 }
             });
         } catch (err) {

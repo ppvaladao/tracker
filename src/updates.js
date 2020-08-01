@@ -2,18 +2,14 @@ const Character = require('./models/Character');
 const puppeteer = require('puppeteer');
 const fetch = require('node-fetch');
 const func = require('./functions')
-async function onlinesReturn() {
-    const onlines = await fetch("http://localhost/allonlines").then(response => response.json());
-    return onlines;
-};
+var baseURL = 'cigarrinho.com' 
+// 'cigarrinho.com','127.0.0.1';
 
 
 
 
 async function huntedss() {
-    console.log('huntedss started')
-    // Unexpected token < in JSON at position 0
-    const onlines = await onlinesReturn();
+    const onlines = await fetch(`http://${baseURL}/allonlines`).then(response => response.json());
     await Character.findAll({
         attributes: ['name', 'level', 'vocation', 'exp', 'online'],
         raw: true
@@ -59,8 +55,8 @@ async function huntedss() {
                     }
                 };
                 await Character.update(values, selector).then(function (update) {
-                    if (online)
-                    console.log(`${hunted.name} ficou online `)
+                    //if (online)
+                    //console.log(`${hunted.name} ficou online `)
                     //salvar update log na db 
                         
                 });
@@ -71,7 +67,7 @@ async function huntedss() {
   };
 
   async function tracker_exp() {
-    console.log('tracker started')
+    const onlines = await fetch(`http://${baseURL}/allonlines`).then(response => response.json());
     const hunteds = await Character.findAll({
         attributes: ['name', 'level', 'vocation', 'exp', 'online'],
         where: {
@@ -80,11 +76,32 @@ async function huntedss() {
         raw: true,
     }).then(async function (hunteds) {
         for (const hunted of hunteds){
-            console.log(hunted.name)
-            const xp = await func.pegar_exp(hunted.name);
-            console.log(`${hunted.name} fez ${xp} de xp hoje.`)
+            let online = onlines.find(function(item) {
+                return item.name == hunted.name;
+            });
+            if (online){
+
+            
+            const xp = await func.pegar_d(hunted.name);
+            const xp2 = xp.split('+').join('').split('.').join('');
+            //console.log(`${hunted.name} fez ${xp2} de xp hoje.`)
             //'update de exp' na tabela
-      
+            var values = {
+                exp: xp2,
+            };
+            var selector = {
+                where: {
+                    name: hunted.name,
+                }
+            };
+            
+            Character.update(values, selector).then(function (updated) {
+                //console.log(`xp de ${hunted.name} foi atualizada`)
+                return updated;
+            });
+            
+        
+            }
         }
     
     });

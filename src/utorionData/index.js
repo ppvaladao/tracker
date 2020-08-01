@@ -25,6 +25,7 @@ async function onlines_now() {
     browser.close();
 
     fs.writeFileSync(__dirname + "/lastOnlines.json", JSON.stringify(on_now))
+    console.log(on_now.length + ' Players Online')
     return on_now.length
     
 };

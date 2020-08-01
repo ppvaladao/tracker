@@ -163,7 +163,7 @@ async function pegar_exp(name) {
     const browser = await puppeteer.launch({waitUntil: 'networkidle0'});
     const page = await browser.newPage();
     await page.goto(`https://www.utorion.com/index.php?subtopic=characters&name=${name.replace(' ', '+')}`);
-       if (await page.$('div.TableContentAndRightShadow > div > table > tbody > tr:nth-child(1) > td:nth-child(2)') !== null) console.log('exp encontrado');
+       if (await page.$('div.TableContentAndRightShadow > div > table > tbody > tr:nth-child(1) > td:nth-child(2)') !== null) console.log(`exp de ${name} encontrado`);
        else {console.log('nome nao existe'); return;}
     function extractItems() {
       const extractedElements = document.querySelectorAll('div.TableContentAndRightShadow > div > table > tbody > tr:nth-child(1) > td:nth-child(2)');

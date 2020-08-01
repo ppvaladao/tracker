@@ -3,7 +3,8 @@ var router = express.Router();
 const huntedss = require('./updates').huntedss;
 const path = require('path');
 const characterControllers = require('./controllers/characterController');
-
+var fs = require('fs');
+var usersFilePath = path.join(__dirname, './utorionData/lastOnlines.json');
 
 router.get('/', function (req, res) {
     res.render(__dirname + '/html/index.html');
@@ -17,10 +18,9 @@ router.get('/huntedsOn', async function(req, res){
 
 
 //todos onlines com lvl atualizado
-router.get('/allonlines', async function(req, res){
-    res.header("Content-Type",'application/json');
-    res.sendFile(path.join(__dirname, './utorionData/lastOnlines.json'));
-
+router.get('/allonlines', function(req, res){
+    var readable = fs.createReadStream(usersFilePath);
+    readable.pipe(res);
 });
 
 

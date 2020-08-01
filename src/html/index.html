@@ -5,8 +5,11 @@
 	<title>Hunteds</title>
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script>
+		var baseURL = '127.0.0.1' 
+		// 'cigarrinho.com','127.0.0.1';
+
 		function hello() {
-			$.getJSON("http://localhost/hunted", function (json) {
+			$.getJSON(`/hunted`, function (json) {
 				var $table = $('#jsonTable');
 				var $tbody = $table.find('tbody').empty();
 
@@ -21,7 +24,7 @@
 		}
 
 		async function logsreturn() {
-			var x = await fetch('http://localhost/logsreturn').then(response => response.json());
+			var x = await fetch(`/logsreturn`).then(response => response.json());
 			document.getElementById("logsreturn").innerHTML = x;
 		}
 
@@ -31,7 +34,7 @@
 			};
 			$.ajax({
 				type: action,
-				url: 'http://localhost/hunted',
+				url: `	/hunted`,
 				//baseUrl + ':3003/api/sendmail',
 				data: JSON.stringify(msg),
 				dataType: 'json',

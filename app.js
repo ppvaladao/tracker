@@ -1,11 +1,13 @@
 app = require ('./src/express')
 const { tracker_exp, huntedss } = require('./src/updates');
 const onlines_update = require('./src/utorionData').onlines_now
-//fazer update da xp na db tracker.js
+
+app.listen(80);
+
+
 //ajeitar logs na db e mostrar no site
 //implementar notificações no teamspeak 
 //colocar esquema de login para usar botões. //mais difícil
-
 
 const loop1 = () => huntedss().finally(loop1);
 const loop2 = () => tracker_exp().finally(loop2);
@@ -15,11 +17,5 @@ loop2()
 loop3()
 
 
-
-
-
-
-
-app.listen(80);
 
 
