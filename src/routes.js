@@ -6,22 +6,14 @@ const characterControllers = require('./controllers/characterController');
 var fs = require('fs');
 var usersFilePath = path.join(__dirname, './utorionData/lastOnlines.json');
 
-router.get('/', function (req, res) {
-    res.render(__dirname + '/html/index.html');
-});
-
-router.get('/huntedsOn', async function(req, res){
-    const huntedsOn = await mostrarHuntedOn()
-
-    res.json(huntedsOn);
-  });
 
 
 //todos onlines com lvl atualizado
 router.get('/allonlines', function(req, res){
-    var readable = fs.createReadStream(usersFilePath);
-    readable.pipe(res);
+  var readable = fs.createReadStream(usersFilePath);
+  readable.pipe(res);
 });
+
 
 
 

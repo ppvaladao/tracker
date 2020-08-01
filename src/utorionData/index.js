@@ -4,7 +4,6 @@ const fs = require('fs')
 
 
 async function onlines_now() {
-
     const browser = await puppeteer.launch({waitUntil: 'networkidle0'});
     const page = await browser.newPage();
     await page.goto(url_names);

@@ -4,6 +4,7 @@ const onlines_update = require('./src/utorionData').onlines_now
 
 app.listen(80);
 
+
 //implementar notificações no teamspeak 
 //ajeitar logs na db e mostrar no site
 //colocar esquema de login para usar botões. //mais difícil
@@ -14,7 +15,6 @@ const loop3 = () => onlines_update().finally(loop3);
 loop1()
 loop2()
 loop3()
-
 
 
 
