@@ -27,7 +27,8 @@ router.get('/allonlines', function(req, res){
 
 router.post('/hunted', characterControllers.create); //cria
 router.delete('/hunted', characterControllers.delete); //deleta
-router.get('/hunted', characterControllers.listOnline); //lista hunteds online
+router.get('/huntedon', characterControllers.listOnline); //lista hunteds online
+router.get('/huntedoff', characterControllers.listOff); //lista hunteds online
 
 
 

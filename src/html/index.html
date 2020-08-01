@@ -9,8 +9,23 @@
 		// 'cigarrinho.com','127.0.0.1';
 
 		function hello() {
-			$.getJSON(`/hunted`, function (json) {
+			$.getJSON(`/huntedOn`, function (json) {
 				var $table = $('#jsonTable');
+				var $tbody = $table.find('tbody').empty();
+
+				$table.css("visibility", "visible").css("border", "1px solid green");
+
+				for (var counter = 0; counter < json.length; counter++) {
+					$tbody.append("<tr><td>" + json[counter].name + "</td><td>" + json[counter].level + "</td><td>" + json[counter].vocation + "</td><td>" + json[counter].exp + "</td></tr>");
+				}
+
+				$('th').css("border", "1px solid green");
+			});
+		}
+
+		function hello2() {
+			$.getJSON(`/huntedOff`, function (json) {
+				var $table = $('#jsonTable2');
 				var $tbody = $table.find('tbody').empty();
 
 				$table.css("visibility", "visible").css("border", "1px solid green");
@@ -34,7 +49,7 @@
 			};
 			$.ajax({
 				type: action,
-				url: `	/hunted`,
+				url: `	/huntedOn`,
 				//baseUrl + ':3003/api/sendmail',
 				data: JSON.stringify(msg),
 				dataType: 'json',
@@ -63,8 +78,9 @@
 			});
 
 			hello();
-			setInterval(hello, 2000);
-			//setInterval(logsreturn, 2000);
+			hello2();
+			setInterval(hello, 4000);
+			setInterval(hello2, 4000);
 		});
 	</script>
 </head>
@@ -80,6 +96,20 @@
 	<p>
 	<div class="alpha"></div>
 	<table id="jsonTable" style="visibility:hidden">
+		<thead>
+			<tr>
+				<!-- The JSON downloaded from the URL above provides four attributes.-->
+				<th>name</th>
+				<th>level</th>
+				<th>vocation</th>
+				<th>exp</th>
+			</tr>
+		</thead>
+		<tbody></tbody>
+	</table>
+
+
+	<table id="jsonTable2" style="visibility:hidden">
 		<thead>
 			<tr>
 				<!-- The JSON downloaded from the URL above provides four attributes.-->

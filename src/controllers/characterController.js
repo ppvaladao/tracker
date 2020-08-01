@@ -59,7 +59,22 @@ module.exports = {
         }
     },
 
-
+    async listOff(req, res){
+        try {
+            const huntedsOnlines = await Character.findAll({
+                attributes: ['name', 'level', 'vocation', 'exp', 'online'],
+                where: {
+                    online: false,
+                },
+                raw: true,
+            }).then(async function (hunteds) {
+                return res.json (hunteds)
+            
+            });
+        } catch (err) {
+            return console.log("Erro na listagem de onlines: ", err);
+        }
+    },
 
 
 
