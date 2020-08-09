@@ -1,4 +1,5 @@
 const Character = require('./models/Character');
+const Logs = require('./models/Logs');
 const fetch = require('node-fetch');
 const func = require('./functions')
 var baseURL = 'cigarrinho.com' 
