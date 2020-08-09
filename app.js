@@ -4,7 +4,7 @@ const onlines_update = require('./src/utorionData').onlines_now
 
 app.listen(80);
 
-//ordenar a tabela por quem fez mais xp.
+//ordenar a tabela por quem fez mais xp!
 
 
 
