@@ -32,7 +32,7 @@ async function huntedss() {
                             }
                         };
                         if (hunted.level != online.level) {
-                          
+                            await Logs.create(update, selectorx);
                              
                         }
                         else {
