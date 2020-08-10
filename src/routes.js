@@ -4,7 +4,7 @@ const huntedss = require('./updates').huntedss;
 const path = require('path');
 const characterControllers = require('./controllers/characterController');
 var fs = require('fs');
-var usersFilePath = path.join(__dirname, './utorionData/lastOnlines.json');
+var usersFilePath = path.join(__dirname, '../utorionData/lastOnlines.json');
 
 
 

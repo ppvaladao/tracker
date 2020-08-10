@@ -1,8 +1,8 @@
 const Character = require('./models/Character');
-const puppeteer = require('puppeteer');
+const Logs = require('./models/Logs');
 const fetch = require('node-fetch');
 const func = require('./functions')
-var baseURL = 'cigarrinho.com' 
+var baseURL = '127.0.0.1' 
 // 'cigarrinho.com','127.0.0.1';
 
 
@@ -20,13 +20,23 @@ async function huntedss() {
                 });
 
                 if (online) {
+                    
                     if (hunted.level != online.level || hunted.vocation != online.vocation) {
+                        let update = (`hunted: level de ' + ${online.name} + ' atualizado de ' + ${hunted.level} + ' para ' + ${online.level}`);
+                        var updatex = {
+                            update: update
+                        };
+                        var selectorx = {
+                            where: {
+                                name: hunted.name,
+                            }
+                        };
                         if (hunted.level != online.level) {
-                            console.log('hunted: level de ' + online.name + ' atualizado de ' + hunted.level + ' para ' + online.level);
-                            //salvar na db de logs `${online.name} foi atualizado do level ${hunted.level} para o level ${online.level} `
+                            await Logs.create(update, selectorx);
+                             
                         }
                         else {
-                            console.log('hunted: vocation de ' + online.name + ' atualizado de ' + hunted.vocation + ' para ' + online.vocation);
+                           //console.log('hunted: vocation de ' + online.name + ' atualizado de ' + hunted.vocation + ' para ' + online.vocation);
                             //salvar na db de logs `${online.name} foi atualizado do level ${hunted.level} para o level ${online.level} `
                         }
                         
@@ -40,7 +50,7 @@ async function huntedss() {
                             }
                         };
                         
-                        Character.update(values, selector).then(function (updated) {
+                        await Character.update(values, selector).then(function (updated) {
                             return updated;
                         });
                     }
@@ -55,6 +65,7 @@ async function huntedss() {
                     }
                 };
                 await Character.update(values, selector).then(function (update) {
+                    
                     //if (online)
                     //console.log(`${hunted.name} ficou online `)
                     //salvar update log na db 
@@ -65,8 +76,9 @@ async function huntedss() {
     }) 
  
   };
-
+const exp = require('./puppeteer2')
   async function tracker_exp() {
+      console.log('track exp start')
     const onlines = await fetch(`http://${baseURL}/allonlines`).then(response => response.json());
     const hunteds = await Character.findAll({
         attributes: ['name', 'level', 'vocation', 'exp', 'online'],
@@ -80,9 +92,9 @@ async function huntedss() {
                 return item.name == hunted.name;
             });
             if (online){
-
-            
-            const xp = await func.pegar_d(hunted.name);
+            console.log(hunted.name)
+            const xp = await exp(hunted.name);
+            try {console.log(xp)} catch (e) {console.log(e)}
             const xp2 = xp.split('+').join('').split('.').join('');
             //console.log(`${hunted.name} fez ${xp2} de xp hoje.`)
             //'update de exp' na tabela
