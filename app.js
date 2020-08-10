@@ -1,6 +1,6 @@
 app = require ('./src/express')
 const { tracker_exp, huntedss } = require('./src/updates');
-const onlines_update = require('./src/utorionData').onlines_now
+const onlines_update = require('./utorionData').onlines_now
 
 app.listen(80);
 
