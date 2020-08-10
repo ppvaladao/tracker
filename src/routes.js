@@ -8,7 +8,7 @@ var usersFilePath = path.join(__dirname, './utorionData/lastOnlines.json');
 
 
 
-//todos onlines com lvl atualizado
+//todos onlines com lvl atualizadoxx
 router.get('/allonlines', function(req, res){
   var readable = fs.createReadStream(usersFilePath);
   readable.pipe(res);
