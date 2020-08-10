@@ -3,7 +3,7 @@ const { huntedss, tracker_exp } = require('./src/updates');
 const onlines = require('./src/puppeteer');
 app.listen(80);
 
-//ordenar a tabela por quem fez mais xp!
+//ordenar a tabela por quem fez mais xp
 
 
 
