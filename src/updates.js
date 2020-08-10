@@ -20,20 +20,23 @@ async function huntedss() {
                 });
 
                 if (online) {
+                    
                     if (hunted.level != online.level || hunted.vocation != online.vocation) {
-
-                        
+                        let update = (`hunted: level de ' + ${online.name} + ' atualizado de ' + ${hunted.level} + ' para ' + ${online.level}`);
+                        var updatex = {
+                            update: update
+                        };
+                        var selectorx = {
+                            where: {
+                                name: hunted.name,
+                            }
+                        };
                         if (hunted.level != online.level) {
-                            await Logs.update(values, selector).then(function (updated) {
-                                return updated;
-                            });
-                            console.log('hunted: level de ' + online.name + ' atualizado de ' + hunted.level + ' para ' + online.level);
-                            //salvar na db de logs `${online.name} foi atualizado do level ${hunted.level} para o level ${online.level} `
+                          
+                             
                         }
                         else {
-                            await Logs.update(values, selector).then(function (updated) {
-                                return updated;
-                            });//console.log('hunted: vocation de ' + online.name + ' atualizado de ' + hunted.vocation + ' para ' + online.vocation);
+                           //console.log('hunted: vocation de ' + online.name + ' atualizado de ' + hunted.vocation + ' para ' + online.vocation);
                             //salvar na db de logs `${online.name} foi atualizado do level ${hunted.level} para o level ${online.level} `
                         }
                         
