@@ -3,7 +3,10 @@ const connection = Database.connection;
 const Character = require('./models/Character');
 const Hunted = require('./models/Hunted');
 const namess = require('./updates').namess;
-const puppeteer = require('puppeteer');
+const cheerio = require('cheerio');
+const request = require('request');
+
+
 async function logsReturn() {
     const xd = await namess()
     console.log(xd.length)
@@ -152,19 +155,6 @@ const toSqlDatetime = (inputDate) => {
 
 
 
-
-
-
-
-
-
-
-async function pegar_exp(name) {
-    const browser = await puppeteer.launch({args: ['--no-sandbox', '--disable-setuid-sandbox'], waitUntil: 'networkidle0'});
-    const page = await browser.newPage();
-    
-  };
-
 module.exports = {
     checkStatus,
     addHunted,
@@ -174,5 +164,4 @@ module.exports = {
     getText,
     toSqlDatetime,
     logsReturn,
-    pegar_exp
 };
