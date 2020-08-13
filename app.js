@@ -1,5 +1,6 @@
 app = require ('./src/express')
-const { tracker } = require('./src/updates');
+const { tracker, huntedss, reqOnlines } = require('./src/updates');
+
 //const onlines = require('./src/puppeteer');
 app.listen(80);
 
@@ -8,12 +9,11 @@ app.listen(80);
 //ajeitar logs na db e mostrar no site
 //colocar esquema de login para usar botões. //mais difícil
 
-const loop1 = () => tracker().finally(loop1);
-
-
-loop1()
-//loop2()
 
 
 
+const loop1 = () => reqOnlines().finally(loop1);
+const loop2 = () => huntedss().finally(loop2);
 
+loop1();
+loop2();
