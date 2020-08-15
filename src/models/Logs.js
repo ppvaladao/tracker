@@ -2,7 +2,7 @@ const {Sequelize, connection} = require('../config/database');
 
 const Logs = connection.define('logs', {
     logs: {
-        type: Sequelize.STRING,
+        type: Sequelize.TEXT,
         defaultValue: false,
         allowNull: true,
     },

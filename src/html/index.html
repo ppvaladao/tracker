@@ -38,9 +38,24 @@
 			});
 		}
 
-		async function logsreturn() {
-			var x = await fetch(`/logsreturn`).then(response => response.json());
-			document.getElementById("logsreturn").innerHTML = x;
+		function hello3() {
+			$.getJSON(`/listLogs`, function (json) {
+				var $table = $('#jsonTable3');
+				var $tbody = $table.find('tbody').empty();
+
+				$table.css("visibility", "visible").css("border", "1px solid green");
+
+				for (var counter = 0; counter < json.length; counter++) {
+					$tbody.append("<tr><td>" + json[counter].logs + "</td><td>");
+				}
+
+				$('th').css("border", "1px solid green");
+			});
+		}
+
+		async function listLogs() {
+			var x = await fetch(`/listLogs`).then(response => response.json());
+			document.getElementById("listLogs").innerHTML = x;
 		}
 
 		function actionHunted(action, name) {
@@ -78,9 +93,10 @@
 			});
 
 			hello();
-			hello2();
+			hello2();hello3();
 			setInterval(hello, 4000);
 			setInterval(hello2, 4000);
+			setInterval(hello3, 4000);
 		});
 	</script>
 </head>
@@ -121,9 +137,18 @@
 		<tbody></tbody>
 	</table>
 	<br>
+	<table id="jsonTable3" style="visibility:hidden">
+		<thead>
+			<tr>
+				<!-- The JSON downloaded from the URL above provides four attributes.-->
+				<th>logs</th>
+			</tr>
+		</thead>
+		<tbody></tbody>
+	</table>
+	<br>
 
-
-	<pre id="logsreturn"></pre>
+	<pre id="listLogs"></pre>
 
 
 </body>

@@ -153,6 +153,78 @@ const toSqlDatetime = (inputDate) => {
 };
 
 
+async function exp(hunted) { 
+    return new Promise((resolve, reject) => {
+        request({
+            
+            method: 'GET',
+            url: `https://www.utorion.com/index.php?subtopic=characters&name=${hunted}`
+        }, (err, res, body) => {
+    
+            if (err) {
+                console.error(err);
+                return reject(err);
+            }
+            if (body.indexOf(' does not exist.') != -1) {
+                console.error('Usuário mudou de nome: ' + hunted);
+                return reject(err);
+            }
+            if (body.indexOf('The Following Errors Have Occurred:') != -1) {
+                console.error('Erro na página: ' + hunted);
+                return reject(err);
+            }
+    
+            let $ = cheerio.load(body);
+    
+            var xp = $('table > tbody > tr > td > div > table > tbody > tr > td > div.TableContentAndRightShadow > div > table > tbody > tr:nth-child(1) > td:nth-child(2) > font').text();
+            if (xp) {
+                return resolve(xp)
+    
+            } else{
+                return resolve(0);
+            }
+    
+        });
+            
+    
+        });
+    
+    };
+    async function reqOnlines() {
+        return new Promise((resolve, reject) => {
+            request({
+                method: 'GET',
+                url: `https://www.utorion.com/index.php?subtopic=whoisonline`
+            }, (err, res, body) => {
+    
+                if (err) {
+                    console.error(err);
+    
+                    // Se a requisição falhar, vamos REJEITAR a Promise (dizer que deu errado / chamar o catch) enviando o erro
+                    return reject(err);
+                }
+    
+                const $ = cheerio.load(body);
+    
+                const onlines = [];
+    
+                $('.Table2 tr:not(:first-child)').each(function () {
+                    const $el = $(this);
+                    const name = $el.find('td:nth-child(1) a').text();
+                    const level = $el.find('td:nth-child(2)').text();
+                    const vocation = $el.find('td:nth-child(3)').text().split('&nbsp;').join(' ');
+                    onlines.push({
+                        name,
+                        level,
+                        vocation,
+                    });
+                });
+    
+               
+                return resolve(onlines);
+            });
+        });
+    };
 
 
 module.exports = {
@@ -164,4 +236,6 @@ module.exports = {
     getText,
     toSqlDatetime,
     logsReturn,
+    exp,
+    reqOnlines
 };

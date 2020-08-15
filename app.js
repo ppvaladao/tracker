@@ -1,5 +1,5 @@
 app = require ('./src/express')
-const { tracker, huntedss, reqOnlines } = require('./src/updates');
+const { tracker, huntedss, exp } = require('./src/updates');
 
 //const onlines = require('./src/puppeteer');
 app.listen(80);
@@ -12,8 +12,7 @@ app.listen(80);
 
 
 
-const loop1 = () => reqOnlines().finally(loop1);
-const loop2 = () => huntedss().finally(loop2);
+const loop1 = () => huntedss().finally(loop1);
+
 
 loop1();
-loop2();
