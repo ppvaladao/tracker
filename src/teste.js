@@ -1,21 +1,17 @@
-const Logs = require('./models/Logs');
-const cheerio = require('cheerio');
-const request = require('request');
+
+//const { TeamSpeak,  } = require("ts3-nodejs-library")
+// TeamSpeak.connect({
+//     host: "BR.VOLTUHOST.COM",
+//   nickname: "NodeJS Query Framework",
+//   username: "NodeJS",
+//   serverport: "1603",
+//   queryport: "10011"
+//   }).then(async teamspeak => {
+//     const clientList = await teamspeak.clientList();
+//     console.log(clientList)
+//   }).catch((e)=> {e; console.log(e)} )
 
 
-const frase = 'xdddd';
-
-                    
-// async function onlines() {
-    
-//     const hunteds = Character.findAll({
-//         attributes: ['name', 'level', 'vocation', 'exp', 'online'],
-//         raw: true,
-//     }).then(async function (hunteds) {
-            
-    
-//         });
-//     };
-
-
-    
+// //BR.VOLTUHOST.COM:1603
+//  //sacode.typefrag.com
+//  //tilera.serverbb.net

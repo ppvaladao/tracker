@@ -1,19 +1,9 @@
 var express = require('express');
 var router = express.Router();
-const huntedss = require('./updates').huntedss;
-const path = require('path');
 const characterControllers = require('./controllers/characterController');
 const logsController = require('./controllers/logsController');
-var fs = require('fs');
-var usersFilePath = path.join(__dirname, '../utorionData/lastOnlines.json');
 
 
-
-//todos onlines com lvl atualizado
-router.get('/allonlines', function(req, res){
-  var readable = fs.createReadStream(usersFilePath);
-  readable.pipe(res);
-});
 
 
 

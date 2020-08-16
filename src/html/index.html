@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -53,10 +52,6 @@
 			});
 		}
 
-		async function listLogs() {
-			var x = await fetch(`/listLogs`).then(response => response.json());
-			document.getElementById("listLogs").innerHTML = x;
-		}
 
 		function actionHunted(action, name) {
 			var msg = {
@@ -124,6 +119,16 @@
 		<tbody></tbody>
 	</table>
 	<br>
+	<table id="jsonTable3" style="visibility:hidden">
+		<thead>
+			<tr>
+				<!-- The JSON downloaded from the URL above provides four attributes.-->
+				<th>logs</th>
+			</tr>
+		</thead>
+		<tbody></tbody>
+	</table>
+	<br>
 	<table id="jsonTable2" style="visibility:hidden">
 		<thead>
 			<tr>
@@ -132,16 +137,6 @@
 				<th>level</th>
 				<th>vocation</th>
 				<th>exp</th>
-			</tr>
-		</thead>
-		<tbody></tbody>
-	</table>
-	<br>
-	<table id="jsonTable3" style="visibility:hidden">
-		<thead>
-			<tr>
-				<!-- The JSON downloaded from the URL above provides four attributes.-->
-				<th>logs</th>
 			</tr>
 		</thead>
 		<tbody></tbody>

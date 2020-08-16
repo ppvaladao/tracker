@@ -1,7 +1,4 @@
 const express = require('express');
-var fs = require('fs');
-const path = require('path');
-
 
  //express server 
   const app = express();

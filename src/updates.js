@@ -1,9 +1,10 @@
 const Character = require('./models/Character');
 const func = require('./functions');
-const fs = require(`fs`);
 const Logs = require('./models/Logs');
 
+  
 async function huntedss() {
+    await func.sleep(10000);
     await Character.findAll({
         attributes: ['name', 'level', 'vocation', 'exp', 'online'],
         raw: true
@@ -12,11 +13,14 @@ async function huntedss() {
 
         for (const hunted of hunteds) {
             const onlines = await func.reqOnlines();
+            if (onlines.length == 0){return;} 
+
             const online = onlines.find(function (item) {
                 return item.name == hunted.name;
             });
 
-            const exp = (await func.exp(hunted.name));
+            const exp = (await func.exp(hunted.name)); 
+            if (exp === '3') {console.log('exp = 3, ou seja, erro');return;} 
             if (exp != hunted.exp) {
 
                 let values = {
@@ -63,7 +67,6 @@ async function huntedss() {
                 console.log('vocacao change')
                 console.log(`${hunted.name} ${hunted.level} ${hunted.vocation} ${online.vocation}`)
                 let values = {
-                    level: online.level,
                     vocation: online.vocation,
                 };
                 let selector = {
@@ -74,7 +77,7 @@ async function huntedss() {
 
                 Character.update(values, selector).then(function () {
             
-                    const frase = `O level de ${hunted.name} foi atualizado de ${hunted.level} para ${online.level}.`
+                    const frase = `A vocação de ${hunted.name} foi atualizado de ${hunted.vocation} para ${online.vocation}.`
                     Logs.create({logs: frase}).then(function () {
                         console.log('log criado com ' + frase)
                     });
