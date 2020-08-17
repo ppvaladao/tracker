@@ -20,7 +20,7 @@ async function huntedss() {
             });
 
             const exp = (await func.exp(hunted.name)); 
-            if (exp === '3') {console.log('exp = 3, ou seja, erro');return;} 
+            if (exp === '3') {return;} 
             if (exp != hunted.exp) {
 
                 let values = {
