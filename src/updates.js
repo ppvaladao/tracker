@@ -37,10 +37,10 @@ async function huntedss() {
 
                 });
             }
-            
+
             if (online){
                 const exp = (await func.exp(hunted.name)); 
-            if (exp === '3') {return;} 
+            if (exp === ('')) {return;} 
             if (exp != hunted.exp) {
 
                 let values = {
