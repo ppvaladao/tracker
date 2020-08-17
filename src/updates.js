@@ -3,7 +3,7 @@ const func = require('./functions');
 const Logs = require('./models/Logs');
 
   
-async function huntedss() {
+async function hunteds() {
     await func.sleep(3000);
     await Character.findAll({
         attributes: ['name', 'level', 'vocation', 'exp', 'online'],
@@ -115,6 +115,6 @@ async function huntedss() {
 
 
 module.exports = {
-    huntedss
+    hunteds
 
 };

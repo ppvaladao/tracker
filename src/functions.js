@@ -145,19 +145,19 @@ async function exp(hunted) {
             }
             if (body.indexOf(' does not exist.') != -1) {
                 console.error('Usuário mudou de nome: ' + hunted);
-                return reject('3');
+                return reject();
             }
             if (body.indexOf('The Following Errors Have Occurred:') != -1) {
                 console.error('Erro na página: ' + hunted);
-                return reject('3');
+                return reject();
             }
             if (body.indexOf('cloudflare') != -1) {
                 console.error('cloudflare error' + hunted);
-                return reject('3');
+                return reject();
             }
             if (body.indexOf('not found') != -1) {
                 console.error('not found error' + hunted);
-                return reject('3');
+                return reject();
             }
     
             let $ = cheerio.load(body);
