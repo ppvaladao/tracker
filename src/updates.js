@@ -18,8 +18,28 @@ async function huntedss() {
             const online = onlines.find(function (item) {
                 return item.name == hunted.name;
             });
+            if (hunted.online != !!online) {
+                let values = {
+                    online: !!online,
+                };
+                let selector = {
+                    where: {
+                        name: hunted.name
+                    }
+                };
 
-            const exp = (await func.exp(hunted.name)); 
+                Character.update(values, selector).then(function () {
+                    const frase = ` ${hunted.name} online ${!!online} `
+          
+                    Logs.create({logs: frase}).then(function () {
+                        console.log('log criado com ' + frase)
+                    });
+
+                });
+            }
+            
+            if (online){
+                const exp = (await func.exp(hunted.name)); 
             if (exp === '3') {return;} 
             if (exp != hunted.exp) {
 
@@ -42,28 +62,7 @@ async function huntedss() {
                 });
             }
 
-            if (hunted.online != !!online) {
-                let values = {
-                    online: !!online,
-                };
-                let selector = {
-                    where: {
-                        name: hunted.name
-                    }
-                };
-
-                Character.update(values, selector).then(function () {
-                    const frase = ` ${hunted.name} online ${!!online} `
-          
-                    Logs.create({logs: frase}).then(function () {
-                        console.log('log criado com ' + frase)
-                    });
-
-                });
-            }
-
-
-            if (online && online.vocation != hunted.vocation) {
+            if (online.vocation != hunted.vocation) {
                 console.log('vocacao change')
                 console.log(`${hunted.name} ${hunted.level} ${hunted.vocation} ${online.vocation}`)
                 let values = {
@@ -85,7 +84,7 @@ async function huntedss() {
                 });
             }
 
-            if (online && online.level != hunted.level) {
+            if (online.level != hunted.level) {
                 let values = {
                     level: online.level,
                 };
@@ -102,6 +101,8 @@ async function huntedss() {
                     });
                 });
             }
+            }
+            
 
 
         }
