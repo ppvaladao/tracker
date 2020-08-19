@@ -217,15 +217,13 @@ async function reqOnlines() {
 
 const config = {
     host: "BR.VOLTUHOST.COM",
-    username: "",
+    username: "bot",
     password: "WdbiL8CpfZiq",
     serverport: "1603",
     queryport: "10011",
 };
 
 let ts3;
-
-const connection = TeamSpeak.connect(config);
 
 async function sendMessage(message) {
     try {
@@ -244,6 +242,35 @@ async function sendMessage(message) {
     }
 }
 
+
+
+
+async function sendMessage2(message) {
+
+        const teamspeak = new TeamSpeak({
+            host: "BR.VOLTUHOST.COM",
+            queryport: 10011,
+            serverport: "1603",
+            username: "tracker",
+            password: "WdbiL8CpfZiq"
+        })
+     teamspeak.on("ready", (teamspeak) => {
+            const clients = teamspeak.clientList();
+            for (const client of clients) {
+                console.log(`Sending "${message}" to ${client.nickname}`);
+                client.message(message)
+            }
+          })
+          
+
+    }
+
+async function xd() {
+    await sendMessage2('testtee6');
+}
+
+xd();
+sendMessage2('testtee33');
 
 module.exports = {
     addHunted,
