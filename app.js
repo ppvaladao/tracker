@@ -5,5 +5,4 @@ app.listen(80);
 
 const loop1 = () => hunteds().finally(loop1);
 
-
 loop1();

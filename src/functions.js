@@ -5,6 +5,7 @@ const cheerio = require('cheerio');
 const request = require('request');
 const { TeamSpeak, } = require("ts3-nodejs-library")
 
+var teamspeak;
 
 async function addHunted(name) {
     let options = {
@@ -215,7 +216,7 @@ async function reqOnlines() {
     });
 };
 
-const config = {
+const config_teamspeak = {
     host: "BR.VOLTUHOST.COM",
     username: "bot",
     password: "WdbiL8CpfZiq",
@@ -223,54 +224,30 @@ const config = {
     queryport: "10011",
 };
 
-let ts3;
+async function connect() {
+    teamspeak = new TeamSpeak(config_teamspeak);
+    teamspeak.on("ready", () => {
+        console.log("ready");
+    });
+
+    teamspeak.on("error", (e) => {
+        console.log("error: " + e);
+    });
+
+    teamspeak.on("close", async () => {
+        console.log("disconnected, trying to reconnect...");
+        await teamspeak.reconnect(-1, 1000);
+        console.log("reconnected!");
+    });
+};
 
 async function sendMessage(message) {
-    try {
-        if (!ts3) {
-            ts3 = await TeamSpeak.connect(config)
-        }
-
-        const clients = await ts3.clientList();
-
-        for (const client of clients) {
-            console.log(`Sending "${message}" to ${client.nickname}`);
-            await client.message(message)
-        }
-    } catch (err) {
-        console.log(err)
-    }
+    const clients = await teamspeak.clientList();
+    clients.forEach(client => {
+        //console.log(`Sending ${message} to ${client.nickname}`)
+        client.message(message);
+    });
 }
-
-
-
-
-async function sendMessage2(message) {
-
-        const teamspeak = new TeamSpeak({
-            host: "BR.VOLTUHOST.COM",
-            queryport: 10011,
-            serverport: "1603",
-            username: "tracker",
-            password: "WdbiL8CpfZiq"
-        })
-     teamspeak.on("ready", (teamspeak) => {
-            const clients = teamspeak.clientList();
-            for (const client of clients) {
-                console.log(`Sending "${message}" to ${client.nickname}`);
-                client.message(message)
-            }
-          })
-          
-
-    }
-
-async function xd() {
-    await sendMessage2('testtee6');
-}
-
-xd();
-sendMessage2('testtee33');
 
 module.exports = {
     addHunted,
@@ -282,5 +259,6 @@ module.exports = {
     exp,
     reqOnlines,
     sleep,
+    connect,
     sendMessage
 };

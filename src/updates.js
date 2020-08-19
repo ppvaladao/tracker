@@ -4,6 +4,7 @@ const Logs = require('./models/Logs');
 
   
 async function hunteds() {
+    await func.connect();
     await func.sleep(3000);
     await Character.findAll({
         attributes: ['name', 'level', 'vocation', 'exp', 'online'],
