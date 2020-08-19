@@ -1,9 +1,9 @@
 const Database = require('./config/database');
-const connection = Database.connection;
+const connectionx = Database.connection;
 const Character = require('./models/Character');
 const cheerio = require('cheerio');
 const request = require('request');
-
+const { TeamSpeak, } = require("ts3-nodejs-library")
 
 
 async function addHunted(name) {
@@ -36,7 +36,7 @@ async function addHunted(name) {
         return;
     }
 
-    await connection.query('SET FOREIGN_KEY_CHECKS = 0', { raw: true }).then(async function () {
+    await connectionx.query('SET FOREIGN_KEY_CHECKS = 0', { raw: true }).then(async function () {
         await Hunted.sync().then(async function () {
             let options = {
                 where: {
@@ -131,17 +131,17 @@ const toSqlDatetime = (inputDate) => {
 };
 
 
-async function exp(hunted) { 
+async function exp(hunted) {
     return new Promise((resolve, reject) => {
         request({
-            
+
             method: 'GET',
             url: `https://www.utorion.com/index.php?subtopic=characters&name=${hunted}`
         }, (err, res, body) => {
-            
+
             if (err) {
                 console.error(err);
-                return ;
+                return reject();
             }
             if (body.indexOf(' does not exist.') != -1) {
                 console.error('Usuário mudou de nome: ' + hunted);
@@ -159,63 +159,90 @@ async function exp(hunted) {
                 console.error('not found error' + hunted);
                 return reject();
             }
-    
+
             let $ = cheerio.load(body);
-    
+
             var xp = $('table > tbody > tr > td > div > table > tbody > tr > td > div.TableContentAndRightShadow > div > table > tbody > tr:nth-child(1) > td:nth-child(2) > font').text();
-   
+
             if (xp) {
                 return resolve(xp)
-    
-            } else
-            {
+
+            } else {
                 return resolve(0)
             }
-    
-        });
-            
-    
-        });
-    
-    };
-    async function reqOnlines() {
-        return new Promise((resolve, reject) => {
-            request({
-                method: 'GET',
-                url: `https://www.utorion.com/index.php?subtopic=whoisonline`
-            }, (err, res, body) => {
-              
-    
-                if (err) {
-                    console.error(err);
-      
-                    // Se a requisição falhar, vamos REJEITAR a Promise (dizer que deu errado / chamar o catch) enviando o erro
-                    return reject(err);
-                }
-                
-                
-                const $ = cheerio.load(body);
-                const onlines = [];
-                $('.Table2 tr:not(:first-child)').each(function () {
-                    const $el = $(this);
-                    const name = $el.find('td:nth-child(1) a').text();
-                    const level = $el.find('td:nth-child(2)').text();
-                    const vocation = $el.find('td:nth-child(3)').text().split('&nbsp;').join(' ');
-                    onlines.push({
-                        name,
-                        level,
-                        vocation,
-                    });
-                });
-      
-                
-                
-                
-                return resolve(onlines);
-            });
-        });
-      };
 
+        });
+
+
+    });
+
+};
+async function reqOnlines() {
+    return new Promise((resolve, reject) => {
+        request({
+            method: 'GET',
+            url: `https://www.utorion.com/index.php?subtopic=whoisonline`
+        }, (err, res, body) => {
+
+
+            if (err) {
+                console.error(err);
+
+                // Se a requisição falhar, vamos REJEITAR a Promise (dizer que deu errado / chamar o catch) enviando o erro
+                return reject(err);
+            }
+
+
+            const $ = cheerio.load(body);
+            const onlines = [];
+            $('.Table2 tr:not(:first-child)').each(function () {
+                const $el = $(this);
+                const name = $el.find('td:nth-child(1) a').text();
+                const level = $el.find('td:nth-child(2)').text();
+                const vocation = $el.find('td:nth-child(3)').text().split('&nbsp;').join(' ');
+                onlines.push({
+                    name,
+                    level,
+                    vocation,
+                });
+            });
+
+
+
+
+            return resolve(onlines);
+        });
+    });
+};
+
+const config = {
+    host: "BR.VOLTUHOST.COM",
+    username: "",
+    password: "WdbiL8CpfZiq",
+    serverport: "1603",
+    queryport: "10011",
+};
+
+let ts3;
+
+const connection = TeamSpeak.connect(config);
+
+async function sendMessage(message) {
+    try {
+        if (!ts3) {
+            ts3 = await TeamSpeak.connect(config)
+        }
+
+        const clients = await ts3.clientList();
+
+        for (const client of clients) {
+            console.log(`Sending "${message}" to ${client.nickname}`);
+            await client.message(message)
+        }
+    } catch (err) {
+        console.log(err)
+    }
+}
 
 
 module.exports = {
@@ -227,5 +254,6 @@ module.exports = {
     toSqlDatetime,
     exp,
     reqOnlines,
-    sleep
+    sleep,
+    sendMessage
 };
