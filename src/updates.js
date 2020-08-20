@@ -31,7 +31,7 @@ async function hunteds() {
                 Character.update(values, selector).then(async function () {
                     const frase = ` ${hunted.name} online ${!!online} `
                     await TeamSpeakProvider.messageAll(frase);
-                    Logs.create({ logs: frase }).then(function () {
+                    await Logs.create({ logs: frase }).then(function () {
                         console.log('log criado com ' + frase)
                     });
 
@@ -53,9 +53,9 @@ async function hunteds() {
                     };
 
                     Character.update(values, selector).then(async function () {
-                        const frase = `Experiência de ${hunted.name} atualizada de ${hunted.exp} para ${exp}`;
+                        const frase = `Experiência de ${hunted.name} ${hunted.vocation} ${hunted.level} atualizada de ${hunted.exp} para ${exp}`;
                         await TeamSpeakProvider.messageAll(frase);
-                        Logs.create({ logs: frase }).then(function () {
+                        await Logs.create({ logs: frase }).then(function () {
                             console.log('log criado com ' + frase)
                         });
 
@@ -79,7 +79,7 @@ async function hunteds() {
 
                         const frase = `A vocação de ${hunted.name} foi atualizado de ${hunted.vocation} para ${online.vocation}.`
                         await TeamSpeakProvider.messageAll(frase);
-                        Logs.create({ logs: frase }).then(function () {
+                        await Logs.create({ logs: frase }).then(function () {
                             console.log('log criado com ' + frase)
                         });
 
@@ -97,9 +97,9 @@ async function hunteds() {
                     };
 
                     Character.update(values, selector).then(async function () {
-                        const frase = `O level de ${hunted.name} foi atualizado de ${hunted.level} para ${online.level}.`
+                        const frase = `O level de ${hunted.name} ${hunted.vocation} foi atualizado de ${hunted.level} para ${online.level}.`
                         await TeamSpeakProvider.messageAll(frase);
-                        Logs.create({ logs: frase }).then(function () {
+                        await Logs.create({ logs: frase }).then(function () {
                             console.log('log criado com ' + frase)
                         });
                     });
