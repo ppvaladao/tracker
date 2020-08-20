@@ -31,7 +31,7 @@ async function hunteds() {
 
                 Character.update(values, selector).then(async function () {
                     const frase = ` ${hunted.name} online ${!!online} `
-                    await func.sendMessage(frase);
+                    //await func.sendMessage(frase);
                     Logs.create({logs: frase}).then(function () {
                         console.log('log criado com ' + frase)
                     });
@@ -55,7 +55,7 @@ async function hunteds() {
 
                 Character.update(values, selector).then(async function () {
                     const frase = `Experiência de ${hunted.name} atualizada de ${hunted.exp} para ${exp}`;
-                    await func.sendMessage(frase);
+                    //await func.sendMessage(frase);
                     Logs.create({logs: frase}).then(function () {
                         console.log('log criado com ' + frase)
                     });
@@ -79,7 +79,7 @@ async function hunteds() {
                 Character.update(values, selector).then(async function () {
             
                     const frase = `A vocação de ${hunted.name} foi atualizado de ${hunted.vocation} para ${online.vocation}.`
-                    await func.sendMessage(frase);
+                    //await func.sendMessage(frase);
                     Logs.create({logs: frase}).then(function () {
                         console.log('log criado com ' + frase)
                     });
@@ -99,7 +99,7 @@ async function hunteds() {
 
                 Character.update(values, selector).then(async function () {
                     const frase = `O level de ${hunted.name} foi atualizado de ${hunted.level} para ${online.level}.`
-                    await func.sendMessage(frase);
+                    //await func.sendMessage(frase);
                     Logs.create({logs: frase}).then(function () {
                         console.log('log criado com ' + frase)
                     });

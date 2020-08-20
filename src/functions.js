@@ -227,7 +227,6 @@ const config_teamspeak = {
 async function connect() {
     teamspeak = new TeamSpeak(config_teamspeak);
     teamspeak.on("ready", () => {
-        console.log("ready");
     });
 
     teamspeak.on("error", (e) => {
@@ -236,7 +235,7 @@ async function connect() {
 
     teamspeak.on("close", async () => {
         console.log("disconnected, trying to reconnect...");
-        await teamspeak.reconnect(-1, 1000);
+        await teamspeak.reconnect(-1, 5000);
         console.log("reconnected!");
     });
 };
