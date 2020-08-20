@@ -2,9 +2,12 @@ var express = require('express');
 var router = express.Router();
 const characterControllers = require('./controllers/characterController');
 const logsController = require('./controllers/logsController');
+const { html } = require('cheerio');
 
 
-
+router.get('/addzin', function(req, res) {
+    res.sendFile('addz.html', {root: __dirname + '/html/' })
+});
 
 
 
