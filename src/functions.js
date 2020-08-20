@@ -216,37 +216,7 @@ async function reqOnlines() {
     });
 };
 
-const config_teamspeak = {
-    host: "BR.VOLTUHOST.COM",
-    username: "bot",
-    password: "WdbiL8CpfZiq",
-    serverport: "1603",
-    queryport: "10011",
-};
 
-async function connect() {
-    teamspeak = new TeamSpeak(config_teamspeak);
-    teamspeak.on("ready", () => {
-    });
-
-    teamspeak.on("error", (e) => {
-        console.log("error: " + e);
-    });
-
-    teamspeak.on("close", async () => {
-        console.log("disconnected, trying to reconnect...");
-        await teamspeak.reconnect(-1, 5000);
-        console.log("reconnected!");
-    });
-};
-
-async function sendMessage(message) {
-    const clients = await teamspeak.clientList();
-    clients.forEach(client => {
-        //console.log(`Sending ${message} to ${client.nickname}`)
-        client.message(message);
-    });
-}
 
 module.exports = {
     addHunted,
@@ -257,7 +227,5 @@ module.exports = {
     toSqlDatetime,
     exp,
     reqOnlines,
-    sleep,
-    connect,
-    sendMessage
+    sleep
 };
