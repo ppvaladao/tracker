@@ -49,8 +49,13 @@ module.exports = {
                 where: {
                     online: true,
                 },
+                order: [
+                    ['level', 'DESC'],
+                ],
                 raw: true,
+                
             }).then(async function (hunteds) {
+                
                 return res.json (hunteds)
             
             });

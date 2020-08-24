@@ -41,6 +41,7 @@ async function hunteds() {
             if (online) {
                 const exp = (await func.exp(hunted.name));
                 if (exp === ('')) { return; }
+                await func.sleep(1000);
                 if (exp != hunted.exp) {
 
                     let values = {

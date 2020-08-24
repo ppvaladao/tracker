@@ -133,6 +133,7 @@ const toSqlDatetime = (inputDate) => {
 
 
 async function exp(hunted) {
+    //retornar exp do hunted e tempo de update, se tempo for menor q 5 min de update, retornar a msm xp
     return new Promise((resolve, reject) => {
         request({
 

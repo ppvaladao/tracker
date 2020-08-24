@@ -35,5 +35,5 @@ const Frag = connection.define('frag', {
 }, {
     timestamps: true,
 });
-
+//Frag.sync({force: true})
 module.exports = Frag;
