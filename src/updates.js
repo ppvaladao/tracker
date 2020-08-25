@@ -32,7 +32,7 @@ async function hunteds() {
                     const frase = ` ${hunted.vocation} ${hunted.level} ${hunted.name} online ${!!online} `
                     await TeamSpeakProvider.messageAll(frase);
                     await Logs.create({ logs: frase }).then(function () {
-                        console.log('log criado com ' + frase)
+                       
                     });
 
                 });
@@ -57,7 +57,7 @@ async function hunteds() {
                         const frase = `${hunted.vocation} ${hunted.level} ${hunted.name} exp update de ${hunted.exp} para ${exp}`;
                         await TeamSpeakProvider.messageAll(frase);
                         await Logs.create({ logs: frase }).then(function () {
-                            console.log('log criado com ' + frase)
+                           
                         });
 
 
@@ -80,7 +80,7 @@ async function hunteds() {
                         const frase = `A vocação de ${hunted.vocation} ${hunted.level} ${hunted.name} foi atualizado de ${hunted.vocation} para ${online.vocation}.match(/\b\w/g).join('')`
                         //await TeamSpeakProvider.messageAll(frase);
                         //await Logs.create({ logs: frase }).then(function () {
-                            console.log('log criado com ' + frase)
+           
                         //});
 
                     });
@@ -100,7 +100,7 @@ async function hunteds() {
                         const frase = `${hunted.vocation} ${hunted.level} ${hunted.name} lvl update de ${hunted.level} para ${online.level}.`
                         await TeamSpeakProvider.messageAll(frase);
                         await Logs.create({ logs: frase }).then(function () {
-                            console.log('log criado com ' + frase)
+                            
                         });
                     });
                 }
