@@ -15,7 +15,7 @@
 				$table.css("visibility", "visible").css("border", "1px solid green");
 
 				for (var counter = 0; counter < json.length; counter++) {
-					$tbody.append("<tr><td>" + json[counter].name + "</td><td>" + json[counter].level + "</td><td>" + json[counter].vocation + "</td><td>" + json[counter].exp + "</td></tr>");
+					$tbody.append("<tr><td>" + json[counter].name + "</td><td>" + json[counter].level + "</td><td>" + json[counter].vocation.match(/\b\w/g).join('') + "</td><td>" + json[counter].exp + "</td></tr>");
 				}
 
 				$('th').css("border", "1px solid green");
@@ -30,7 +30,7 @@
 				$table.css("visibility", "visible").css("border", "1px solid green");
 
 				for (var counter = 0; counter < json.length; counter++) {
-					$tbody.append("<tr><td>" + json[counter].name + "</td><td>" + json[counter].level + "</td><td>" + json[counter].vocation + "</td><td>" + json[counter].exp + "</td></tr>");
+					$tbody.append("<tr><td>" + json[counter].name + "</td><td>" + json[counter].level + "</td><td>" + json[counter].vocation.match(/\b\w/g).join('') + "</td><td>" + json[counter].exp + "</td></tr>");
 				}
 
 				$('th').css("border", "1px solid green");

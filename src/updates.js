@@ -29,7 +29,7 @@ async function hunteds() {
                 };
 
                 Character.update(values, selector).then(async function () {
-                    const frase = ` ${hunted.name} online ${!!online} `
+                    const frase = ` ${hunted.vocation} ${hunted.level} ${hunted.name} online ${!!online} `
                     await TeamSpeakProvider.messageAll(frase);
                     await Logs.create({ logs: frase }).then(function () {
                         console.log('log criado com ' + frase)
@@ -54,7 +54,7 @@ async function hunteds() {
                     };
 
                     Character.update(values, selector).then(async function () {
-                        const frase = `Experiência de ${hunted.name} ${hunted.vocation} ${hunted.level} atualizada de ${hunted.exp} para ${exp}`;
+                        const frase = `${hunted.vocation} ${hunted.level} ${hunted.name} exp update de ${hunted.exp} para ${exp}`;
                         await TeamSpeakProvider.messageAll(frase);
                         await Logs.create({ logs: frase }).then(function () {
                             console.log('log criado com ' + frase)
@@ -64,11 +64,10 @@ async function hunteds() {
                     });
                 }
 
-                if (online.vocation != hunted.vocation) {
-                    console.log('vocacao change')
-                    console.log(`${hunted.name} ${hunted.level} ${hunted.vocation} ${online.vocation}`);
+                if (online.vocation.match(/\b\w/g).join('') != hunted.vocation) {
+                    
                     let values = {
-                        vocation: online.vocation,
+                        vocation: online.vocation.match(/\b\w/g).join(''),
                     };
                     let selector = {
                         where: {
@@ -78,11 +77,11 @@ async function hunteds() {
 
                     Character.update(values, selector).then(async function () {
 
-                        const frase = `A vocação de ${hunted.name} foi atualizado de ${hunted.vocation} para ${online.vocation}.`
-                        await TeamSpeakProvider.messageAll(frase);
-                        await Logs.create({ logs: frase }).then(function () {
+                        const frase = `A vocação de ${hunted.vocation} ${hunted.level} ${hunted.name} foi atualizado de ${hunted.vocation} para ${online.vocation}.match(/\b\w/g).join('')`
+                        //await TeamSpeakProvider.messageAll(frase);
+                        //await Logs.create({ logs: frase }).then(function () {
                             console.log('log criado com ' + frase)
-                        });
+                        //});
 
                     });
                 }
@@ -98,7 +97,7 @@ async function hunteds() {
                     };
 
                     Character.update(values, selector).then(async function () {
-                        const frase = `O level de ${hunted.name} ${hunted.vocation} foi atualizado de ${hunted.level} para ${online.level}.`
+                        const frase = `${hunted.vocation} ${hunted.level} ${hunted.name} lvl update de ${hunted.level} para ${online.level}.`
                         await TeamSpeakProvider.messageAll(frase);
                         await Logs.create({ logs: frase }).then(function () {
                             console.log('log criado com ' + frase)

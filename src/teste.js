@@ -3,6 +3,8 @@ const request = require('request');
 const md5 = require('md5');
 const Frag = require('./models/Frag');
 
+
+
       //salvar apenas o nick de todos os killers
       //trocar frags por killers
       //colocar na tabela killers nickChanged
@@ -47,32 +49,33 @@ async function tracker(hunted) {
   
       const xp = $('table > tbody > tr > td > div > table > tbody > tr > td > div.TableContentAndRightShadow > div > table > tbody > tr:nth-child(1) > td:nth-child(2) > font').text();
       const tbodyKillers = $('div:nth-child(6) > table > tbody > tr > td > div > table > tbody > tr > td > div.TableContentAndRightShadow > div > table > tbody')
-      const dateAndDeaths = $('div:nth-child(6) > table > tbody > tr > td > div > table > tbody > tr > td > div.TableContentAndRightShadow > div > table > tbody > tr:nth-child(n) > td:nth-child(n)');
       const allKillersOnly = $('div:nth-child(6) > table > tbody > tr > td > div > table > tbody > tr > td > div.TableContentAndRightShadow > div > table > tbody > tr:nth-child(n) > td:nth-child(2) > a:nth-child(n)');
-
-      const KillerListOnly = $('div:nth-child(6) > table > tbody > tr > td > div > table > tbody > tr > td > div.TableContentAndRightShadow > div > table > tbody')
+      
+      const KillerListOnly = tbodyKillers
           .find(allKillersOnly)
           .toArray()
           .map(element => $(element).attr('href').replace('index.php?subtopic=characters&name=', '',).replace('+', ' '));
 
-      const killersList = tbodyKillers
-          .find(dateAndDeaths)
-          .toArray()
-          .map(element => $(element).text());
-    
-          const nameDATE = ($) => { 
-              const name = $(`div:nth-child(6) > table > tbody > tr > td > div > table > tbody > tr > td > div.TableContentAndRightShadow > div > table > tbody > tr:nth-child(1) > td:nth-child(2) > a:nth-child(2}`)
-              const date = $('div:nth-child(6) > table > tbody > tr > td > div > table > tbody > tr > td > div.TableContentAndRightShadow > div > table > tbody > tr:nth-child(1) > td:nth-child(1)') 
-              return 
-                  date,
-                  name,
-              };
-           
-          };
 
-      console.log(KillerListOnly, killersList)
-      console.log(nameDATE($))
+      console.log(KillerListOnly, )
+    //   const killer = KillerListOnly.find(function (item) {
+    //     return item.name == hunted.name;
+    // });
       
+      tbodyKillers.find('tr').each (function(index, tr) {
+        $(tr).find('td').each (function(index, td) {
+          console.log($(td).text())
+          //quebrar os dados pra salvar os nomes separados, com as infos: lvl, date, killer.. criar nova db pra isso relacionada.
+          //pra pegar só nome de killers, sem bichos, podemos usar a const 'KillerListOnly'
+          //depois esse msm tracker vai buscar na db quem trocou de nick, se tiver true vai buscar all killers/lvl para encontrar o novo nick nos frags.
+         
+        }); 
+  
+        
+      }); 
+
+
+
       //achar tabela e fazer um for pra salvar datam lvl e killers
       //depois podemos buscar os killers com os dados salvos
 
@@ -148,3 +151,4 @@ function tip(o) {
   document.querySelector("#tip").innerHTML = "&#36;" + total;
 
 }
+
