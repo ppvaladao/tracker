@@ -8,7 +8,7 @@ const loop1 = () => hunteds().finally(loop1);
 loop1();
 
 
-
+//excluir frags e criar killers com as infos: nick changed, lvl, date, killer..
 
 //criar uma belongstoString(character) com diferença de xp no ultimo update, e usar o updated date pra saber a quanto tempo foi ultimo update em minutos.
 
