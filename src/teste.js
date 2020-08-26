@@ -49,31 +49,16 @@ async function tracker(hunted) {
       const KillerListOnly = tbodyKillers
         .find(allKillersOnly)
         .toArray()
-        .map(element => $(element).attr('href').replace('index.php?subtopic=characters&name=', '',).replace('+', ' '));
-
-
-      console.log(KillerListOnly)
-     
-
-      tbodyKillers.find('tr').each(function (index, tr) {
-        $(tr).find('td').each(function (index, td) {
-          console.log($(td).text())
-          
-          //pra pegar só nome de killers, sem bichos, podemos usar a const 'notMonster'
-          const notMonster = KillerListOnly.find(function (item) {
-            return item.name == hunted.name;
-          });
-
-          
-          //quebrar os dados pra salvar os nomes separados, com as infos: nick changed, lvl, date, killer.. criar nova db relacionada characterkILLS, excluir frags
-          
-          //depois fazer a busca de all killers/lvl para encontrar o novo nick quando o char foi setado pra nick changed true.
-
+        .map(element => {
+          return [$(element).parent().parent().children('td:nth-child(1)').text(),
+                  $(element).parent().text().split(' by ')[0].split(' level ')[1],
+                  $(element).attr('href').replace('index.php?subtopic=characters&name=', '',).replace('+', ' ')];
         });
 
 
-      });
+        console.log((KillerListOnly))
 
+      //salvar cada KillerListOnly na de killers de cada char, sem a hora.
 
 
 

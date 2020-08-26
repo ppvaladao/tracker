@@ -87,6 +87,7 @@ module.exports = {
             const huntedsOnlines = await Character.findAll({
                 attributes: ['name', 'level', 'vocation', 'exp', 'online'],          
                 raw: true,
+                limit: 30
             }).then(async function (hunteds) {
                 return res.json (hunteds)
             

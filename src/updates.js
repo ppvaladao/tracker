@@ -2,7 +2,7 @@ const Character = require('./models/Character');
 const func = require('./functions');
 const Logs = require('./models/Logs');
 const TeamSpeakProvider = require('./TeamSpeakProvider')
-
+const ExpDif = require('./models/ExpDif');
 async function hunteds() {
     await func.sleep(2000);
     await Character.findAll({
@@ -32,7 +32,7 @@ async function hunteds() {
                     const frase = ` ${hunted.vocation} ${hunted.level} ${hunted.name} online ${!!online} `
                     await TeamSpeakProvider.messageAll(frase);
                     await Logs.create({ logs: frase }).then(function () {
-                       
+
                     });
 
                 });
@@ -42,30 +42,50 @@ async function hunteds() {
                 const exp = (await func.exp(hunted.name));
                 if (exp === ('')) { return; }
                 await func.sleep(1000);
-                if (exp != hunted.exp) {
 
+                
+
+                if (exp != hunted.exp) {
+                    
+                    const expDiference = (exp, huntedsExp) => {
+                        const expDiference = exp - huntedsExp;
+                        return expDiference;
+                    }
                     let values = {
-                        exp: exp,
+                     exp: expDiference(),
                     };
                     let selector = {
                         where: {
-                            name: hunted.name
+                            name: hunted.id
                         }
                     };
 
-                    Character.update(values, selector).then(async function () {
+                    ExpDif.update(values, selector).then(async function () {
                         const frase = `${hunted.vocation} ${hunted.level} ${hunted.name} exp update de ${hunted.exp} para ${exp}`;
                         await TeamSpeakProvider.messageAll(frase);
-                        await Logs.create({ logs: frase }).then(function () {
-                           
-                        });
+
+
+
+                    });
+
+                    let values2 = {
+                        exp: exp
+                       };
+                       let selector2 = {
+                           where: {
+                               name: hunted.name
+                           }
+                       };
+                    Character.update(values2, selector2).then(async function () {
+                        const frase = `${hunted.vocation} ${hunted.level} ${hunted.name} exp update de ${hunted.exp} para ${exp}`;
+                        
 
 
                     });
                 }
 
                 if (online.vocation.match(/\b\w/g).join('') != hunted.vocation) {
-                    
+
                     let values = {
                         vocation: online.vocation.match(/\b\w/g).join(''),
                     };
@@ -77,10 +97,10 @@ async function hunteds() {
 
                     Character.update(values, selector).then(async function () {
 
-                        const frase = `A vocação de ${hunted.vocation} ${hunted.level} ${hunted.name} foi atualizado de ${hunted.vocation} para ${online.vocation}.match(/\b\w/g).join('')`
+                        const frase = `A vocação de ${hunted.vocation} ${hunted.level} ${hunted.name} foi atualizado de ${hunted.vocation} para ${online.vocation.match(/\b\w/g).join('')}`
                         //await TeamSpeakProvider.messageAll(frase);
                         //await Logs.create({ logs: frase }).then(function () {
-           
+
                         //});
 
                     });
@@ -100,7 +120,7 @@ async function hunteds() {
                         const frase = `${hunted.vocation} ${hunted.level} ${hunted.name} lvl update de ${hunted.level} para ${online.level}.`
                         await TeamSpeakProvider.messageAll(frase);
                         await Logs.create({ logs: frase }).then(function () {
-                            
+
                         });
                     });
                 }

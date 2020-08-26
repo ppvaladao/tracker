@@ -1,150 +1,54 @@
-<html lang="pt-br">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-	<title>Hunteds</title>
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-	<script>
-		var baseURL = '127.0.0.1' 
-		// 'cigarrinho.com','127.0.0.1';
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunteds / Logs</title>
 
-		function hello() {
-			$.getJSON(`/huntedOn`, function (json) {
-				var $table = $('#jsonTable');
-				var $tbody = $table.find('tbody').empty();
-
-				$table.css("visibility", "visible").css("border", "1px solid green");
-
-				for (var counter = 0; counter < json.length; counter++) {
-					$tbody.append("<tr><td>" + json[counter].name + "</td><td>" + json[counter].level + "</td><td>" + json[counter].vocation.match(/\b\w/g).join('') + "</td><td>" + json[counter].exp + "</td></tr>");
-				}
-
-				$('th').css("border", "1px solid green");
-			});
-		}
-
-		function hello2() {
-			$.getJSON(`/huntedOff`, function (json) {
-				var $table = $('#jsonTable2');
-				var $tbody = $table.find('tbody').empty();
-
-				$table.css("visibility", "visible").css("border", "1px solid green");
-
-				for (var counter = 0; counter < json.length; counter++) {
-					$tbody.append("<tr><td>" + json[counter].name + "</td><td>" + json[counter].level + "</td><td>" + json[counter].vocation.match(/\b\w/g).join('') + "</td><td>" + json[counter].exp + "</td></tr>");
-				}
-
-				$('th').css("border", "1px solid green");
-			});
-		}
-
-		function hello3() {
-			$.getJSON(`/listLogs`, function (json) {
-				var $table = $('#jsonTable3');
-				var $tbody = $table.find('tbody').empty();
-
-				$table.css("visibility", "visible").css("border", "1px solid green");
-
-				for (var counter = 0; counter < json.length; counter++) {
-					$tbody.append("<tr><td>" + json[counter].logs + "</td><td>");
-				}
-
-				$('th').css("border", "1px solid green");
-			});
-		}
-
-
-		function actionHunted(action, name) {
-			var msg = {
-				name: name
-			};
-			$.ajax({
-				type: action,
-				url: `	/hunted`,
-				//baseUrl + ':3003/api/sendmail',
-				data: JSON.stringify(msg),
-				dataType: 'json',
-				contentType: 'application/json; charset=utf-8',
-				timeout: 5000,
-				error: function (jqXHR, textStatus, errorThrown) {
-					if (textStatus === 'timeout') {
-						alert('Erro, timeout');
-					}
-					alert('Error: ' + textStatus + '...' + errorThrown);
-				},
-				success: function (data) {
-					alert("trouxe o dado: " + JSON.stringify(data));
-				},
-			});
-		}
-		
-		// $(function() {
-		$(document).ready(function () {
-			$("#btn-add").click(function () {
-				actionHunted('POST', $('#txt-name').val());
-			});
-
-			$("#btn-remove").click(function () {
-				actionHunted('DELETE', $('#txt-name').val());
-			});
-
-			hello();
-			hello2();hello3();
-			setInterval(hello, 4000);
-			setInterval(hello2, 4000);
-			setInterval(hello3, 4000);
-		});
-	</script>
+    <link rel="icon" href="./favicon.ico"/>
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="text/javascript" src="./scripts.js"></script>
 </head>
 
 <body>
-	<input type="button" value="Atualizar" id="btn-atualizar" onclick="hello()" />
 
-	<!-- <p>
-		<input id="txt-name" type="text" placeholder="name" />
-		<button id="btn-add" value="send">add</button></p>
-		<button id="btn-remove" value="send">remove</button></p>
-		<div class="alpha"></div>
-	<p> -->
-	<div class="alpha"></div>
-	<table id="jsonTable" style="visibility:hidden">
-		<thead>
-			<tr>
-				<!-- The JSON downloaded from the URL above provides four attributes.-->
-				<th>name</th>
-				<th>level</th>
-				<th>voc</th>
-				<th>exp</th>
-			</tr>
-		</thead>
-		<tbody></tbody>
-	</table>
-	<br>
-	<table id="jsonTable3" style="visibility:hidden">
-		<thead>
-			<tr>
-				<!-- The JSON downloaded from the URL above provides four attributes.-->
-				<th>logs</th>
-			</tr>
-		</thead>
-		<tbody></tbody>
-	</table>
-	<br>
-	<table id="jsonTable2" style="visibility:hidden">
-		<thead>
-			<tr>
-				<!-- The JSON downloaded from the URL above provides four attributes.-->
-				<th>name</th>
-				<th>level</th>
-				<th>vocation</th>
-				<th>exp</th>
-			</tr>
-		</thead>
-		<tbody></tbody>
-	</table>
-	<br>
-
-	<pre id="listLogs"></pre>
-
+    <main id="main" class="row">
+        <div class="col">
+            <h2>Hunteds</h2>
+            <table class="box">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Level</th>
+                        <th>Vocation</th>
+                        <th>Status</th>
+                        <th>Experience</th>
+                    </tr>
+                </thead>
+                <tbody id="hunted-list">
+                    <tr>
+                        <td colspan="4">Loading...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col">
+            <h2>Logs</h2>
+            <table class="box">
+                <thead>
+                    <tr>
+                        <th>Info</th>
+                    </tr>
+                </thead>
+                <tbody id="log-list">
+                    <tr>
+                        <td>Loading...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
 
 </body>
 

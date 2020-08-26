@@ -1,0 +1,125 @@
+/********
+ * VARS *
+ ********/
+
+:root {
+    --radius: 4px;
+    --spacing: 16px;
+    --red: #e53935;
+    --green: #43a047;
+    --blue: #1e88e5;
+}
+
+/*********
+ * RESET *
+ *********/
+
+*, *:after, *::before {
+    box-sizing: border-box;
+}
+
+html, body {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    color: #fff;
+    font-size: 0.875rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.43;
+    letter-spacing: 0.01071em;
+    background-color: #303030;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+/*********
+ * UTILS *
+ *********/
+
+.txt-red {
+    color: var(--red);
+}
+
+.txt-green {
+    color: var(--green);
+}
+
+.txt-blue {
+    color: var(--blue);
+}
+
+/**********
+ * LAYOUT *
+ **********/
+
+table {
+    border: 0;
+    border-spacing: 0;
+    text-align: left;
+}
+
+th, td {
+    padding: calc(var(--spacing) / 2) var(--spacing);
+}
+
+#main {
+    /* padding: calc(var(--spacing) * 2); */
+    height: 100%;
+}
+
+#main .col {
+    height: 100%;
+    /* overflow: hidden; */
+    overflow-y: auto;
+    min-width: 50%;
+}
+
+/**************
+ * COMPONENTS *
+ **************/
+
+.row {
+    display: flex;
+}
+
+.col {
+    padding: calc(var(--spacing) * 2);
+}
+
+.box {
+    background-color: #424242;
+    border-radius: var(--radius);
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    margin: var(--spacing) auto;
+    padding: var(--spacing);
+    width: 100%;
+}
+
+.box:first-child {
+    margin-top: 0;
+}
+
+.box:last-child {
+    margin-bottom: 0;
+}
+
+table.box {
+    padding: 0;
+}
+
+.box thead tr th {
+    border-bottom: 1px solid #636363;
+    text-transform: uppercase;
+}
+
+.box tbody tr:hover td {
+    background-color: #6d6d6d;
+}
