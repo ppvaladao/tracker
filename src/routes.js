@@ -3,6 +3,7 @@ var router = express.Router();
 const characterControllers = require('./controllers/characterController');
 const logsController = require('./controllers/logsController');
 const { html } = require('cheerio');
+const { basename } = require('path');
 
 
 router.get('/addzin', function(req, res) {
@@ -17,7 +18,6 @@ router.get('/huntedon', characterControllers.listOnline); //lista hunteds online
 router.get('/hunteds', characterControllers.listAll); //lista hunteds online
 router.get('/huntedoff', characterControllers.listOff); //lista hunteds off
 router.get('/listLogs', logsController.listLogs); //lista hunteds online
-
 
 
 module.exports = router;

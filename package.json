@@ -23,6 +23,7 @@
     "connect-livereload": "^0.6.1",
     "cors": "^2.8.5",
     "cron": "^1.8.2",
+    "date-pt-br": "^1.2.2",
     "dateformat": "^3.0.3",
     "express": "^4.17.1",
     "fetch": "^1.1.0",

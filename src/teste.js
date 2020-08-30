@@ -1,13 +1,9 @@
 const cheerio = require('cheerio');
 const request = require('request');
-const md5 = require('md5');
-const Frag = require('./models/Frag');
-
-
-
-(async function name(params) {
-  tracker('polvilho');
-})();
+const DatePtBR = require('date-pt-br')
+const date = new DatePtBR()
+const xd = date.getHourMinute().replace(':', ': ')
+console.log(xd)
 
 async function tracker(hunted) {
 

@@ -10,6 +10,6 @@ const Logs = connection.define('logs', {
     timestamps: true,
 });
 
-//Logs.sync({force: true})
+// Logs.sync({force: true})
 
 module.exports = Logs;

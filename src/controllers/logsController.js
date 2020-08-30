@@ -8,8 +8,12 @@ module.exports = {
             const huntedsOnlines = await Logs.findAll({
                 attributes: ['logs'],
                 raw: true,
+                limit: 50,
+                order: [
+                    ['id', 'DESC'],
+                ],
             }).then(async function (logs) {
-                return res.json (logs.reverse())
+                return res.json (logs)
             
             });
         } catch (err) {

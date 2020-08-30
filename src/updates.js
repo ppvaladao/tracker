@@ -2,9 +2,13 @@ const Character = require('./models/Character');
 const func = require('./functions');
 const Logs = require('./models/Logs');
 const TeamSpeakProvider = require('./TeamSpeakProvider')
-const ExpDif = require('./models/ExpDif');
+const DatePtBR = require('date-pt-br')
+const date = new DatePtBR()
+
+
 async function hunteds() {
-    await func.sleep(2000);
+    const newDate = date.getHourMinute().replace(':', '¦');
+
     await Character.findAll({
         attributes: ['name', 'level', 'vocation', 'exp', 'online'],
         raw: true
@@ -29,60 +33,19 @@ async function hunteds() {
                 };
 
                 Character.update(values, selector).then(async function () {
-                    const frase = ` ${hunted.vocation} ${hunted.level} ${hunted.name} online ${!!online} `
-                    await TeamSpeakProvider.messageAll(frase);
-                    await Logs.create({ logs: frase }).then(function () {
+                    if (hunted.online = true) {
+                        const frase = `${newDate} ${hunted.vocation} ${hunted.level} ${hunted.name} online.`
+                        await TeamSpeakProvider.messageAll(frase);
+                        await Logs.create({ logs: frase }).then(function () {
 
-                    });
+                        });
+                    }
 
                 });
             }
 
             if (online) {
-                const exp = (await func.exp(hunted.name));
-                if (exp === ('')) { return; }
-                await func.sleep(1000);
 
-                
-
-                if (exp != hunted.exp) {
-                    
-                    const expDiference = (exp, huntedsExp) => {
-                        const expDiference = exp - huntedsExp;
-                        return expDiference;
-                    }
-                    let values = {
-                     exp: expDiference(),
-                    };
-                    let selector = {
-                        where: {
-                            name: hunted.id
-                        }
-                    };
-
-                    ExpDif.update(values, selector).then(async function () {
-                        const frase = `${hunted.vocation} ${hunted.level} ${hunted.name} exp update de ${hunted.exp} para ${exp}`;
-                        await TeamSpeakProvider.messageAll(frase);
-
-
-
-                    });
-
-                    let values2 = {
-                        exp: exp
-                       };
-                       let selector2 = {
-                           where: {
-                               name: hunted.name
-                           }
-                       };
-                    Character.update(values2, selector2).then(async function () {
-                        const frase = `${hunted.vocation} ${hunted.level} ${hunted.name} exp update de ${hunted.exp} para ${exp}`;
-                        
-
-
-                    });
-                }
 
                 if (online.vocation.match(/\b\w/g).join('') != hunted.vocation) {
 
@@ -97,7 +60,7 @@ async function hunteds() {
 
                     Character.update(values, selector).then(async function () {
 
-                        const frase = `A vocação de ${hunted.vocation} ${hunted.level} ${hunted.name} foi atualizado de ${hunted.vocation} para ${online.vocation.match(/\b\w/g).join('')}`
+                        const frase = `${newDate} A vocação de ${hunted.vocation} ${hunted.level} ${hunted.name} foi atualizado de ${hunted.vocation} para ${online.vocation.match(/\b\w/g).join('')}`
                         //await TeamSpeakProvider.messageAll(frase);
                         //await Logs.create({ logs: frase }).then(function () {
 
@@ -117,11 +80,13 @@ async function hunteds() {
                     };
 
                     Character.update(values, selector).then(async function () {
-                        const frase = `${hunted.vocation} ${hunted.level} ${hunted.name} lvl update de ${hunted.level} para ${online.level}.`
-                        await TeamSpeakProvider.messageAll(frase);
-                        await Logs.create({ logs: frase }).then(function () {
+                        if (online.level > hunted.level) {
+                            const frase = `${newDate} ${hunted.vocation} ${hunted.level} ${hunted.name} lvl update de ${hunted.level} para ${online.level}.`
+                            await TeamSpeakProvider.messageAll(frase);
+                            await Logs.create({ logs: frase }).then(function () {
 
-                        });
+                            });
+                        }
                     });
                 }
             }
@@ -133,11 +98,57 @@ async function hunteds() {
 
 };
 
+async function exp() {
+    const newDate = date.getHourMinute().replace(':', '¦');
+    await Character.findAll({
+        attributes: ['name', 'level', 'vocation', 'exp', 'online'],
+        raw: true,
+        where: {
+            online: true
+        }
+    }).then(async function (hunteds) {
+        for (const hunted of hunteds) {
+
+            const exp = await func.exp(hunted.name);
+
+            if (exp === ('')) { `exp do ${hunted} vazia, retornando`; return; }
+            const expPura = exp.split('+').join('').split('-').join('').split('.').join('');
+            const huntedExpPura = hunted.exp.split('+').join('').split('-').join('').split('.').join('');
+            let diff = expPura - huntedExpPura;
+           // console.log(
+           //     expPura, huntedExpPura, diff)
+            //console.log(`Exp de ${hunted.name} é ${exp}, diferença ${diff}`);
+            await func.sleep(500);
+            if (exp != hunted.exp) {
+                let values = {
+                    exp: exp
+                };
+                let selector = {
+                    where: {
+                        name: hunted.name
+                    }
+                };
+                Character.update(values, selector).then(async function () {
+                    const frase = `${newDate} ${hunted.vocation} ${hunted.level} ${hunted.name} exp update de ${hunted.exp} para ${exp}`;
+
+                    if (exp != 0 && diff > 300000) {
+                        await Logs.create({ logs: frase }).then(async function () {
+                            //await TeamSpeakProvider.messageAll(frase);
+                        });
+                    }
 
 
 
+
+                });
+               
+            }
+        };
+    });
+};
 
 module.exports = {
-    hunteds
+    hunteds,
+    exp
 
 };

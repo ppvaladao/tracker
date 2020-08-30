@@ -1,12 +1,13 @@
 app = require ('./src/express')
-const {hunteds} = require('./src/updates');
+const {hunteds, exp} = require('./src/updates');
 
 app.listen(80);
 
 const loop1 = () => hunteds().finally(loop1);
+const loop2 = () => exp().finally(loop2);
 
 loop1();
-
+loop2();
 
 //excluir frags e criar killers com as infos: nick changed, lvl, date, killer..
 
