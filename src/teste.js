@@ -63,13 +63,13 @@ async function dbSave() {
 
   tracker('polvilho').then((KillerListOnly) => {
     for (killer of KillerListOnly) {
-
-      //mudar pra find or create, só preciso do nick de cada killer 1x.
+    //usar findOrCreate, basta salvar cada killer 1x.
+    //encaixar esse codigo dos killers dentro de exp().
       Death.create({
         date: killer[0],
         lvl: killer[1],
         killerName: killer[3],
-        characterId: 3 //chamar certo
+        characterId: 3 //chamar certo hunted.id
       }).then(async function () {
         console.log('salvo na db')
 

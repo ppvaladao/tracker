@@ -9,7 +9,6 @@ const date = new DatePtBR()
 
 
 async function hunteds() {
-    await func.sleep(5000);
     await Character.findAll({
         attributes: ['name', 'level', 'vocation', 'exp', 'online', 'id'],
         raw: true
@@ -32,14 +31,13 @@ async function hunteds() {
                         name: hunted.name
                     }
                 };
-
-                Character.update(values, selector).then(async function () {
+                await Character.update(values, selector).then(async function () {
 
                     if (hunted.online = true && hunted.level > 350) {
                         let newDate = date.getHourMinute();
                         let frase = `${newDate} ${hunted.vocation} ${hunted.level} ${hunted.name} online.`
                         await Logs.create({ logs: frase }).then(async function () {
-                            let fraseTs3 = `${newDate.replace(':', 'Â«')} ${hunted.vocation} ${hunted.level} ${hunted.name} online.`
+                            let fraseTs3 = `${newDate.replace(':', '«')} ${hunted.vocation} ${hunted.level} ${hunted.name} online.`
                             await TeamSpeakProvider.messageAll(fraseTs3);
                         });
                     }
@@ -63,7 +61,7 @@ async function hunteds() {
 
                     Character.update(values, selector).then(async function () {
 
-                        const frase = `${newDate} A vocaÃ§Ã£o de ${hunted.vocation} ${hunted.level} ${hunted.name} foi atualizado de ${hunted.vocation} para ${online.vocation.match(/\b\w/g).join('')}`
+                        //const frase = `${newDate} A vocaÃ§Ã£o de ${hunted.vocation} ${hunted.level} ${hunted.name} foi atualizado de ${hunted.vocation} para ${online.vocation.match(/\b\w/g).join('')}`
                         //await TeamSpeakProvider.messageAll(frase);
                         //await Logs.create({ logs: frase }).then(function () {
 
@@ -88,7 +86,7 @@ async function hunteds() {
                             let frase = `${newDate} ${hunted.vocation} ${hunted.level} ${hunted.name} lvl ${hunted.level} to ${online.level}.`
 
                             await Logs.create({ logs: frase }).then(async function () {
-                                let fraseTs3 = `${newDate.replace(':', 'Â«')} ${hunted.vocation} ${hunted.level} ${hunted.name} lvl ${hunted.level} to ${online.level}.`
+                                let fraseTs3 = `${newDate.replace(':', '«')} ${hunted.vocation} ${hunted.level} ${hunted.name} lvl ${hunted.level} to ${online.level}.`
                                 await TeamSpeakProvider.messageAll(fraseTs3);
                             });
                         }
@@ -100,7 +98,7 @@ async function hunteds() {
 
         }
     })
-
+    await func.sleep(5000);
 };
 
 async function exp() {
@@ -113,15 +111,12 @@ async function exp() {
     }).then(async function (hunteds) {
 
         for (const hunted of hunteds) {
-            console.log(hunted.name);
-            const exp = await func.exp(hunted.name);
 
+            const exp = await func.exp(hunted.name);
 
             if (exp === ('')) {
                 return;
             }
-
-            await func.sleep(500);
             if (exp && exp != hunted.exp) {
                 let values = {
                     exp: exp
@@ -133,14 +128,13 @@ async function exp() {
                 };
                 Character.update(values, selector).then(async function () {
                     const newDate = date.getHourMinute();
-                    //colocar aqui um if, se a xp nova contiver um '-', nÃ£o entra aqui.
-                    let diff = exp.split('+').join('').split('-').join('').split('.').join('') - hunted.exp.split('+').join('').split('-').join('').split('.').join('');
+                    let diff = exp.split('.').join('') - hunted.exp.split('.').join('');
                     const frase = `${newDate} ${hunted.vocation} ${hunted.level} ${hunted.name} exp ${hunted.exp} to ${exp}`;
                     if (diff > 300000 && hunted.level > 350) {
-
                         await Logs.create({ logs: frase }).then(async function () {
-                            let fraseTs3 = `${newDate.replace(':', 'Â«')} ${hunted.vocation} ${hunted.level} ${hunted.name} exp ${hunted.exp} to ${exp}`;
+                            let fraseTs3 = `${newDate.replace(':', '«')} ${hunted.vocation} ${hunted.level} ${hunted.name} exp ${hunted.exp} to ${exp}`;
                             await TeamSpeakProvider.messageAll(fraseTs3);
+                            //set find or create on ExpDif.
                             await ExpDif.create({
                                 expDif: diff,
                                 characterId: hunted.id
@@ -157,6 +151,7 @@ async function exp() {
                 });
 
             }
+            await func.sleep(500);
         };
     });
 };
