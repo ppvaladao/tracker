@@ -3,7 +3,7 @@ const Character = require('./Character');
 
 const ExpDif = connection.define('ExpDif', {
     expDif: {
-        type: Sequelize.BOOLEAN,
+        type: Sequelize.INTEGER,
         allowNull: true,
     }
 }, {

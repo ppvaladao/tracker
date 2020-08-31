@@ -3,15 +3,15 @@ const Character = require('./Character');
 
 const Death = connection.define('Death', {
     date: {
-        type: Sequelize.BOOLEAN,
+        type: Sequelize.STRING,
         allowNull: true,
     },
     lvl: {
-        type: Sequelize.BOOLEAN,
+        type: Sequelize.INTEGER,
         allowNull: true,
     },
     killerName: {
-        type: Sequelize.BOOLEAN,
+        type: Sequelize.STRING,
         allowNull: true,
     }
 }, {
@@ -20,3 +20,4 @@ const Death = connection.define('Death', {
 Death.belongsTo(Character)
 //Death.sync({force: true})
 module.exports = Death;
+

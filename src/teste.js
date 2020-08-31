@@ -1,9 +1,6 @@
 const cheerio = require('cheerio');
 const request = require('request');
-const DatePtBR = require('date-pt-br')
-const date = new DatePtBR()
-const xd = date.getHourMinute().replace(':', ': ')
-console.log(xd)
+const Death = require('./models/Death')
 
 async function tracker(hunted) {
 
@@ -46,18 +43,12 @@ async function tracker(hunted) {
         .find(allKillersOnly)
         .toArray()
         .map(element => {
-          return [$(element).parent().parent().children('td:nth-child(1)').text(),
-                  $(element).parent().text().split(' by ')[0].split(' level ')[1],
-                  $(element).attr('href').replace('index.php?subtopic=characters&name=', '',).replace('+', ' ')];
+          return [$(element).parent().parent().children('td:nth-child(1)').text().split(',')[0],
+          $(element).parent().text().split(' by ')[0].split(' level ')[1],
+          $(element).attr('href').replace('index.php?subtopic=characters&name=', '',).replace('+', ' ')];
         });
 
-
-        console.log((KillerListOnly))
-
-      //salvar cada KillerListOnly na de killers de cada char, sem a hora.
-
-
-
+      if (KillerListOnly) { return resolve(KillerListOnly) }
 
     });
 
@@ -67,6 +58,28 @@ async function tracker(hunted) {
 };
 
 
+async function dbSave() {
+
+
+  tracker('polvilho').then((KillerListOnly) => {
+    for (killer of KillerListOnly) {
+
+      //mudar pra find or create, só preciso do nick de cada killer 1x.
+      Death.create({
+        date: killer[0],
+        lvl: killer[1],
+        killerName: killer[3],
+        characterId: 3 //chamar certo
+      }).then(async function () {
+        console.log('salvo na db')
+
+      });
+
+    }
+  })
 
 
 
+}
+
+dbSave()
