@@ -36,10 +36,15 @@ const Character = connection.define('character', {
         allowNull: true,
     },
     exp: {
-        type: Sequelize.INTEGER,
-        defaultValue: false,
+        type: Sequelize.STRING,
+        defaultValue: 0,
         allowNull: true,
     },
+    expDif: {
+        type: Sequelize.INTEGER,
+        defaultValue: 0,
+        allowNull: true,
+    }
 }, {
     timestamps: true,
 });

@@ -118,36 +118,28 @@ async function exp() {
                 return;
             }
             if (exp && exp != hunted.exp) {
-                let values = {
-                    exp: exp
-                };
+                const newDate = date.getHourMinute();
+                let diff = exp.split('.').join('') - hunted.exp.split('.').join('');
+  
+                const values = {exp};
+
+                if (diff > 300000 && hunted.level > 350) {
+                    values.expDif = diff;
+                }
+
                 let selector = {
                     where: {
                         name: hunted.name
                     }
                 };
                 Character.update(values, selector).then(async function () {
-                    const newDate = date.getHourMinute();
-                    let diff = exp.split('.').join('') - hunted.exp.split('.').join('');
                     const frase = `${newDate} ${hunted.vocation} ${hunted.level} ${hunted.name} exp ${hunted.exp} to ${exp}`;
                     if (diff > 300000 && hunted.level > 350) {
                         await Logs.create({ logs: frase }).then(async function () {
                             let fraseTs3 = `${newDate.replace(':', '«')} ${hunted.vocation} ${hunted.level} ${hunted.name} exp ${hunted.exp} to ${exp}`;
                             await TeamSpeakProvider.messageAll(fraseTs3);
-                            //set find or create on ExpDif.
-                            await ExpDif.create({
-                                expDif: diff,
-                                characterId: hunted.id
-                            }).then(async function (response) {
-
-                            });
                         });
-
                     }
-
-
-
-
                 });
 
             }
