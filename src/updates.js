@@ -111,17 +111,17 @@ async function exp() {
 
         for (const hunted of hunteds) {
             console.log(hunted.name); //debug
-            const exp = '+995.999.999';// await func.exp(hunted.name);
+            const exp = '+977.999.999';// await func.exp(hunted.name);
 
             if (exp === ('')) {
                 return;
             }
             if (exp && exp != hunted.exp) {
                 const newDate = date.getHourMinute();
-                let diff = 300001 //exp.split('.').join('') - hunted.exp.split('.').join('');
+                let diff = 300007 //exp.split('.').join('') - hunted.exp.split('.').join('');
 
                 let values = { exp };
-
+                //lvl > 1 debug
                 if (diff > 300000 && hunted.level > 1) {
                     values.expDif = diff;
                     values.expDifUpdate = new Date();

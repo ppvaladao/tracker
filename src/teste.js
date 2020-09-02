@@ -1,7 +1,7 @@
 const cheerio = require('cheerio');
 const request = require('request');
 const Death = require('./models/Death')
-
+console.log(new Date())
 async function tracker(hunted) {
 
   return new Promise((resolve, reject) => {
