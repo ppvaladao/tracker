@@ -16,5 +16,17 @@ loop2();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 //teria como criar um model: nickChanged, que ja adiciona todos characters existentes como false numa relação de belongsTo?
 //criar bot que procura nickChanged = True e busca o novo nick.

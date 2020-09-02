@@ -37,7 +37,7 @@ async function hunteds() {
                         let frase = `${newDate} ${hunted.vocation} ${hunted.level} ${hunted.name} online.`
                         await Logs.create({ logs: frase }).then(async function () {
                             let fraseTs3 = `${newDate.replace(':', '«')} ${hunted.vocation} ${hunted.level} ${hunted.name} online.`
-                            await TeamSpeakProvider.messageAll(fraseTs3);
+                            //await TeamSpeakProvider.messageAll(fraseTs3);
                         });
                     }
 
@@ -61,7 +61,7 @@ async function hunteds() {
                     Character.update(values, selector).then(async function () {
 
                         //const frase = `${newDate} A vocaÃ§Ã£o de ${hunted.vocation} ${hunted.level} ${hunted.name} foi atualizado de ${hunted.vocation} para ${online.vocation.match(/\b\w/g).join('')}`
-                        //await TeamSpeakProvider.messageAll(frase);
+                        ////await TeamSpeakProvider.messageAll(frase);
                         //await Logs.create({ logs: frase }).then(function () {
 
                         //});
@@ -86,7 +86,7 @@ async function hunteds() {
 
                             await Logs.create({ logs: frase }).then(async function () {
                                 let fraseTs3 = `${newDate.replace(':', '«')} ${hunted.vocation} ${hunted.level} ${hunted.name} lvl ${hunted.level} to ${online.level}.`
-                                await TeamSpeakProvider.messageAll(fraseTs3);
+                                //await TeamSpeakProvider.messageAll(fraseTs3);
                             });
                         }
                     });
@@ -110,20 +110,21 @@ async function exp() {
     }).then(async function (hunteds) {
 
         for (const hunted of hunteds) {
-
-            const exp = await func.exp(hunted.name);
+            console.log(hunted.name); //debug
+            const exp = '+995.999.999';// await func.exp(hunted.name);
 
             if (exp === ('')) {
                 return;
             }
             if (exp && exp != hunted.exp) {
                 const newDate = date.getHourMinute();
-                let diff = exp.split('.').join('') - hunted.exp.split('.').join('');
-  
-                const values = {exp};
+                let diff = 300001 //exp.split('.').join('') - hunted.exp.split('.').join('');
 
-                if (diff > 300000 && hunted.level > 350) {
+                let values = { exp };
+
+                if (diff > 300000 && hunted.level > 1) {
                     values.expDif = diff;
+                    values.expDifUpdate = new Date();
                 }
 
                 let selector = {
@@ -131,12 +132,14 @@ async function exp() {
                         name: hunted.name
                     }
                 };
-                Character.update(values, selector).then(async function () {
+                console.log(values);
+                Character.update(values, selector).then(async function (response) {
+                    console.log(response); //tentando pegar response do update
                     const frase = `${newDate} ${hunted.vocation} ${hunted.level} ${hunted.name} exp ${hunted.exp} to ${exp}`;
                     if (diff > 300000 && hunted.level > 350) {
                         await Logs.create({ logs: frase }).then(async function () {
                             let fraseTs3 = `${newDate.replace(':', '«')} ${hunted.vocation} ${hunted.level} ${hunted.name} exp ${hunted.exp} to ${exp}`;
-                            await TeamSpeakProvider.messageAll(fraseTs3);
+                            //await TeamSpeakProvider.messageAll(fraseTs3);
                         });
                     }
                 });
