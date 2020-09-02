@@ -3,7 +3,7 @@ const TeamSpeak = require('ts3-nodejs-library').TeamSpeak;
 const tsConfig = {
     host: "BR.VOLTUHOST.COM",
     username: "bot",
-    password: "WdbiL8CpfZiq",
+    password: "iTd0jFR79KJY",
     serverport: "1603",
     queryport: "10011",
 };

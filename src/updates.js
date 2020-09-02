@@ -1,7 +1,6 @@
 const Character = require('./models/Character');
 const func = require('./functions');
 const Logs = require('./models/Logs');
-const ExpDif = require('./models/ExpDif');
 const TeamSpeakProvider = require('./TeamSpeakProvider')
 const DatePtBR = require('date-pt-br');
 const { response } = require('express');
