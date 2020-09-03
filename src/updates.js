@@ -130,7 +130,6 @@ async function exp() {
                         name: hunted.name
                     }
                 };
-                console.log(values);
                 Character.update(values, selector).then(async function () {
                     const frase = `${newDate} ${hunted.vocation} ${hunted.level} ${hunted.name} exp ${hunted.exp} to ${exp}`;
                     if (diff > 300000 && hunted.level > 350) {
