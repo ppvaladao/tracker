@@ -44,7 +44,12 @@ const Character = connection.define('character', {
         type: Sequelize.INTEGER,
         defaultValue: 0,
         allowNull: true,
-    }
+    },
+    expDifUpdate: {
+        type: Sequelize.DATE,
+        defaultValue: null,
+        allowNull: true,
+    },
 }, {
     timestamps: true,
 });
